@@ -7,11 +7,11 @@
 #include <glm/gtc/type_ptr.hpp>
 
 #include <iostream>
-#include <string>
 #include <sstream>
+#include <fstream>
+#include <string>
 #include <vector>
 #include <unordered_map>
-#include <fstream>
 
 #ifdef _WIN32
     #ifdef GLB_EXPORTS

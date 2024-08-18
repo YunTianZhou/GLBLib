@@ -1,6 +1,6 @@
-#include "GLVertexArray.h"
-#include "GLVertexBuffer.h"
-#include "GLVertexBufferLayout.h"
+#include "VertexArray.h"
+#include "VertexBuffer.h"
+#include "VertexBufferLayout.h"
 
 namespace glb {
 

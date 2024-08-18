@@ -1,4 +1,4 @@
-#include "GLWindow.h"
+#include "Window.h"
 
 namespace glb {
 
@@ -6,6 +6,8 @@ namespace glb {
         : m_width(width), m_height(height), m_title(title),
           m_aspectRatio(0), m_window(nullptr), m_isExist(false)
     {
+        // Set glfw error callback
+        glfwSetErrorCallback(GLFWErrorCallback);
 
         // Init glfw
         if (!glfwInit()) {
@@ -14,7 +16,7 @@ namespace glb {
         }
 
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-        glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+        glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 4);
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
         m_window = glfwCreateWindow(m_width, m_height, m_title.c_str(), nullptr, nullptr);
@@ -47,6 +49,28 @@ namespace glb {
         glEnable(GL_BLEND);
 
         m_isExist = true;
+
+        GLLog("GLB init successfully!");
+    }
+
+    Window::~Window()
+    {
+        ShutDown();
+        glfwDestroyWindow(m_window);
+        glfwTerminate();
+    }
+
+    void Window::ShutDown()
+    {
+        m_isExist = false;
+        glfwSetWindowShouldClose(m_window, GL_TRUE);
+    }
+
+    void Window::GLFWErrorCallback(int errorCode,
+                                   const char* description)
+    {
+        GLDebugbreak();
+        GLError("[GLFW " << errorCode << "] " << description);
     }
 
     void Window::GLLogMessageCallback(GLenum source,
@@ -57,6 +81,8 @@ namespace glb {
         const GLchar* message,
         const void* userParam)
     {
+        GLDebugbreak();
+
         switch (severity)
         {
         case GL_DEBUG_SEVERITY_HIGH:

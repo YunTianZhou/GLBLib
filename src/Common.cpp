@@ -1,4 +1,4 @@
-#include "GLCommon.h"
+#include "Common.h"
 
 namespace glb {
 

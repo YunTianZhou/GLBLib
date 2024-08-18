@@ -1,7 +1,7 @@
-#include "GLRenderer.h"
-#include "GLVertexArray.h"
-#include "GLIndexBuffer.h"
-#include "GLShader.h"
+#include "Renderer.h"
+#include "VertexArray.h"
+#include "IndexBuffer.h"
+#include "Shader.h"
 
 namespace glb {
 

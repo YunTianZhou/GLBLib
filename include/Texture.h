@@ -1,6 +1,6 @@
 #pragma once
 
-#include "GLCommon.h"
+#include "Common.h"
 
 namespace glb {
 

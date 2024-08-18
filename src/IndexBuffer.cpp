@@ -1,4 +1,4 @@
-#include "GLIndexBuffer.h"
+#include "IndexBuffer.h"
 
 namespace glb {
 

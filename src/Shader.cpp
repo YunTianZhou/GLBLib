@@ -1,4 +1,4 @@
-#include "GLShader.h"
+#include "Shader.h"
 
 namespace glb {
 

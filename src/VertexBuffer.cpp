@@ -1,4 +1,4 @@
-#include "GLVertexBuffer.h"
+#include "VertexBuffer.h"
 
 namespace glb {
 	

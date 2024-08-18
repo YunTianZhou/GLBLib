@@ -1,20 +1,22 @@
 #pragma once
 
-#include "GLCommon.h"
+#include "Common.h"
 
 namespace glb {
 
     class GLB_API Window
     {
     public:
-        static Window& GetInstance(int width, int height, std::string name) {
+        inline static Window& GetInstance(int width, int height, std::string name) {
             static Window instance(width, height, name);
             return instance;
         }
 
         Window(Window const&) = delete;            // Disallow copy
         void operator=(Window const&) = delete;      // Disallow asign
-        ~Window() { ShutDown(), glfwTerminate(); }
+        ~Window();
+
+        void ShutDown();
 
         inline int IsExist() const { return m_isExist; }
         inline int IsOpen() const { return glfwWindowShouldClose(m_window) == GL_FALSE; }
@@ -26,16 +28,12 @@ namespace glb {
         inline void PollEvents() const { glfwPollEvents(); }
         inline void SwapBuffers() const { glfwSwapBuffers(m_window); }
 
-        inline GLFWwindow* GetWindow() { return m_window; }
-
-        void ShutDown()
-        {
-            m_isExist = false;
-            glfwSetWindowShouldClose(m_window, GL_TRUE);
-        }
+        inline GLFWwindow* GetWindow() const { return m_window; }
 
     private:
         Window(int width, int height, std::string title);
+        static void GLFWErrorCallback(int errorCode,
+                                        const char* description);
         static void GLLogMessageCallback(GLenum source,
                                          GLenum type,
                                          GLuint id,
