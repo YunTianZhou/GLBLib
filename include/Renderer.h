@@ -18,6 +18,7 @@ namespace glb {
 		static void DrawElements(const VertexArray& va, const IndexBuffer& ib, const Shader& shader, int count = -1, unsigned int first = 0);
 	
 		static void SetClearColor(float r, float g, float b, float a);
+		static void SetViewport(int x, int y, int width, int height);
 	};
 
 }

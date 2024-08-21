@@ -8,7 +8,7 @@ namespace glb {
 
         if (!stream.is_open())
         {
-            GLError("Faild to open the file '" << filepath << "'!");
+            GLError("Faild to open the file '" << filepath << "'");
             return { std::string(), std::string() };
         }
 
@@ -30,7 +30,7 @@ namespace glb {
                 else if (line.find("fragment") != std::string::npos)
                     type = ShaderType::FRAGMENT;
                 else
-                    GLError("Unknow shader source type:\n" << line);
+                    GLWarn("Unknow shader source type:\n" << line);
             }
             else
             {
@@ -133,7 +133,7 @@ namespace glb {
 
         int location = glGetUniformLocation(m_rendererID, name.c_str());
         if (location == -1)
-            GLWarn("uniform '" << name << "' doesn't exist !");
+            GLWarn("uniform '" << name << "' doesn't exist!");
 
         m_UniformLocationCoche[name] = location;
         return location;

@@ -1,10 +1,21 @@
 #include "Window.h"
 
+#include "CallbackManager.h"
+
 namespace glb {
 
+    bool Window::s_initialized = false;
+    Window Window::s_instance;
+    GLFWwindow* Window::s_window = nullptr;
+
+    Window::Window()
+        : m_isExist(false)
+    {
+
+    }
+
     Window::Window(int width, int height, std::string title)
-        : m_width(width), m_height(height), m_title(title),
-          m_aspectRatio(0), m_window(nullptr), m_isExist(false)
+        : m_title(title), m_isExist(false)
     {
         // Set glfw error callback
         glfwSetErrorCallback(GLFWErrorCallback);
@@ -19,22 +30,20 @@ namespace glb {
         glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 4);
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-        m_window = glfwCreateWindow(m_width, m_height, m_title.c_str(), nullptr, nullptr);
+        s_window = glfwCreateWindow(width, height, m_title.c_str(), nullptr, nullptr);
 
-        if (!m_window) {
+        if (!s_window) {
             GLError("Window creation failed!");
             glfwTerminate();
             return;
         }
 
-        glfwMakeContextCurrent(m_window);
-
-        m_aspectRatio = (float) m_width / (float)m_height;
+        glfwMakeContextCurrent(s_window);
 
         // Init glew
         if (glewInit() != GLEW_OK) {
             GLError("GLEW init failed!");
-            glfwDestroyWindow(m_window);
+            glfwDestroyWindow(s_window);
             glfwTerminate();
             return;
         }
@@ -43,11 +52,13 @@ namespace glb {
         glDebugMessageCallback(GLLogMessageCallback, nullptr);
         glEnable(GL_DEBUG_OUTPUT);
         glEnable(GL_DEBUG_OUTPUT_SYNCHRONOUS);
+        glfwSetWindowUserPointer(s_window, &Manager);
 
         // Set blend func and enable
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         glEnable(GL_BLEND);
 
+        s_initialized = true;
         m_isExist = true;
 
         GLLog("GLB init successfully!");
@@ -55,21 +66,26 @@ namespace glb {
 
     Window::~Window()
     {
-        ShutDown();
-        glfwDestroyWindow(m_window);
+        if (m_isExist)
+            Destory();
         glfwTerminate();
     }
 
-    void Window::ShutDown()
+    void Window::Destory()
     {
+        if (!m_isExist)
+        {
+            GLWarn("Window already terminated!");
+            return;
+        }
+        glfwSetWindowShouldClose(s_window, GL_TRUE);
+        glfwDestroyWindow(s_window);
         m_isExist = false;
-        glfwSetWindowShouldClose(m_window, GL_TRUE);
     }
 
     void Window::GLFWErrorCallback(int errorCode,
                                    const char* description)
     {
-        GLDebugbreak();
         GLError("[GLFW " << errorCode << "] " << description);
     }
 
@@ -81,8 +97,6 @@ namespace glb {
         const GLchar* message,
         const void* userParam)
     {
-        GLDebugbreak();
-
         switch (severity)
         {
         case GL_DEBUG_SEVERITY_HIGH:
@@ -97,6 +111,5 @@ namespace glb {
             break;
         }
     }
-
 
 }

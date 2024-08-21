@@ -9,6 +9,7 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
+#include <functional>
 #include <string>
 #include <vector>
 #include <unordered_map>
@@ -23,24 +24,12 @@
     #define GLB_API
 #endif
 
-#ifdef NDEBUG
-    #define GLDebugbreak()
-#else
-    #if defined(_MSC_VER) // For Microsoft Visual Studio
-        #define GLDebugbreak() __debugbreak()
-    #elif defined(__GNUC__) // For GCC or Clang
-        #define GLDebugbreak() __builtin_trap()
-    #else
-        #define GLDebugbreak() (*(volatile int*)0 = 0) // Default to a simple crash
-    #endif
-#endif
-
 #define GLSay(x) std::cout << x << std::endl
 #define GLLog(x) std::cout << "GLB Log: [" << __FUNCTION__ << "] " << x << std::endl
 #define GLWarn(x) std::cerr << "GLB Warn: [" << __FUNCTION__ << "] " << x << std::endl
 #define GLError(x) std::cerr << "GLB Error: [" << __FUNCTION__ << "] " << x << std::endl
 
-#define GLASSERT(c, x) if (!(c)) { GLError(x); GLDebugbreak(); }
+#define GLASSERT(c, x) if (!(c)) { GLError(x); }
 
 namespace glb {
 
@@ -48,12 +37,18 @@ namespace glb {
     {
         switch (type)
         {
+        case GL_INT:              return 4;
         case GL_FLOAT:            return 4;
         case GL_UNSIGNED_INT:     return 4;
+        case GL_DOUBLE:           return 8;
+        case GL_SHORT:            return 2;
         case GL_UNSIGNED_SHORT:   return 2;
         case GL_UNSIGNED_BYTE:    return 1;
+        case GL_BYTE:             return 1;
+        case GL_HALF_FLOAT:       return 2;
+        case GL_FIXED:            return 4;
         }
-        GLError("Unsupported type!");
+        GLError("Unsupported type '" << type << "'!");
         return 0;
     }
 

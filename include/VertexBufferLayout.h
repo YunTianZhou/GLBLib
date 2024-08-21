@@ -23,7 +23,7 @@ namespace glb {
 		template<typename T>
 		void Push(unsigned int count)
 		{
-			GLError("Unsupport this type!");
+			GLError("Unsupport the type '" << typeid(T) << "'!");
 		}
 
 		template<>

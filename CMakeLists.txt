@@ -12,15 +12,15 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE ${CMAKE_SOURCE_DIR}/build/Release)
 
 # Collect source files
 file(GLOB SRC_FILES
+    "${PROJECT_SOURCE_DIR}/vendor/stb_image/stb_image.cpp"
     "${PROJECT_SOURCE_DIR}/src/*.cpp"
 )
 
 # Create a shared library (DLL)
-add_library(${CMAKE_PROJECT_NAME} SHARED ${SRC_FILES})
+add_library(${CMAKE_PROJECT_NAME} SHARED ${SRC_FILES} "include/CallbackManager.h")
 
 # Define GLB_EXPORTS when building the library
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE GLB_EXPORTS)
-target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE STB_IMAGE_IMPLEMENTATION)
 
 # GLFW and GLEW settings
 set(GLFW_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/external/GLFW/include")

@@ -3,16 +3,8 @@
 #include <stb_image/stb_image.h>
 
 namespace glb {
-	Texture::Texture(const std::string& filepath)
-		: m_rendererID(0), m_filepath(filepath), m_localBuffer(nullptr),
-		  m_width(0), m_height(0), m_BPP(0)
+	void Texture::Init()
 	{
-		// Set the coordinate origin to the bottom left
-		stbi_set_flip_vertically_on_load(1);
-
-		// Load the image form the specify file
-		m_localBuffer = stbi_load(m_filepath.c_str(), &m_width, &m_height, &m_BPP, 4);
-
 		// Gen the texture and bind it
 		glGenTextures(1, &m_rendererID);
 		glBindTexture(GL_TEXTURE_2D, m_rendererID);
@@ -35,10 +27,37 @@ namespace glb {
 
 		// Unbind the texture
 		glBindTexture(GL_TEXTURE_2D, 0);
+	}
+
+	Texture::Texture(const std::string& filepath)
+		: m_rendererID(0), m_localBuffer(nullptr),
+		  m_width(0), m_height(0), m_BPP(0)
+	{
+		// Set the coordinate origin to the bottom left
+		stbi_set_flip_vertically_on_load(1);
+
+		// Load the image form the specify file
+		m_localBuffer = stbi_load(filepath.c_str(), &m_width, &m_height, &m_BPP, 4);
+
+		// Init the GL Texture
+		Init();
+
+		// Reset the coordinate origin
+		stbi_set_flip_vertically_on_load(0);
 
 		// Free the local buffer
 		if (m_localBuffer)
 			stbi_image_free(m_localBuffer);
+		else
+			GLError("Loard texture faild from file '" << filepath << "'");
+	}
+
+	Texture::Texture(int width, int height, int BPP, unsigned char* buffer)
+		: m_rendererID(0), m_localBuffer(buffer),
+		  m_width(width), m_height(height), m_BPP(BPP)
+	{
+		// Init the GL Texture based on the given buffer
+		Init();
 	}
 
 	Texture::~Texture()

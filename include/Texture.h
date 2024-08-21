@@ -6,8 +6,14 @@ namespace glb {
 
 	class GLB_API Texture
 	{
+	private:
+		void Init();
 	public:
 		Texture(const std::string& filepath);
+		Texture(int width, int height, int BPP, unsigned char* buffer);
+
+		Texture(const Texture&) = delete;
+		Texture& operator=(const Texture&) = delete;
 
 		~Texture();
 
@@ -24,10 +30,10 @@ namespace glb {
 
 		inline int GetWidth() const { return m_width; }
 		inline int GetHeight() const { return m_height; }
+		inline int GetBPP() const { return m_BPP; }
 
 	private:
 		unsigned int m_rendererID;
-		std::string m_filepath;
 		unsigned char* m_localBuffer;
 		int m_width, m_height, m_BPP;
 	};

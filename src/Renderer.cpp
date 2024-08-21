@@ -31,4 +31,9 @@ namespace glb {
 	{
 		glClearColor(r, g, b, a);
 	}
+
+	void Renderer::SetViewport(int x, int y, int width, int height)
+	{
+		glViewport(x, y, width, height);
+	}
 }
