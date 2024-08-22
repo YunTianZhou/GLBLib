@@ -22,14 +22,9 @@ add_library(${CMAKE_PROJECT_NAME} SHARED ${SRC_FILES})
 # Define GLB_EXPORTS when building the library
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE GLB_EXPORTS)
 
-# GLFW and GLEW settings
-set(GLFW_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/external/GLFW/include")
-set(GLEW_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/external/GLEW/include")
-
-set(INCLUDE_DIR "${CMAKE_SOURCE_DIR}/include")
+# Include dirs
+set(INCLUDE_DIR "${CMAKE_SOURCE_DIR}/include/GLB")
 set(VENDOR_DIR "${CMAKE_SOURCE_DIR}/vendor")
-
-include_directories(${GLFW_INCLUDE_DIR} ${GLEW_INCLUDE_DIR} ${INCLUDE_DIR} ${VENDOR_DIR})
 
 # Platform-specific settings
 if (WIN32)
@@ -42,6 +37,8 @@ if (WIN32)
         set(SUF "win32")
     endif()
 
+    set(GLFW_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/external/GLFW/include")
+    set(GLEW_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/external/GLEW/include")
     set(GLFW_LIBRARY_DIR "${CMAKE_SOURCE_DIR}/external/GLFW/lib/Release/${SUF}")
     set(GLEW_LIBRARY_DIR "${CMAKE_SOURCE_DIR}/external/GLEW/lib/Release/${SUF}")
     set(GLFW_BIN_DIR "${CMAKE_SOURCE_DIR}/external/GLFW/bin/Release/${SUF}")
@@ -49,6 +46,9 @@ if (WIN32)
     
     set(GLFW_LIBRARY "${GLFW_LIBRARY_DIR}/glfw3dll.lib")
     set(GLEW_LIBRARY "${GLEW_LIBRARY_DIR}/glew32.lib")
+
+
+    include_directories(${GLFW_INCLUDE_DIR} ${GLEW_INCLUDE_DIR} ${INCLUDE_DIR} ${VENDOR_DIR})
 
     target_link_libraries(${CMAKE_PROJECT_NAME} ${GLFW_LIBRARY} ${GLEW_LIBRARY} OpenGL32.lib)
 
@@ -70,7 +70,7 @@ elseif (UNIX)
     pkg_search_module(GLEW REQUIRED glew)
 
     # Include directories for GLFW and GLEW
-    include_directories(${GLFW_INCLUDE_DIRS} ${GLEW_INCLUDE_DIRS})
+    include_directories(${GLFW_INCLUDE_DIRS} ${GLEW_INCLUDE_DIRS} ${VENDOR_DIR})
 
     # Link directories for GLFW and GLEW (if needed)
     link_directories(${GLFW_LIBRARY_DIRS} ${GLEW_LIBRARY_DIRS})
