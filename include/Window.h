@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Common.h"
 #include "Icon.h"
+#include "Enum.h"
 
 namespace glb {
 
@@ -14,7 +14,14 @@ namespace glb {
         struct Position_t { int x = 0, y = 0; };
         enum class Callback
         {
-
+            Close = 0,              // Close window callback (None)
+            Size = 1,               // Resize window resize callback (int width, int height)
+            FramebufferSize = 2,    // Set Framebuffer size callback (int width, int height)
+            Position = 3,           // Move window callback (int xpos, int ypos)
+            Iconify = 4,            // Window iconification callback (int iconified)
+            Maximize = 5,           // Window maximization callback (int maximized)
+            Focus = 6,              // Window Focus callback (int focused)
+            Refresh = 7,            // Window damage and refresh callback (None)
         };
     public:
         inline static Window& GetInstance(int width, int height, std::string name) 
@@ -27,7 +34,7 @@ namespace glb {
         {
             if (!s_initialized) 
             {
-                GLError("Window instance has not been initialized!");
+                GLBErrL(ObjectNonExist, "Window instance has not been initialized!");
             }
             return s_instance;
         }
@@ -39,6 +46,9 @@ namespace glb {
         ~Window();
 
         void Destory();
+
+        bool SetCallback(Callback type, void* callback);
+        bool DisableCallback(Callback type);
 
         // Get Functions
         inline int IsExist() const { return m_isExist; }
@@ -58,6 +68,7 @@ namespace glb {
         inline void SetSzie(Size_t size) const { glfwSetWindowSize(s_window, size.width, size.height); }
         inline void SetSizeLimit(int minWidth, int minHeight, int maxWidth, int maxHeight) const { glfwSetWindowSizeLimits(s_window, minWidth, minHeight, maxWidth, maxHeight); }
         inline void SetSizeLimit(Size_t min, Size_t max) const { glfwSetWindowSizeLimits(s_window, min.width, min.height, max.width, max.height); }
+        inline void DisableSizeLimit() const { glfwSetWindowSizeLimits(s_window, Enum::DontCare, Enum::DontCare, Enum::DontCare, Enum::DontCare); }
 
         inline void SetTitle(std::string title);
         inline void SetIcon(const Icon& icon) const;
@@ -66,18 +77,21 @@ namespace glb {
         inline void SetIconAndFree(Icon icons[], int size) const;
         inline void SetDefaultIcon() const { glfwSetWindowIcon(s_window, 0, nullptr); }
 
-        inline void DisableSizeLimit() const { glfwSetWindowSizeLimits(s_window, GLFW_DONT_CARE, GLFW_DONT_CARE, GLFW_DONT_CARE, GLFW_DONT_CARE); }
         inline void SetAspectRatio(int numer, int denom) const { glfwSetWindowAspectRatio(s_window, numer, denom); }
-        inline void DisableAspectRatio() const { glfwSetWindowAspectRatio(s_window, GLFW_DONT_CARE, GLFW_DONT_CARE); }
+        inline void DisableAspectRatio() const { glfwSetWindowAspectRatio(s_window, Enum::DontCare, Enum::DontCare); }
         inline void SetPosition(int xpos, int ypos) const { glfwSetWindowPos(s_window, xpos, ypos); }
         inline void SetOpacity(float opacity) const { glfwSetWindowOpacity(s_window, opacity); }
         inline void SetSwapInterval(int interval) const { glfwSwapInterval(1); }
 
         inline void Iconify() const { glfwIconifyWindow(s_window); }
         inline void Maximize() const { glfwMaximizeWindow(s_window); }
+        inline void Restore() const { glfwRestoreWindow(s_window); }
+        inline void EnableResize() const { glfwSetWindowAttrib(s_window, GLFW_RESIZABLE, GL_TRUE); }
+        inline void DisableResize() const { glfwSetWindowAttrib(s_window, GLFW_RESIZABLE, GL_FALSE); }
+
         inline void Hide() const { glfwHideWindow(s_window); }
         inline void Show() const { glfwShowWindow(s_window); }
-        inline void Pin() const { glfwFocusWindow(s_window); }
+        inline void Focus() const { glfwFocusWindow(s_window); }
         inline void RequestAttention() const { glfwRequestWindowAttention(s_window); }
 
         // Other functions

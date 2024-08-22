@@ -1,3 +1,4 @@
+#include "Enum.h"
 #include "VertexArray.h"
 #include "VertexBuffer.h"
 #include "VertexBufferLayout.h"
@@ -26,7 +27,7 @@ namespace glb {
 			glEnableVertexAttribArray(m_index);
 			glVertexAttribPointer(m_index, element.count, element.type, element.normalized,
 				layout.GetStride(), (void*)offset);
-			offset += GetSizeOfType(element.type) * element.count;
+			offset += Enum::GetSizeOfType(element.type) * element.count;
 			m_index++;
 		}
 	}

@@ -1,5 +1,10 @@
 #pragma once
-#include "Common.h"
+
+#include <string>
+
+#include "Export.h"
+
+struct GLFWimage;
 
 namespace glb {
 

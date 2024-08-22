@@ -1,6 +1,7 @@
 #include "Texture.h"
 
 #include <stb_image/stb_image.h>
+#include "Debug.h"
 
 namespace glb {
 	void Texture::Init()
@@ -42,14 +43,11 @@ namespace glb {
 		// Init the GL Texture
 		Init();
 
-		// Reset the coordinate origin
-		stbi_set_flip_vertically_on_load(0);
-
 		// Free the local buffer
 		if (m_localBuffer)
 			stbi_image_free(m_localBuffer);
 		else
-			GLError("Loard texture faild from file '" << filepath << "'");
+			GLBErrL(LoadImageFaild, "Load texture faild from file '" << filepath << "'");
 	}
 
 	Texture::Texture(int width, int height, int BPP, unsigned char* buffer)

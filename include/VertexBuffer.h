@@ -1,17 +1,17 @@
 #pragma once
 
-#include "Common.h"
+#include "Enum.h"
 
 namespace glb {
 
 	class GLB_API VertexBuffer
 	{
 	public:
-		VertexBuffer(unsigned int usage);
+		VertexBuffer(BufferUsage usage);
 
-		VertexBuffer(int size, unsigned int usage);
+		VertexBuffer(int size, BufferUsage usage);
 
-		VertexBuffer(float vertices[], int size, unsigned int usage);
+		VertexBuffer(float vertices[], int size, BufferUsage usage);
 
 		~VertexBuffer();
 
@@ -19,12 +19,13 @@ namespace glb {
 		inline void Unbind() const { glBindBuffer(GL_ARRAY_BUFFER, 0); }
 
 		inline int GetSize() const { return m_size; }
+		inline BufferUsage GetUsage() const { return m_usage; }
 
-		void SetData(int size, float vertices[]);
+		void SetData(float vertices[], int size);
 
 	private:
 		int m_size;
-		unsigned int m_usage;
+		BufferUsage m_usage;
 		unsigned int m_rendererID;
 	};
 

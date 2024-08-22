@@ -1,5 +1,9 @@
 #pragma once
-#include "Common.h"
+
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+#include <string>
+#include "Export.h"
 
 namespace glb {
 
@@ -144,8 +148,8 @@ namespace glb {
 
 		enum class Callback
 		{
-			Key = 0,		// Key input (glfwSetKeyCallback)
-			Char = 1		// Text input callback (glfwSetCharCallback)
+			Key = 0,		// Key input (int key, int scancode, int action, int mods)
+			Char = 1		// Text input callback (unsigned int codepoint)
 		};
 
 		static bool IsPressed(Type key);
@@ -154,6 +158,7 @@ namespace glb {
 		static std::string ToString(Type key);
 		static std::string ToString(int scancode);
 		static bool SetCallback(Callback type, void* callback);
+		static bool DisableCallback(Callback type);
 	};
 
 }

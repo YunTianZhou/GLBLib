@@ -10,7 +10,7 @@ namespace glb {
         int id = (int) button;
         if (id < 0 || id > (int) Button::Last)
         {
-            GLWarn("Invalid mouse button '" << id << "'");
+            GLBWarnH(InvalidEnum, "Invalid mouse button '" << id << "'");
             return false;
         }
         return glfwGetMouseButton(Window::GetGLFWwindow(), id);
@@ -30,11 +30,16 @@ namespace glb {
             case Callback:: ## e: \
             { \
                 Manager.Cursor. ## e = callback;\
-                f(Window::GetGLFWwindow(), \
-                    +[] p { \
-                        void* func = ((CallbackManager*) glfwGetWindowUserPointer(Window::GetGLFWwindow()))->Cursor. ## e; \
-                        (t func) a; \
-                    }); \
+                if (callback) \
+                { \
+                    f(Window::GetGLFWwindow(), \
+                        +[] p { \
+                            void* func = ((CallbackManager*) glfwGetWindowUserPointer(Window::GetGLFWwindow()))->Cursor. ## e; \
+                            (t func) a; \
+                        }); \
+		            } \
+                else \
+                    f(Window::GetGLFWwindow(), nullptr); \
             } \
                 break
 
@@ -45,11 +50,15 @@ namespace glb {
         Case(MouseButton, glfwSetMouseButtonCallback, (GLFWwindow* window, int button, int action, int mods), (void (*) (int, int, int)), (button, action, mods));
         Case(Scroll, glfwSetScrollCallback, (GLFWwindow* window, double xoffset, double yoffset), (void (*) (double, double)), (xoffset, yoffset));
         default:
-            GLWarn("Invalid cursor callback type '" << (int) type << "'");
+            GLBWarnH(InvalidCallbackType, "Invalid cursor callback type '" << (int) type << "'");
             return false;
         }
         return true;
         
         #undef Case
+    }
+    bool Cursor::DisableCallback(Callback type)
+    {
+        return SetCallback(type, nullptr);
     }
 }

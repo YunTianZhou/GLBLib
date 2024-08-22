@@ -2,28 +2,28 @@
 
 namespace glb {
 	
-	VertexBuffer::VertexBuffer(unsigned int usage)
+	VertexBuffer::VertexBuffer(BufferUsage usage)
 		: m_size(1), m_usage(usage)
 	{
 		glGenBuffers(1, &m_rendererID);
 		glBindBuffer(GL_ARRAY_BUFFER, m_rendererID);
-		glBufferData(GL_ARRAY_BUFFER, 1, nullptr, usage);
+		glBufferData(GL_ARRAY_BUFFER, 1, nullptr, (unsigned int) usage);
 	}
 
-	VertexBuffer::VertexBuffer(int size, unsigned int usage)
+	VertexBuffer::VertexBuffer(int size, BufferUsage usage)
 		: m_size(size), m_usage(usage)
 	{
 		glGenBuffers(1, &m_rendererID);
 		glBindBuffer(GL_ARRAY_BUFFER, m_rendererID);
-		glBufferData(GL_ARRAY_BUFFER, size, nullptr, usage);
+		glBufferData(GL_ARRAY_BUFFER, size, nullptr, (unsigned int) usage);
 	}
 
-	VertexBuffer::VertexBuffer(float vertices[], int size, unsigned int usage)
+	VertexBuffer::VertexBuffer(float vertices[], int size, BufferUsage usage)
 		: m_size(size), m_usage(usage)
 	{
 		glGenBuffers(1, &m_rendererID);
 		glBindBuffer(GL_ARRAY_BUFFER, m_rendererID);
-		glBufferData(GL_ARRAY_BUFFER, size, vertices, usage);
+		glBufferData(GL_ARRAY_BUFFER, size, vertices, (unsigned int) usage);
 	}
 
 	VertexBuffer::~VertexBuffer()
@@ -31,10 +31,10 @@ namespace glb {
 		glDeleteBuffers(1, &m_rendererID);
 	}
 
-	void VertexBuffer::SetData(int size, float vertices[])
+	void VertexBuffer::SetData(float vertices[], int size)
 	{
 		Bind();
-		glBufferData(GL_ARRAY_BUFFER, size, vertices, m_usage);
+		glBufferData(GL_ARRAY_BUFFER, size, vertices, (unsigned int) m_usage);
 		m_size = size;
 	}
 

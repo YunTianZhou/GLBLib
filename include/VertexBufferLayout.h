@@ -1,6 +1,7 @@
 #pragma once
 
-#include "Common.h"
+#include <vector>
+#include "Enum.h"
 
 namespace glb {
 
@@ -23,28 +24,28 @@ namespace glb {
 		template<typename T>
 		void Push(unsigned int count)
 		{
-			GLError("Unsupport the type '" << typeid(T) << "'!");
+			GLBErrL(UnknowType, "Unsupport the type '" << typeid(T) << "'!");
 		}
 
 		template<>
 		void Push<float>(unsigned int count)
 		{
-			m_elements.push_back({ GL_FLOAT, count, GL_FALSE });
-			m_stride += count * GetSizeOfType(GL_FLOAT);
+			m_elements.push_back({ Enum::Float, count, GL_FALSE });
+			m_stride += count * Enum::GetSizeOfType(Enum::Float);
 		}
 
 		template<>
 		void Push<unsigned int>(unsigned int count)
 		{
-			m_elements.push_back({ GL_UNSIGNED_INT, count, GL_FALSE });
-			m_stride += count * GetSizeOfType(GL_UNSIGNED_INT);
+			m_elements.push_back({ Enum::Uint, count, GL_FALSE });
+			m_stride += count * Enum::GetSizeOfType(Enum::Uint);
 		}
 
 		template<>
 		void Push<unsigned char>(unsigned int count)
 		{
-			m_elements.push_back({ GL_UNSIGNED_BYTE, count, GL_TRUE });
-			m_stride += count * GetSizeOfType(GL_UNSIGNED_BYTE);
+			m_elements.push_back({ Enum::Ubyte, count, GL_TRUE });
+			m_stride += count * Enum::GetSizeOfType(Enum::Ubyte);
 		}
 
 		inline const std::vector <VertexBufferElement>GetElements() const { return m_elements; }

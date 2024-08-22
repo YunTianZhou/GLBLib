@@ -1,18 +1,25 @@
 #include "Icon.h"
 
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
 #include <stb_image/stb_image.h>
+#include "Debug.h"
+
 
 namespace glb {
 
 	Icon::Icon(const std::string& filepath)
 		: m_width(0), m_height(0), m_pixels(nullptr)
 	{
+		// Set the coordinate origin to the bottom left
+		stbi_set_flip_vertically_on_load(0);
+
 		// Load the image form the specify file
 		int channels;
 		m_pixels = stbi_load(filepath.c_str(), &m_width, &m_height, &channels, 4);
-		if (!m_pixels)
-			GLError("Loard icon faild from file '" << filepath << "'");
+		GLBAssertEL(m_pixels, LoadImageFaild, "Loard icon faild from file '" << filepath << "'");
 	}
+
 	Icon::Icon(int width, int height, unsigned char* pixels)
 		: m_width(width), m_height(height), m_pixels(pixels)
 	{
@@ -20,10 +27,7 @@ namespace glb {
 
 	Icon::Icon(Icon&& other) noexcept
 	{
-		if (!other.m_pixels)
-		{
-			GLWarn("Move a non-exist icon!");
-		}
+		GLBAssertWL(other.m_pixels, ObjectNonExist, "Move a non-exist icon!");
 
 		m_width = other.m_width;
 		m_height = other.m_height;
@@ -50,7 +54,7 @@ namespace glb {
 	Icon::Icon(const Icon& other) noexcept
 		: m_width(other.m_width), m_height(other.m_height), m_pixels(nullptr)
 	{
-		GLLog("Copy icon!");
+		GLBWarnL(CopyLargeMemory, "Copy icon!");
 		if (other.m_pixels)
 		{
 			m_pixels = new unsigned char[m_width * m_height * 4];
@@ -58,7 +62,7 @@ namespace glb {
 		}
 		else
 		{
-			GLWarn("Copy a non-exist icon!");
+			GLBWarnL(ObjectNonExist, "Copy a non-exist icon!");
 		}
 	}
 	Icon& Icon::operator=(const Icon& other) noexcept
@@ -66,7 +70,7 @@ namespace glb {
 		if (this == &other)
 			return *this;
 
-		GLLog("Copy icon!");
+		GLBWarnL(CopyLargeMemory, "Copy icon!");
 
 		if (m_pixels)
 			Free();
@@ -81,7 +85,7 @@ namespace glb {
 		}
 		else
 		{
-			GLWarn("Copy a non-exist icon!");
+			GLBWarnL(ObjectNonExist, "Copy a non-exist icon!");
 			m_pixels = nullptr;
 		}
 
@@ -93,7 +97,7 @@ namespace glb {
 	{
 		if (!m_pixels)
 		{
-			GLWarn("Icon is already free!");
+			GLBWarnL(DoubleFree, "Icon is already free!");
 			return;
 		}
 		stbi_image_free(m_pixels);
@@ -111,7 +115,7 @@ namespace glb {
 	{
 		if (!m_pixels)
 		{
-			GLWarn("Icon does not exist!");
+			GLBWarnL(ObjectNonExist, "Icon does not exist!");
 			return { 0, 0, nullptr };
 		}
 		return { m_width, m_height, m_pixels };

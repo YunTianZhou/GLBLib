@@ -22,18 +22,19 @@ namespace glb {
 
         // Init glfw
         if (!glfwInit()) {
-            GLError("GLFW init failed!");
+            GLBErrH(GLFWErr, "GLFW init failed!");
             return;
         }
-
+        
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
         glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 4);
+        glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
         s_window = glfwCreateWindow(width, height, m_title.c_str(), nullptr, nullptr);
 
         if (!s_window) {
-            GLError("Window creation failed!");
+            GLBErrH(GLFWErr, "Window creation failed!");
             glfwTerminate();
             return;
         }
@@ -42,7 +43,7 @@ namespace glb {
 
         // Init glew
         if (glewInit() != GLEW_OK) {
-            GLError("GLEW init failed!");
+            GLBErrH(GLEWErr, "GLEW init failed!");
             glfwDestroyWindow(s_window);
             glfwTerminate();
             return;
@@ -61,7 +62,7 @@ namespace glb {
         s_initialized = true;
         m_isExist = true;
 
-        GLLog("GLB init successfully!");
+        GLBLog("GLB init successfully!");
     }
 
     Window::~Window()
@@ -75,7 +76,7 @@ namespace glb {
     {
         if (!m_isExist)
         {
-            GLWarn("Window already terminated!");
+            GLBWarnL(DoubleFree, "Window already terminated!");
             return;
         }
         glfwSetWindowShouldClose(s_window, GL_TRUE);
@@ -83,10 +84,54 @@ namespace glb {
         m_isExist = false;
     }
 
+    bool Window::SetCallback(Callback type, void* callback)
+    {
+        // Enum, func, Parameters, CallbackFuncType, Args
+        #define Case(e, f, p, t, a) \
+            case Callback:: ## e: \
+            { \
+                Manager.Window. ## e = callback;\
+                if (callback) \
+                { \
+                    f(s_window, \
+                        + [] p{ \
+                            void* func = ((CallbackManager*)glfwGetWindowUserPointer(s_window))->Window. ## e; \
+                            (t func) a; \
+                        }); \
+                } \
+                else \
+                    f(s_window, nullptr); \
+            } \
+                break
+
+        switch (type)
+        {
+        Case(Close, glfwSetWindowCloseCallback, (GLFWwindow* window), (void (*) ()), ());
+        Case(Size, glfwSetWindowSizeCallback, (GLFWwindow* window, int width, int height), (void (*) (int, int)), (width, height));
+        Case(FramebufferSize, glfwSetFramebufferSizeCallback, (GLFWwindow* window, int width, int height), (void (*) (int, int)), (width, height));
+        Case(Position, glfwSetWindowPosCallback, (GLFWwindow* window, int xpos, int ypos), (void (*) (int, int)), (xpos, ypos));
+        Case(Iconify, glfwSetWindowIconifyCallback, (GLFWwindow* window, int iconified), (void (*) (int)), (iconified));
+        Case(Maximize, glfwSetWindowMaximizeCallback, (GLFWwindow* window, int maximized), (void (*) (int)), (maximized));
+        Case(Focus, glfwSetWindowFocusCallback, (GLFWwindow* window, int focused), (void (*) (int)), (focused));
+        Case(Refresh, glfwSetWindowRefreshCallback, (GLFWwindow* window), (void (*) ()), ());
+        default:
+            GLBWarnH(InvalidCallbackType, "Invalid window callback type '" << (int) type << "'");
+            return false;
+        }
+        return true;
+
+        #undef Case
+    }
+
+    bool Window::DisableCallback(Callback type)
+    {
+        return SetCallback(type, nullptr);
+    }
+
     void Window::GLFWErrorCallback(int errorCode,
                                    const char* description)
     {
-        GLError("[GLFW " << errorCode << "] " << description);
+        GLBErrH(GLFWErr, "[GLFW " << errorCode << "] " << description);
     }
 
     void Window::GLLogMessageCallback(GLenum source,
@@ -100,14 +145,13 @@ namespace glb {
         switch (severity)
         {
         case GL_DEBUG_SEVERITY_HIGH:
-            GLError("[OpenGL Debug HIGH] " << message);
-            throw std::runtime_error(message);
+            GLBErrH(OpenGLErr, "[OpenGL Debug HIGH] " << message);
             break;
         case GL_DEBUG_SEVERITY_MEDIUM:
-            GLError("[OpenGL Debug MEDIUM] " << message);
+            GLBErrL(OpenGLErr, "[OpenGL Debug MEDIUM] " << message);
             break;
         case GL_DEBUG_SEVERITY_LOW:
-            GLError("[OpenGL Debug LOW] " << message);
+            GLBWarnH(OpenGLErr, "[OpenGL Debug LOW] " << message);
             break;
         }
     }

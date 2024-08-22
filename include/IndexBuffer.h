@@ -1,20 +1,20 @@
 #pragma once
 
-#include "Common.h"
+#include "Enum.h"
 
 namespace glb {
 
 	class GLB_API IndexBuffer
 	{
 	private:
-		void Init(void* indices, unsigned int count, unsigned int usage, unsigned int type);
+		void Init(void* indices, unsigned int count, BufferUsage usage, unsigned int type);
 
 	public:
-		IndexBuffer(unsigned int usage, unsigned int type = GL_UNSIGNED_INT);
+		IndexBuffer(BufferUsage usage, unsigned int type = Enum::Uint);
 
-		IndexBuffer(unsigned int count, unsigned int usage, unsigned int type = GL_UNSIGNED_INT);
+		IndexBuffer(unsigned int count, BufferUsage usage, unsigned int type = Enum::Uint);
 
-		IndexBuffer(void* indices, int count, unsigned int usage, unsigned int type = GL_UNSIGNED_INT);
+		IndexBuffer(void* indices, int count, BufferUsage usage, unsigned int type = Enum::Uint);
 
 		~IndexBuffer();
 
@@ -23,12 +23,13 @@ namespace glb {
 
 		inline int GetCount() const { return m_count; }
 		inline unsigned int GetType() const { return m_type; }
+		inline BufferUsage GetUsage() const { return m_usage; }
 
 		void SetData(unsigned int count, void* indices);
 
 	private:
 		unsigned int m_count;
-		unsigned int m_usage;
+		BufferUsage m_usage;
 		unsigned int m_type;
 		unsigned int m_rendererID;
 	};

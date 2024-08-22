@@ -1,6 +1,8 @@
 #pragma once
 
-#include "Common.h"
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+#include "Export.h"
 
 namespace glb {
 

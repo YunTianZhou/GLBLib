@@ -1,5 +1,10 @@
 #include "Shader.h"
 
+#include <fstream>
+#include <glm/gtc/type_ptr.hpp>
+
+#include "Debug.h"
+
 namespace glb {
 
     ShaderProgramSource ShaderProgramSource::ReadFromFile(const std::string& filepath)
@@ -8,7 +13,7 @@ namespace glb {
 
         if (!stream.is_open())
         {
-            GLError("Faild to open the file '" << filepath << "'");
+            GLBErrH(OpenFileFaild, "Faild to open the file '" << filepath << "'");
             return { std::string(), std::string() };
         }
 
@@ -30,14 +35,14 @@ namespace glb {
                 else if (line.find("fragment") != std::string::npos)
                     type = ShaderType::FRAGMENT;
                 else
-                    GLWarn("Unknow shader source type:\n" << line);
+                    GLBWarnH(UnknowType, "Unknow shader source type:\n" << line);
             }
             else
             {
                 if (type != ShaderType::NONE)
                     ss[(int)type] << line << "\n";
                 else
-                    GLWarn("Does not specify a shader type!");
+                    GLBWarnL(UnknowType, "Does not specify a shader type!");
             }
         }
 
@@ -117,9 +122,9 @@ namespace glb {
 
             char* buffer = new char[length];
             glGetShaderInfoLog(id, length, &length, buffer);
-            GLError("Faild to compile " <<
+            GLBErrH(ShaderCompiledFaild, "Faild to compile " <<
                 (type == GL_VERTEX_SHADER ? "vertx" : "fragment") << "shader!");
-            GLSay(buffer);
+            GLBSay(buffer);
             delete[] buffer;
         }
 
@@ -133,7 +138,7 @@ namespace glb {
 
         int location = glGetUniformLocation(m_rendererID, name.c_str());
         if (location == -1)
-            GLWarn("uniform '" << name << "' doesn't exist!");
+            GLBWarnH(UnknowUniform, "Uniform '" << name << "' doesn't exist!");
 
         m_UniformLocationCoche[name] = location;
         return location;

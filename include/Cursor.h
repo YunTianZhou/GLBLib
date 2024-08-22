@@ -1,6 +1,8 @@
 #pragma once 
 
-#include "Common.h"
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+#include "Export.h"
 
 namespace glb {
 
@@ -28,15 +30,16 @@ namespace glb {
         };
         enum class Callback
         {
-            Position = 0,       // Cursor position callback (glfwSetCursorPosCallback)
-            Enter = 1,          // Cursor enter/leave callback (glfwSetCursorEnterCallback)
-            MouseButton = 2,    // Mouse button callback (glfwSetMouseButtonCallback)
-            Scroll = 3,         // Scroll callback (glfwSetScrollCallback)
+            Position = 0,       // Cursor position callback (double xpos, double ypos)
+            Enter = 1,          // Cursor enter/leave callback (int enter)
+            MouseButton = 2,    // Mouse button callback (int button, int action, int mods)
+            Scroll = 3,         // Scroll callback (double xoffset, double yoffset)
         };
     public:
         static bool IsButtonPressed(Button button);
         static Position GetPosition();
         static bool SetCallback(Callback type, void* callback);
+        static bool DisableCallback(Callback type);
     };
 
 }

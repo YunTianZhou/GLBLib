@@ -17,7 +17,7 @@ file(GLOB SRC_FILES
 )
 
 # Create a shared library (DLL)
-add_library(${CMAKE_PROJECT_NAME} SHARED ${SRC_FILES} "include/CallbackManager.h")
+add_library(${CMAKE_PROJECT_NAME} SHARED ${SRC_FILES})
 
 # Define GLB_EXPORTS when building the library
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE GLB_EXPORTS)
