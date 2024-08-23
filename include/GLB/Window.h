@@ -24,20 +24,8 @@ namespace glb {
             Refresh = 7,            // Window damage and refresh callback (None)
         };
     public:
-        inline static Window& GetInstance(int width, int height, std::string name) 
-        {
-            static Window instance(width, height, name);
-            return instance;
-        }
-
-        static Window& GetInstance() 
-        {
-            if (!s_initialized) 
-            {
-                GLBErrL(ObjectNonExist, "Window instance has not been initialized!");
-            }
-            return s_instance;
-        }
+        inline static Window& Create(int width, int height, std::string name);
+        inline static Window& GetInstance();
 
         inline static GLFWwindow* GetGLFWwindow() { return s_window; }
 
@@ -118,6 +106,18 @@ namespace glb {
         std::string m_title;
         bool m_isExist;
     };
+
+    inline Window& Window::Create(int width, int height, std::string name)
+    {
+        static Window instance(width, height, name);
+        return instance;
+    }
+
+    inline Window& Window::GetInstance()
+    {
+        GLBAssertEL(s_initialized, ObjectNonExist, "Window instance has not been initialized!");
+        return s_instance;
+    }
 
     inline Window::Size_t Window::GetSize() const
     {
