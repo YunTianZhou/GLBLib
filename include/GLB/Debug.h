@@ -1,4 +1,5 @@
 #pragma once
+
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -8,7 +9,7 @@
 #define GLBSay(x) std::cout << x << std::endl
 #define GLBLog(x) std::cout << "GLB Log: [" << __FUNCTION__ << "] " << x << std::endl
 
-#define GLBDebug(p, l, t, m) Debug::Log(p, __FILE__, __FUNCTION__, __LINE__, l, glb::Debug::Type:: ## t, (std::stringstream() << m).str())
+#define GLBDebug(p, l, t, m) Debug::Log(p, __FILE__, __FUNCTION__, __LINE__, l, glb::Debug::Type::t, (std::stringstream() << m).str())
 #define GLBWarnL(t, m) GLBDebug("Warn Low", glb::Debug::Level::WarnLow, t, m)
 #define GLBWarnH(t, m) GLBDebug("Warn High", glb::Debug::Level::WarnHigh, t, m)
 #define GLBErrL(t, m) GLBDebug("Error Low", glb::Debug::Level::ErrorLow, t, m)
@@ -28,10 +29,10 @@ namespace glb {
 	public:
 		enum class Level
 		{
-			WarnLow, 
-			WarnHigh, 
-			ErrorLow, 
-			ErrorHigh, 
+			WarnLow,
+			WarnHigh,
+			ErrorLow,
+			ErrorHigh,
 		};
 
 		enum class Type
@@ -46,12 +47,13 @@ namespace glb {
 			// Memory
 			ObjectNonExist,
 			DoubleFree,
-			CopyLargeMemory,
+			CopyImage,
 
 			// Falid
 			OpenFileFaild,
 			ShaderCompiledFaild,
 			LoadImageFaild,
+			SaveImageFaild,
 
 			// GLFW / GL Error
 			GLFWErr,
@@ -60,11 +62,11 @@ namespace glb {
 		};
 
 		using CallbackFunc = void (*) (const std::string& file,
-									   const std::string& function,
-									   int line,
-									   Level level, 
-									   Type type, 
-									   const std::string& message);
+			                           const std::string& function,
+			                           int line,
+			                           Level level,
+			                           Type type,
+			                           const std::string& message);
 	public:
 		inline static void SetCallback(CallbackFunc callback);
 		inline static void DisableCallback();

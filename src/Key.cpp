@@ -7,7 +7,7 @@ namespace glb {
 
 	bool Key::IsPressed(Type key)
 	{
-		int state = glfwGetKey(Window::GetGLFWwindow(), (int) key);
+		int state = glfwGetKey(Window::GetGLFWwindow(), (int)key);
 		return state == GLFW_PRESS;
 	}
 
@@ -18,18 +18,18 @@ namespace glb {
 
 	int Key::GetScanCode(Type key)
 	{
-		return glfwGetKeyScancode((int) key);
+		return glfwGetKeyScancode((int)key);
 	}
 
 	std::string Key::ToString(Type key)
 	{
-		const char* name = glfwGetKeyName((int) key, 0);
+		const char* name = glfwGetKeyName((int)key, 0);
 		return name ? std::string(name) : "Unknown Key";
 	}
 
 	std::string Key::ToString(int scancode)
 	{
-		const char* name = glfwGetKeyName((int) Type::Unknow, scancode);
+		const char* name = glfwGetKeyName((int)Type::Unknow, scancode);
 		return name ? std::string(name) : "Unknown Key";
 	}
 
@@ -37,14 +37,14 @@ namespace glb {
 	{
 		// Enum, func, Parameters, CallbackFuncType, Args
 		#define Case(e, f, p, t, a) \
-            case Callback:: ## e: \
+            case Callback::e: \
             { \
-                Manager.Key. ## e = callback;\
+                Manager.Key.e = callback;\
                 if (callback) \
                 { \
 					f(Window::GetGLFWwindow(), \
 						+[] p { \
-							void* func = ((CallbackManager*) glfwGetWindowUserPointer(Window::GetGLFWwindow()))->Key. ## e; \
+							void* func = ((CallbackManager*) glfwGetWindowUserPointer(Window::GetGLFWwindow()))->Key.e; \
 							(t func) a; \
 						}); \
 					} \
@@ -55,10 +55,10 @@ namespace glb {
 
 		switch (type)
 		{
-			Case(Key, glfwSetKeyCallback, (GLFWwindow* window, int key, int scancode, int action, int mods), (void (*) (int, int, int, int)), (key, scancode, action, mods));
-			Case(Char, glfwSetCharCallback, (GLFWwindow* window, unsigned int codepoint), (void (*) (unsigned int)), (codepoint));
+			Case(Key, glfwSetKeyCallback, (GLFWwindow * window, int key, int scancode, int action, int mods), (void (*) (int, int, int, int)), (key, scancode, action, mods));
+			Case(Char, glfwSetCharCallback, (GLFWwindow * window, unsigned int codepoint), (void (*) (unsigned int)), (codepoint));
 		default:
-			GLBWarnH(InvalidCallbackType, "Invalid key callback type '" << (int) type << "'");
+			GLBWarnH(InvalidCallbackType, "Invalid key callback type '" << (int)type << "'");
 			return false;
 		}
 		return true;

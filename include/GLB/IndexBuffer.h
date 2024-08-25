@@ -10,7 +10,7 @@ namespace glb {
 		void Init(void* indices, unsigned int count, BufferUsage usage, unsigned int type);
 
 	public:
-		IndexBuffer(BufferUsage usage, unsigned int type = Enum::Uint);
+		explicit IndexBuffer(BufferUsage usage, unsigned int type = Enum::Uint);
 
 		IndexBuffer(unsigned int count, BufferUsage usage, unsigned int type = Enum::Uint);
 

@@ -25,7 +25,7 @@ namespace glb {
             GLBErrH(GLFWErr, "GLFW init failed!");
             return;
         }
-        
+
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
         glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 4);
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
@@ -76,9 +76,10 @@ namespace glb {
     {
         if (!m_isExist)
         {
-            GLBWarnL(DoubleFree, "Window already terminated!");
+            GLBWarnL(DoubleFree, "Window already destoryed!");
             return;
         }
+        GLBLog("Destory window!");
         glfwSetWindowShouldClose(s_window, GL_TRUE);
         glfwDestroyWindow(s_window);
         m_isExist = false;
@@ -88,14 +89,14 @@ namespace glb {
     {
         // Enum, func, Parameters, CallbackFuncType, Args
         #define Case(e, f, p, t, a) \
-            case Callback:: ## e: \
+            case Callback::e: \
             { \
-                Manager.Window. ## e = callback;\
+                Manager.Window.e = callback;\
                 if (callback) \
                 { \
                     f(s_window, \
                         + [] p{ \
-                            void* func = ((CallbackManager*)glfwGetWindowUserPointer(s_window))->Window. ## e; \
+                            void* func = ((CallbackManager*)glfwGetWindowUserPointer(s_window))->Window.e; \
                             (t func) a; \
                         }); \
                 } \
@@ -106,16 +107,16 @@ namespace glb {
 
         switch (type)
         {
-        Case(Close, glfwSetWindowCloseCallback, (GLFWwindow* window), (void (*) ()), ());
-        Case(Size, glfwSetWindowSizeCallback, (GLFWwindow* window, int width, int height), (void (*) (int, int)), (width, height));
-        Case(FramebufferSize, glfwSetFramebufferSizeCallback, (GLFWwindow* window, int width, int height), (void (*) (int, int)), (width, height));
-        Case(Position, glfwSetWindowPosCallback, (GLFWwindow* window, int xpos, int ypos), (void (*) (int, int)), (xpos, ypos));
-        Case(Iconify, glfwSetWindowIconifyCallback, (GLFWwindow* window, int iconified), (void (*) (int)), (iconified));
-        Case(Maximize, glfwSetWindowMaximizeCallback, (GLFWwindow* window, int maximized), (void (*) (int)), (maximized));
-        Case(Focus, glfwSetWindowFocusCallback, (GLFWwindow* window, int focused), (void (*) (int)), (focused));
-        Case(Refresh, glfwSetWindowRefreshCallback, (GLFWwindow* window), (void (*) ()), ());
+            Case(Close, glfwSetWindowCloseCallback, (GLFWwindow * window), (void (*) ()), ());
+            Case(Size, glfwSetWindowSizeCallback, (GLFWwindow * window, int width, int height), (void (*) (int, int)), (width, height));
+            Case(FramebufferSize, glfwSetFramebufferSizeCallback, (GLFWwindow * window, int width, int height), (void (*) (int, int)), (width, height));
+            Case(Position, glfwSetWindowPosCallback, (GLFWwindow * window, int xpos, int ypos), (void (*) (int, int)), (xpos, ypos));
+            Case(Iconify, glfwSetWindowIconifyCallback, (GLFWwindow * window, int iconified), (void (*) (int)), (iconified));
+            Case(Maximize, glfwSetWindowMaximizeCallback, (GLFWwindow * window, int maximized), (void (*) (int)), (maximized));
+            Case(Focus, glfwSetWindowFocusCallback, (GLFWwindow * window, int focused), (void (*) (int)), (focused));
+            Case(Refresh, glfwSetWindowRefreshCallback, (GLFWwindow * window), (void (*) ()), ());
         default:
-            GLBWarnH(InvalidCallbackType, "Invalid window callback type '" << (int) type << "'");
+            GLBWarnH(InvalidCallbackType, "Invalid window callback type '" << (int)type << "'");
             return false;
         }
         return true;
@@ -129,7 +130,7 @@ namespace glb {
     }
 
     void Window::GLFWErrorCallback(int errorCode,
-                                   const char* description)
+        const char* description)
     {
         GLBErrH(GLFWErr, "[GLFW " << errorCode << "] " << description);
     }
@@ -157,3 +158,24 @@ namespace glb {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

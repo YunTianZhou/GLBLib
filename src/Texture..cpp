@@ -1,10 +1,11 @@
 #include "Texture.h"
 
-#include <stb_image/stb_image.h>
+#include <stb_image.h>
+#include "Image.h"
 #include "Debug.h"
 
 namespace glb {
-	void Texture::Init()
+	void Texture::Init(const unsigned char* buffer)
 	{
 		// Gen the texture and bind it
 		glGenTextures(1, &m_rendererID);
@@ -24,38 +25,44 @@ namespace glb {
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
 		// Bind the image buffer to the texture
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, m_width, m_height, 0, GL_RGBA, GL_UNSIGNED_BYTE, m_localBuffer);
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, m_width, m_height, 0, GL_RGBA, GL_UNSIGNED_BYTE, buffer);
 
 		// Unbind the texture
 		glBindTexture(GL_TEXTURE_2D, 0);
 	}
 
 	Texture::Texture(const std::string& filepath)
-		: m_rendererID(0), m_localBuffer(nullptr),
-		  m_width(0), m_height(0), m_BPP(0)
+		: m_rendererID(0), m_width(0), m_height(0)
 	{
 		// Set the coordinate origin to the bottom left
 		stbi_set_flip_vertically_on_load(1);
 
 		// Load the image form the specify file
-		m_localBuffer = stbi_load(filepath.c_str(), &m_width, &m_height, &m_BPP, 4);
+		int channel = 0; 
+		unsigned char* buffer = stbi_load(filepath.c_str(), &m_width, &m_height, &channel, STBI_rgb_alpha);
 
 		// Init the GL Texture
-		Init();
+		Init(buffer);
 
 		// Free the local buffer
-		if (m_localBuffer)
-			stbi_image_free(m_localBuffer);
+		if (buffer)
+			stbi_image_free(buffer);
 		else
-			GLBErrL(LoadImageFaild, "Load texture faild from file '" << filepath << "'");
+			GLBErrL(LoadImageFaild, "Faild to load texture from file '" << filepath << "'");
 	}
 
-	Texture::Texture(int width, int height, int BPP, unsigned char* buffer)
-		: m_rendererID(0), m_localBuffer(buffer),
-		  m_width(width), m_height(height), m_BPP(BPP)
+	Texture::Texture(int width, int height, unsigned char* buffer)
+		: m_rendererID(0), m_width(width), m_height(height)
 	{
-		// Init the GL Texture based on the given buffer
-		Init();
+		// Init the OpenGL Texture based on the given buffer
+		Init(buffer);
+	}
+
+	Texture::Texture(const Image& image)
+		: m_rendererID(0), m_width(image.GetWidth()), m_height(image.GetHeight())
+	{
+		// Init the OpenGL Texture based on the given image
+		Init(image.GetPixels().data());
 	}
 
 	Texture::~Texture()

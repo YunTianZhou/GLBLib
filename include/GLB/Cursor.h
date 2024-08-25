@@ -11,7 +11,7 @@ namespace glb {
     private:
         Cursor() = delete;
     public:
-        struct Position
+        struct Position_t
         {
             double x = 0.0;
             double y = 0.0;
@@ -37,7 +37,7 @@ namespace glb {
         };
     public:
         static bool IsButtonPressed(Button button);
-        static Position GetPosition();
+        static Position_t GetPosition();
         static bool SetCallback(Callback type, void* callback);
         static bool DisableCallback(Callback type);
     };

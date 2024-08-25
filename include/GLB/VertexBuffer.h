@@ -7,7 +7,7 @@ namespace glb {
 	class GLB_API VertexBuffer
 	{
 	public:
-		VertexBuffer(BufferUsage usage);
+		explicit VertexBuffer(BufferUsage usage);
 
 		VertexBuffer(int size, BufferUsage usage);
 

@@ -2,9 +2,11 @@
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
+
 #include <string>
 #include <unordered_map>
-#include <glm/glm.hpp>
+#include <filesystem>
 
 #include "Export.h"
 
@@ -36,7 +38,7 @@ namespace glb {
     class GLB_API Shader
     {
     public:
-        Shader(const ShaderProgramSource& source);
+        explicit Shader(const ShaderProgramSource& source);
 
         ~Shader();
 

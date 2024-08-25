@@ -3,3 +3,8 @@ build/
 /.vs
 .idea/
 CMakeSettings.json
+
+glew/
+glfw/
+glm/
+stb/
