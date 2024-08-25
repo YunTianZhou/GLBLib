@@ -4,7 +4,5 @@ build/
 .idea/
 CMakeSettings.json
 
-glew/
-glfw/
-glm/
-stb/
+external/*
+!external/Windows-Setup.bat
