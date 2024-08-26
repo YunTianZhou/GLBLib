@@ -66,18 +66,18 @@ namespace glb {
     Window::~Window()
     {
         if (m_isExist)
-            Destory();
+            Destroy();
         glfwTerminate();
     }
 
-    void Window::Destory()
+    void Window::Destroy()
     {
         if (!m_isExist)
         {
-            GLBWarnL(DoubleFree, "Window already destoryed!");
+            GLBWarnL(DoubleFree, "Window already destroyed!");
             return;
         }
-        GLBLog("Destory window!");
+        GLBLog("Destroy window!");
         glfwSetWindowShouldClose(s_window, GL_TRUE);
         glfwDestroyWindow(s_window);
         m_isExist = false;

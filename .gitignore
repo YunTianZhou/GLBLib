@@ -6,3 +6,4 @@ CMakeSettings.json
 
 external/*
 !external/Windows-Setup.bat
+!external/Linux-Setup.sh

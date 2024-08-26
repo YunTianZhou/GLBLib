@@ -31,7 +31,7 @@ namespace glb {
         void operator=(Window const&) = delete;      // Disallow asign
         ~Window();
 
-        void Destory();
+        void Destroy();
 
         bool SetCallback(Callback type, void* callback);
         bool DisableCallback(Callback type);

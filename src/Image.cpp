@@ -4,8 +4,8 @@
 #include <GLFW/glfw3.h>
 
 #include <filesystem>
-#include <stb_image.h>
-#include <stb_image_write.h>
+#include <stb/stb_image.h>
+#include <stb/stb_image_write.h>
 
 #include "Debug.h"
 

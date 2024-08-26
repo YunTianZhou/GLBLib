@@ -82,7 +82,7 @@ int main()
     }
 
     // Clean up resources and destroy the window when done.
-    window.Destory();
+    window.Destroy();
 }
 ```
 
