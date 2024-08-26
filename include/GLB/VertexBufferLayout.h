@@ -22,7 +22,7 @@ namespace glb {
 		}
 
 		template<typename T>
-		void Push(unsigned int count)
+		inline void Push(unsigned int count)
 		{
 			GLBErrL(UnknowType, "Unsupport the type '" << typeid(T).name() << "'!");
 		}
@@ -37,21 +37,21 @@ namespace glb {
 
 
 	template<>
-	void VertexBufferLayout::Push<float>(unsigned int count)
+	inline void VertexBufferLayout::Push<float>(unsigned int count)
 	{
 		m_elements.push_back({ Enum::Float, count, GL_FALSE });
 		m_stride += count * Enum::GetSizeOfType(Enum::Float);
 	}
 
 	template<>
-	void VertexBufferLayout::Push<unsigned int>(unsigned int count)
+	inline void VertexBufferLayout::Push<unsigned int>(unsigned int count)
 	{
 		m_elements.push_back({ Enum::Uint, count, GL_FALSE });
 		m_stride += count * Enum::GetSizeOfType(Enum::Uint);
 	}
 
 	template<>
-	void VertexBufferLayout::Push<unsigned char>(unsigned int count)
+	inline void VertexBufferLayout::Push<unsigned char>(unsigned int count)
 	{
 		m_elements.push_back({ Enum::Ubyte, count, GL_TRUE });
 		m_stride += count * Enum::GetSizeOfType(Enum::Ubyte);

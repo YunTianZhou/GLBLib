@@ -1,9 +1,16 @@
-#ifdef _WIN32
-	#ifdef GLB_EXPORTS
-		#define GLB_API __declspec(dllexport)
-	#else
-		#define GLB_API __declspec(dllimport)
+#ifndef GLB_STATIC
+	#if defined(_WIN32)
+		#ifdef GLB_EXPORTS
+			#define GLB_API __declspec(dllexport)
+		#else
+			#define GLB_API __declspec(dllimport)
+		#endif
+	#elif defined(__GNUC__)
+		#define GLB_API __attribute__((visibility("default")))
 	#endif
-#else
+#endif
+
+#ifndef GLB_API
 	#define GLB_API
 #endif
+

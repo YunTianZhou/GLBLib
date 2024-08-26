@@ -5,23 +5,31 @@ project(GLB)
 set(CMAKE_CXX_STANDARD 17)
 
 # Output directories for different build -p
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_SOURCE_DIR}/build/Debug)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_SOURCE_DIR}/build/Release)
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_DEBUG ${CMAKE_SOURCE_DIR}/build/Debug)
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE ${CMAKE_SOURCE_DIR}/build/Release)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_DEBUG ${CMAKE_SOURCE_DIR}/build/Debug)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE ${CMAKE_SOURCE_DIR}/build/Release)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_SOURCE_DIR}/build/bin/Release")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE "${CMAKE_SOURCE_DIR}/build/lib/Release")
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE "${CMAKE_SOURCE_DIR}/build/lib/Release")
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_SOURCE_DIR}/build/bin/Debug")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_DEBUG "${CMAKE_SOURCE_DIR}/build/lib/Debug")
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_DEBUG "${CMAKE_SOURCE_DIR}/build/lib/Debug")
 
 # Collect source files
 file(GLOB SRC_FILES "src/*.cpp")
 
-# Create a shared library (DLL)
-add_library(${CMAKE_PROJECT_NAME} SHARED ${SRC_FILES})
+# Option to select between static and shared library
+option(BUILD_STATIC_LIBS "Build static libraries instead of shared" OFF)
+
+if (BUILD_STATIC_LIBS)
+    add_library(${CMAKE_PROJECT_NAME} STATIC ${SRC_FILES})
+    set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES OUTPUT_NAME "GLB_s")
+    target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE GLB_STATIC)
+else()
+    add_library(${CMAKE_PROJECT_NAME} SHARED ${SRC_FILES})
+endif()
 
 # Define GLB_EXPORTS and GLEW_STATIC when building the library
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE GLB_EXPORTS)
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE GLEW_STATIC)
-
 
 # Platform-specific settings
 if (WIN32)
