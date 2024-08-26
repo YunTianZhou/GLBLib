@@ -11,31 +11,42 @@ GLBLib is a C++ graphics library built on top of OpenGL. It simplifies creating 
 ## Getting Started
 ### Building
 #### 1. Clone the Repository
- ```sh
- git clone https://github.com/YunTianZhou/GLBLib.git
- cd GLBLib
- ```
+```sh
+git clone https://github.com/YunTianZhou/GLBLib.git
+cd GLBLib
+```
 
 #### 2. External Libraries
-  Ensure the following libraries are available:
+  The following are the dependencies of GLB:
   
-  - GLFW: Handles window creation and input.
-  - GLEW: Manages OpenGL extensions.
-  - GLM: Provides a math library for graphics.
-  - stb_image: Facilitates image loading.
+  - **GLFW**: Handles window creation and input.
+  - **GLEW**: Manages OpenGL extensions.
+  - **GLM**: Provides a math library for graphics.
+  - **stb_image**: Facilitates image loading.
 
-  You can either download these libraries manually or use a package manager.
+  To setup these libraries, you can use the provided setup scripts:
+  - **Windows**: Run `external/Windows-Setup.bat` to automatically clone and build the required libraries.
+```sh
+external\Windows-Setup.bat
+```
+  - **Linux**: Run `external/Linux-Setup.sh` to automatically download and install the required libraries.
+```sh
+chmod +x external/Linux-Setup.sh
+sudo ./external/Linux-Setup.sh
+```
+
+  If the scripts don't work, you can download these libraries manually.
 
 #### 3.  Configure the Project with CMake
   Make a build directory:
 ```sh
- mkdir build
- cd build
+mkdir build
+cd build
 ```
   Run CMake to configure the project:
- ```sh
- cmake ..
- ```
+```sh
+cmake ..
+```
   To build a static library, use:
 ```sh
  cmake .. -D BUILD_STATIC_LIBS=ON
@@ -43,14 +54,14 @@ GLBLib is a C++ graphics library built on top of OpenGL. It simplifies creating 
 
 #### 4. Build the Project
   Compile the project:
- ```sh
- make
- ```
-  On Windows, use:
- ```sh
- cmake --build . --config Release
- ```
-   
+```sh
+make
+```
+ On Windows, use:
+```sh
+cmake --build . --config Release
+```
+
 ## Usage
 To use GLBLib in your project, link against the GLBLib library and include the necessary headers.
 Here’s a simple example:
@@ -86,4 +97,4 @@ int main()
 }
 ```
 
-If you are using the static library, ensure you define the GLB_STATIC macro before including the GLBLib headers.
+If you are using the static library, ensure you define the `GLB_STATIC` macro before including the GLBLib headers.
