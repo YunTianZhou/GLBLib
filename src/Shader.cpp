@@ -13,7 +13,7 @@ namespace glb {
 
         if (!stream.is_open())
         {
-            GLBErrH(OpenFileFaild, "Faild to open the file '" << filepath << "'");
+            GLBErrH(OpenFileFaild, "Faild to open the shader source file '" << filepath << "'");
             return { std::string(), std::string() };
         }
 
@@ -45,6 +45,40 @@ namespace glb {
                     GLBWarnL(UnknowType, "Does not specify a shader type!");
             }
         }
+
+        stream.close();
+
+        return { ss[0].str(), ss[1].str() };
+    }
+
+    ShaderProgramSource ShaderProgramSource::ReadFromFile(const std::string& vertex, const std::string& fragment)
+    {
+        std::stringstream ss[2];
+        std::ifstream stream;
+
+        // Read vertex shader source 
+        stream.open(vertex);
+
+        if (!stream.is_open())
+        {
+            GLBErrH(OpenFileFaild, "Faild to open the vertex shader source file '" << vertex << "'");
+            return { std::string(), std::string() };
+        }
+
+        ss[0] << stream.rdbuf();
+
+        stream.close();
+
+        // Read fragment shader source
+        stream.open(fragment);
+
+        if (!stream.is_open())
+        {
+            GLBErrH(OpenFileFaild, "Faild to open the fragment shader source file '" << fragment << "'");
+            return { std::string(), std::string() };
+        }
+
+        ss[1] << stream.rdbuf();
 
         stream.close();
 

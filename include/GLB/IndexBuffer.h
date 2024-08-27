@@ -6,15 +6,12 @@ namespace glb {
 
 	class GLB_API IndexBuffer
 	{
-	private:
-		void Init(void* indices, unsigned int count, BufferUsage usage, unsigned int type);
-
 	public:
-		explicit IndexBuffer(BufferUsage usage, unsigned int type = Enum::Uint);
+		explicit IndexBuffer(BufferUsage usage, Enum_t type = Enum::Uint);
 
-		IndexBuffer(unsigned int count, BufferUsage usage, unsigned int type = Enum::Uint);
+		IndexBuffer(unsigned int count, BufferUsage usage, Enum_t type = Enum::Uint);
 
-		IndexBuffer(void* indices, int count, BufferUsage usage, unsigned int type = Enum::Uint);
+		IndexBuffer(void* indices, int count, BufferUsage usage, Enum_t type = Enum::Uint);
 
 		~IndexBuffer();
 
@@ -28,9 +25,12 @@ namespace glb {
 		void SetData(unsigned int count, void* indices);
 
 	private:
+		void Init(void* indices, unsigned int count, BufferUsage usage, Enum_t type);
+
+	private:
 		unsigned int m_count;
 		BufferUsage m_usage;
-		unsigned int m_type;
+		Enum_t m_type;
 		unsigned int m_rendererID;
 	};
 

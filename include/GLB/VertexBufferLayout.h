@@ -1,60 +1,58 @@
 #pragma once
 
 #include <vector>
+#include <unordered_map>
 #include "Enum.h"
 
 namespace glb {
 
-	struct GLB_API VertexBufferElement
-	{
-		unsigned int type;
-		unsigned int count;
-		unsigned char normalized;
-	};
+    class GLB_API VertexBufferLayout
+    {
+    private:
+        struct Element
+        {
+            Enum_t type;
+            unsigned int count;
+            unsigned char normalized;
+        };
 
-	class GLB_API VertexBufferLayout
-	{
-	public:
-		VertexBufferLayout()
-			: m_stride(0)
-		{
+        struct TypeAttrib
+        {
+            unsigned int size;
+            unsigned char normalized;
+        };
 
-		}
+    public:
+        VertexBufferLayout()
+            : m_stride(0)
+        {
+        }
 
-		template<typename T>
-		inline void Push(unsigned int count)
-		{
-			GLBErrL(UnknowType, "Unsupport the type '" << typeid(T).name() << "'!");
-		}
+        template<Enum_t type>
+        inline void Push(unsigned int count)
+        {
+            auto it = s_typeToAttrib.find(type);
+            if (it != s_typeToAttrib.end())
+            {
+                const TypeAttrib& attrib = it->second;
+                m_elements.push_back({ type, count, attrib.normalized });
+                m_stride += count * attrib.size;
+            }
+            else
+            {
+                GLBErrL(UnknowType, "Unsupported vertex buffer element type '" << type << "'");
+            }
+        }
 
-		inline const std::vector <VertexBufferElement>GetElements() const { return m_elements; }
-		inline unsigned int GetStride() const { return m_stride; }
+        inline const std::vector<Element>& GetElements() const { return m_elements; }
+        inline unsigned int GetStride() const { return m_stride; }
 
-	private:
-		std::vector <VertexBufferElement> m_elements;
-		unsigned int m_stride;
-	};
+    private:
+        static std::unordered_map<Enum_t, TypeAttrib> s_typeToAttrib;
 
-
-	template<>
-	inline void VertexBufferLayout::Push<float>(unsigned int count)
-	{
-		m_elements.push_back({ Enum::Float, count, GL_FALSE });
-		m_stride += count * Enum::GetSizeOfType(Enum::Float);
-	}
-
-	template<>
-	inline void VertexBufferLayout::Push<unsigned int>(unsigned int count)
-	{
-		m_elements.push_back({ Enum::Uint, count, GL_FALSE });
-		m_stride += count * Enum::GetSizeOfType(Enum::Uint);
-	}
-
-	template<>
-	inline void VertexBufferLayout::Push<unsigned char>(unsigned int count)
-	{
-		m_elements.push_back({ Enum::Ubyte, count, GL_TRUE });
-		m_stride += count * Enum::GetSizeOfType(Enum::Ubyte);
-	}
+    private:
+        std::vector<Element> m_elements;
+        unsigned int m_stride;
+    };
 
 }

@@ -33,6 +33,7 @@ namespace glb {
             ____________________________________________________________
         */
         static ShaderProgramSource ReadFromFile(const std::string& filepath);
+        static ShaderProgramSource ReadFromFile(const std::string& vertex, const std::string& fragment);
     };
 
     class GLB_API Shader

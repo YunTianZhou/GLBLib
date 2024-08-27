@@ -13,26 +13,23 @@ namespace glb {
 		Dynamic = GL_DYNAMIC_DRAW,
 	};
 
+	using Enum_t = unsigned int;
+
 	class Enum
 	{
 	public:
-		inline static unsigned int GetSizeOfType(unsigned int type);
+		inline static unsigned int GetSizeOfType(Enum_t type);
 
 	public:
-		inline static const int DontCare = GLFW_DONT_CARE;
-		inline static const int True = GLFW_TRUE;
-		inline static const int False = GLFW_FALSE;
-
-		inline static const unsigned int Int = GL_INT;
-		inline static const unsigned int Float = GL_FLOAT;
-		inline static const unsigned int Uint = GL_UNSIGNED_INT;
-		inline static const unsigned int Double = GL_DOUBLE;
-		inline static const unsigned int Short = GL_SHORT;
-		inline static const unsigned int Ushort = GL_UNSIGNED_SHORT;
-		inline static const unsigned int Ubyte = GL_UNSIGNED_BYTE;
-		inline static const unsigned int Byte = GL_BYTE;
-		inline static const unsigned int HalfFloat = GL_HALF_FLOAT;
-		inline static const unsigned int Fixed = GL_FIXED;
+		inline static const Enum_t Int = GL_INT;
+		inline static const Enum_t Float = GL_FLOAT;
+		inline static const Enum_t Uint = GL_UNSIGNED_INT;
+		inline static const Enum_t Double = GL_DOUBLE;
+		inline static const Enum_t Short = GL_SHORT;
+		inline static const Enum_t Ushort = GL_UNSIGNED_SHORT;
+		inline static const Enum_t Ubyte = GL_UNSIGNED_BYTE;
+		inline static const Enum_t Byte = GL_BYTE;
+		inline static const Enum_t HalfFloat = GL_HALF_FLOAT;
 	};
 
 	inline unsigned int glb::Enum::GetSizeOfType(unsigned int type)
@@ -48,9 +45,8 @@ namespace glb {
 		case Ubyte:			   return 1;
 		case Byte:             return 1;
 		case HalfFloat:        return 2;
-		case Fixed:            return 4;
 		}
-		GLBWarnH(UnknowType, "Unsupported type '" << type << "'!");
+		GLBWarnH(UnknowType, "Unsupported enum type '" << type << "'");
 		return 0;
 	}
 

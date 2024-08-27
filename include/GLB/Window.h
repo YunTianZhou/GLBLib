@@ -64,7 +64,7 @@ namespace glb {
         inline void SetPosition(Position_t position) const { glfwSetWindowPos(s_window, position.x, position.y); }
         inline void SetSizeLimit(int minWidth, int minHeight, int maxWidth, int maxHeight) const { glfwSetWindowSizeLimits(s_window, minWidth, minHeight, maxWidth, maxHeight); }
         inline void SetSizeLimit(Size_t min, Size_t max) const { glfwSetWindowSizeLimits(s_window, min.width, min.height, max.width, max.height); }
-        inline void DisableSizeLimit() const { glfwSetWindowSizeLimits(s_window, Enum::DontCare, Enum::DontCare, Enum::DontCare, Enum::DontCare); }
+        inline void DisableSizeLimit() const { glfwSetWindowSizeLimits(s_window, -1, -1, -1, -1); }
 
         inline void SetTitle(std::string title);
         inline void SetIcon(Image& icon) const;
@@ -74,7 +74,7 @@ namespace glb {
         inline void SetDefaultIcon() const { glfwSetWindowIcon(s_window, 0, nullptr); }
 
         inline void SetAspectRatio(int numer, int denom) const { glfwSetWindowAspectRatio(s_window, numer, denom); }
-        inline void DisableAspectRatio() const { glfwSetWindowAspectRatio(s_window, Enum::DontCare, Enum::DontCare); }
+        inline void DisableAspectRatio() const { glfwSetWindowAspectRatio(s_window, -1, -1); }
         inline void SetOpacity(float opacity) const { glfwSetWindowOpacity(s_window, opacity); }
         inline void SetSwapInterval(int interval) const { glfwSwapInterval(1); }
 
