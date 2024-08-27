@@ -6,7 +6,6 @@
 
 #include <string>
 #include <unordered_map>
-#include <filesystem>
 
 #include "Export.h"
 
@@ -33,6 +32,8 @@ namespace glb {
             ____________________________________________________________
         */
         static ShaderProgramSource ReadFromFile(const std::string& filepath);
+
+        // Read the shader source from two files
         static ShaderProgramSource ReadFromFile(const std::string& vertex, const std::string& fragment);
     };
 
@@ -46,15 +47,18 @@ namespace glb {
         inline void Bind() const { glUseProgram(m_rendererID); }
         inline void Unbind() const { glUseProgram(0); }
 
-        void SetUniform1i(const std::string name, int value);
+        template <class T> void SetUniformVec1(const std::string& name, const T& v0);
+        template <class T> void SetUniformVec2(const std::string& name, const T& v0, const T& v1);
+        template <class T> void SetUniformVec3(const std::string& name, const T& v0, const T& v1, const T& v2);
+        template <class T> void SetUniformVec4(const std::string& name, const T& v0, const T& v1, const T& v2, const T& v3);
 
-        void SetUniform1f(const std::string name, float value);
+        template <class T> void SetUniformVec1Array(const std::string& name, int count, const T* value);
+        template <class T> void SetUniformVec2Array(const std::string& name, int count, const T* value);
+        template <class T> void SetUniformVec3Array(const std::string& name, int count, const T* value);
+        template <class T> void SetUniformVec4Array(const std::string& name, int count, const T* value);
 
-        void SetUniform2f(const std::string name, float v0, float v1);
-
-        void SetUniform4f(const std::string name, float v0, float v1, float v2, float v3);
-
-        void SetUniformMat4f(const std::string& name, const glm::mat4& matrix);
+        template <class T> void SetUniformMatrix(const std::string& name, const T& matrix);
+        template <class T> void SetUniformMatrixArray(const std::string& name, int count, const T* matrices);
 
     private:
         unsigned int CreateShader(const std::string& vertexShader, const std::string& fragmentShader);

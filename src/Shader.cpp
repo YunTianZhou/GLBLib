@@ -1,7 +1,7 @@
 #include "Shader.h"
 
 #include <fstream>
-#include <glm/gtc/type_ptr.hpp>
+#include <filesystem>
 
 #include "Debug.h"
 
@@ -93,36 +93,6 @@ namespace glb {
     Shader::~Shader()
     {
         glDeleteProgram(m_rendererID);
-    }
-
-    void Shader::SetUniform1i(const std::string name, int value)
-    {
-        Bind();
-        glUniform1i(GetUniformLocation(name), value);
-    }
-
-    void Shader::SetUniform1f(const std::string name, float value)
-    {
-        Bind();
-        glUniform1f(GetUniformLocation(name), value);
-    }
-
-    void Shader::SetUniform2f(const std::string name, float v0, float v1)
-    {
-        Bind();
-        glUniform2f(GetUniformLocation(name), v0, v1);
-    }
-
-    void Shader::SetUniform4f(const std::string name, float v0, float v1, float v2, float v3)
-    {
-        Bind();
-        glUniform4f(GetUniformLocation(name), v0, v1, v2, v3);
-    }
-
-    void Shader::SetUniformMat4f(const std::string& name, const glm::mat4& matrix)
-    {
-        Bind();
-        glUniformMatrix4fv(GetUniformLocation(name), 1, GL_FALSE, glm::value_ptr(matrix));
     }
 
     unsigned int Shader::CreateShader(const std::string& vertexShader, const std::string& fragmentShader)
