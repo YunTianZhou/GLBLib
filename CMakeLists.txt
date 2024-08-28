@@ -39,6 +39,13 @@ endif()
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE GLB_EXPORTS)
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE GLEW_STATIC)
 
+include(CMakePackageConfigHelpers)
+configure_package_config_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/cmake/GLBConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/GLBConfig.cmake"
+    INSTALL_DESTINATION lib/cmake/GLB
+)
+
 # Platform-specific settings
 if (WIN32)
     target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE 
