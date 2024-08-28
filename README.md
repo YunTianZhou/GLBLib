@@ -8,6 +8,10 @@
 - **Texture Management:** Simplified texture loading with stb_image.
 - **Event Handling:** Manage input events like key presses and mouse movements.
 
+## Documentation
+
+For more information and detailed descriptions, please refer to the project documentation located at `doc/index.html`. You can view and navigate the documentation by opening this file in your web browser.
+
 ## Getting Started
 ### Building
 #### 1. Clone the Repository
