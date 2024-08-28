@@ -14,8 +14,8 @@ namespace glb {
 
     }
 
-    Window::Window(int width, int height, std::string title)
-        : m_title(title), m_isExist(false)
+    Window::Window(int width, int height, const std::string& title)
+        : m_isExist(false)
     {
         // Set glfw error callback
         glfwSetErrorCallback(GLFWErrorCallback);
@@ -29,7 +29,7 @@ namespace glb {
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
         glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 4);
 
-        s_window = glfwCreateWindow(width, height, m_title.c_str(), nullptr, nullptr);
+        s_window = glfwCreateWindow(width, height, title.c_str(), nullptr, nullptr);
 
         if (!s_window) {
             GLBErrH(GLFWErr, "Window creation failed!");

@@ -29,14 +29,14 @@ namespace glb {
 			Patches = GL_PATCHES,
 		};
 	private:
-		Renderer();
+		Renderer() = delete;
 	public:
 		static void Clear();
-		static void DrawArray(Mode mode, const VertexArray& va, const Shader& shader, unsigned int first, unsigned int count);
-		static void DrawElements(Mode mode, const VertexArray& va, const IndexBuffer& ib, const Shader& shader, int count = -1, unsigned int first = 0);
-	
 		static void SetClearColor(float r, float g, float b, float a);
 		static void SetViewport(int x, int y, int width, int height);
+
+		static void DrawArray(Mode mode, const VertexArray& va, const Shader& shader, unsigned int first, unsigned int count);
+		static void DrawElements(Mode mode, const VertexArray& va, const IndexBuffer& ib, const Shader& shader, int count = -1, unsigned int first = 0);
 	};
 
 }

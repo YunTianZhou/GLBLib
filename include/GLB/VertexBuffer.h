@@ -18,15 +18,26 @@ namespace glb {
 		inline void Bind() const { glBindBuffer(GL_ARRAY_BUFFER, m_rendererID); }
 		inline void Unbind() const { glBindBuffer(GL_ARRAY_BUFFER, 0); }
 
-		inline int GetSize() const { return m_size; }
+		inline int GetSize() const;
 		inline BufferUsage GetUsage() const { return m_usage; }
 
 		void SetData(float vertices[], int size);
+		void SetSubData(const void* data, int offset, int size);
+		float* Map(BufferAccess access) const;
+		void Unmap() const;
 
 	private:
-		int m_size;
 		BufferUsage m_usage;
 		unsigned int m_rendererID;
 	};
+
+
+	inline int VertexBuffer::GetSize() const
+	{
+		Bind();
+		int size = 0;
+		glGetBufferParameteriv(GL_ARRAY_BUFFER, GL_BUFFER_SIZE, &size);
+		return size;
+	}
 
 }

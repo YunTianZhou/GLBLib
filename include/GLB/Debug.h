@@ -54,6 +54,8 @@ namespace glb {
 			ShaderCompiledFaild,
 			LoadImageFaild,
 			SaveImageFaild,
+			MapBufferFaild,
+			UnmapBufferFaild,
 
 			// GLFW / GL Error
 			GLFWErr,

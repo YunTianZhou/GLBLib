@@ -148,8 +148,8 @@ namespace glb {
 
 		enum class Callback
 		{
-			Key = 0,		// Key input (int key, int scancode, int action, int mods)
-			Char = 1		// Text input callback (unsigned int codepoint)
+			Key,    		// Key input (int key, int scancode, int action, int mods)
+			Char,   		// Text input callback (unsigned int codepoint)
 		};
 
 		static bool IsPressed(Type key);

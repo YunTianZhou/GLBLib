@@ -28,12 +28,13 @@ namespace glb {
             Button6 = GLFW_MOUSE_BUTTON_6,
             Button7 = GLFW_MOUSE_BUTTON_7,
         };
+
         enum class Callback
         {
-            Position = 0,       // Cursor position callback (double xpos, double ypos)
-            Enter = 1,          // Cursor enter/leave callback (int enter)
-            MouseButton = 2,    // Mouse button callback (int button, int action, int mods)
-            Scroll = 3,         // Scroll callback (double xoffset, double yoffset)
+            Position,          // Cursor position callback (double xpos, double ypos)
+            Enter,             // Cursor enter/leave callback (int enter)
+            MouseButton,       // Mouse button callback (int button, int action, int mods)
+            Scroll,            // Scroll callback (double xoffset, double yoffset)
         };
     public:
         static bool IsButtonPressed(Button button);

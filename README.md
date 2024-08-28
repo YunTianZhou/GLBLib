@@ -1,6 +1,6 @@
 # GLBLib
 
-GLBLib is a C++ graphics library built on top of OpenGL. It simplifies creating and managing OpenGL contexts and provides utilities for handling shaders, textures, and window management through GLFW and GLEW.
+**GLBLib** is a C++ graphics library built on top of OpenGL. It simplifies creating and managing OpenGL contexts and provides utilities for handling shaders, textures, and window management through GLFW and GLEW.
 
 ## Features
 - **Window Management:** Easy creation and control of OpenGL windows.
@@ -19,10 +19,10 @@ cd GLBLib
 #### 2. External Libraries
   The following are the dependencies of GLB:
   
-  - **GLFW**: Handles window creation and input.
-  - **GLEW**: Manages OpenGL extensions.
-  - **GLM**: Provides a math library for graphics.
-  - **stb_image**: Facilitates image loading.
+  - [GLFW](https://www.glfw.org/): Handles window creation and input.
+  - [GLEW](https://glew.sourceforge.net/): Manages OpenGL extensions.
+  - [GLM](https://github.com/g-truc/glm): Provides a math library for graphics.
+  - [stb_image](https://github.com/nothings/stb/tree/master): Facilitates image loading.
 
   To setup these libraries, you can use the provided setup scripts:
   - **Windows**: Run `external/Windows-Setup.bat` to automatically clone and build the required libraries.

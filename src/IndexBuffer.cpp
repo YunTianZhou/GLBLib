@@ -3,19 +3,19 @@
 namespace glb {
 
 	IndexBuffer::IndexBuffer(BufferUsage usage, Enum_t type)
-		: m_count(1), m_usage(usage), m_type(type)
+		: m_usage(usage), m_type(type)
 	{
 		Init(nullptr, 1, usage, type);
 	}
 
 	IndexBuffer::IndexBuffer(unsigned int count, BufferUsage usage, Enum_t type)
-		: m_count(count), m_usage(usage), m_type(type)
+		: m_usage(usage), m_type(type)
 	{
 		Init(nullptr, count, usage, type);
 	}
 
 	IndexBuffer::IndexBuffer(void* indices, int count, BufferUsage usage, Enum_t type)
-		: m_count(count), m_usage(usage), m_type(type)
+		: m_usage(usage), m_type(type)
 	{
 		Init(indices, count, usage, type);
 	}
@@ -29,7 +29,26 @@ namespace glb {
 	{
 		Bind();
 		glBufferData(GL_ELEMENT_ARRAY_BUFFER, count * Enum::GetSizeOfType(m_type), indices, (unsigned int) m_usage);
-		m_count = count;
+	}
+
+	void IndexBuffer::SetSubData(const void* data, int offset, int count)
+	{
+		Bind();
+		glBufferSubData(GL_ARRAY_BUFFER, offset, count * Enum::GetSizeOfType(m_type), data);
+	}
+
+	void* IndexBuffer::Map(BufferAccess access) const
+	{
+		Bind();
+		void* pointer = glMapBuffer(GL_ARRAY_BUFFER, (unsigned int) access);
+		GLBAssertWH(pointer, MapBufferFaild, "Failed to map the index buffer!");
+		return pointer;
+	}
+
+	void IndexBuffer::Unmap() const
+	{
+		Bind();
+		GLBAssertWH(glUnmapBuffer(GL_ARRAY_BUFFER), UnmapBufferFaild, "Failed to unmap the index buffer!");
 	}
 
 	void IndexBuffer::Init(void* indices, unsigned int count, BufferUsage usage, Enum_t type)

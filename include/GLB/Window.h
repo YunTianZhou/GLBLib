@@ -12,17 +12,17 @@ namespace glb {
         struct Position_t { int x = 0, y = 0; };
         enum class Callback
         {
-            Close = 0,              // Close window callback (None)
-            Size = 1,               // Resize window resize callback (int width, int height)
-            FramebufferSize = 2,    // Set Framebuffer size callback (int width, int height)
-            Position = 3,           // Move window callback (int xpos, int ypos)
-            Iconify = 4,            // Window iconification callback (int iconified)
-            Maximize = 5,           // Window maximization callback (int maximized)
-            Focus = 6,              // Window Focus callback (int focused)
-            Refresh = 7,            // Window damage and refresh callback (None)
+            Close,                  // Close window callback (None)
+            Size,                   // Resize window resize callback (int width, int height)
+            FramebufferSize,        // Set Framebuffer size callback (int width, int height)
+            Position,               // Move window callback (int xpos, int ypos)
+            Iconify,                // Window iconification callback (int iconified)
+            Maximize,               // Window maximization callback (int maximized)
+            Focus,                  // Window Focus callback (int focused)
+            Refresh,                // Window damage and refresh callback (None)
         };
     public:
-        inline static Window& Create(int width, int height, std::string name);
+        inline static Window& Create(int width, int height, const std::string& name);
         inline static Window& GetInstance();
 
         inline static GLFWwindow* GetGLFWwindow() { return s_window; }
@@ -39,7 +39,7 @@ namespace glb {
         // Get Functions
         inline int IsExist() const { return m_isExist; }
         inline int IsOpen() const { return glfwWindowShouldClose(s_window) == GL_FALSE; }
-        inline std::string GetTitle() const { return m_title; }
+        inline std::string GetTitle() const { return glfwGetWindowTitle(s_window); }
 
         inline Size_t GetSize() const;
         inline int GetWidth() const;
@@ -58,8 +58,8 @@ namespace glb {
         inline float GetOpacity() const { return glfwGetWindowOpacity(s_window); }
 
         // Set functions
-        inline void SetSzie(int width, int height) const { glfwSetWindowSize(s_window, width, height); }
-        inline void SetSzie(Size_t size) const { glfwSetWindowSize(s_window, size.width, size.height); }
+        inline void SetSize(int width, int height) const { glfwSetWindowSize(s_window, width, height); }
+        inline void SetSize(Size_t size) const { glfwSetWindowSize(s_window, size.width, size.height); }
         inline void SetPosition(int xpos, int ypos) const { glfwSetWindowPos(s_window, xpos, ypos); }
         inline void SetPosition(Position_t position) const { glfwSetWindowPos(s_window, position.x, position.y); }
         inline void SetSizeLimit(int minWidth, int minHeight, int maxWidth, int maxHeight) const { glfwSetWindowSizeLimits(s_window, minWidth, minHeight, maxWidth, maxHeight); }
@@ -95,26 +95,25 @@ namespace glb {
 
     private:
         Window();
-        Window(int width, int height, std::string title);
+        Window(int width, int height, const std::string& title);
         static void GLFWErrorCallback(int errorCode,
             const char* description);
         static void GLLogMessageCallback(GLenum source,
-            GLenum type,
-            GLuint id,
-            GLenum severity,
-            GLsizei length,
-            const GLchar* message,
-            const void* userParam);
+                                         GLenum type,
+                                         GLuint id,
+                                         GLenum severity,
+                                         GLsizei length,
+                                         const GLchar* message,
+                                         const void* userParam);
 
     private:
         static bool s_initialized;
         static Window s_instance;
         static GLFWwindow* s_window;
-        std::string m_title;
         bool m_isExist;
     };
 
-    inline Window& Window::Create(int width, int height, std::string name)
+    inline Window& Window::Create(int width, int height, const std::string& name)
     {
         static Window instance(width, height, name);
         return instance;
@@ -193,7 +192,6 @@ namespace glb {
     inline void Window::SetTitle(std::string title)
     {
         glfwSetWindowTitle(s_window, title.c_str());
-        m_title = title;
     }
 
     inline void Window::SetIcon(Image& icon) const

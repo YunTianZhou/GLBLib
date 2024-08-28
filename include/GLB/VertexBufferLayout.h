@@ -44,6 +44,8 @@ namespace glb {
             }
         }
 
+    private:
+        friend class VertexArray;
         inline const std::vector<Element>& GetElements() const { return m_elements; }
         inline unsigned int GetStride() const { return m_stride; }
 

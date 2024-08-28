@@ -3,7 +3,7 @@
 namespace glb {
 	
 	VertexBuffer::VertexBuffer(BufferUsage usage)
-		: m_size(1), m_usage(usage)
+		: m_usage(usage)
 	{
 		glGenBuffers(1, &m_rendererID);
 		glBindBuffer(GL_ARRAY_BUFFER, m_rendererID);
@@ -11,7 +11,7 @@ namespace glb {
 	}
 
 	VertexBuffer::VertexBuffer(int size, BufferUsage usage)
-		: m_size(size), m_usage(usage)
+		: m_usage(usage)
 	{
 		glGenBuffers(1, &m_rendererID);
 		glBindBuffer(GL_ARRAY_BUFFER, m_rendererID);
@@ -19,7 +19,7 @@ namespace glb {
 	}
 
 	VertexBuffer::VertexBuffer(float vertices[], int size, BufferUsage usage)
-		: m_size(size), m_usage(usage)
+		: m_usage(usage)
 	{
 		glGenBuffers(1, &m_rendererID);
 		glBindBuffer(GL_ARRAY_BUFFER, m_rendererID);
@@ -35,7 +35,26 @@ namespace glb {
 	{
 		Bind();
 		glBufferData(GL_ARRAY_BUFFER, size, vertices, (unsigned int) m_usage);
-		m_size = size;
+	}
+
+	void VertexBuffer::SetSubData(const void* data, int offset, int size)
+	{
+		Bind();
+		glBufferSubData(GL_ARRAY_BUFFER, offset, size, data);
+	}
+
+	float* VertexBuffer::Map(BufferAccess access) const
+	{
+		Bind();
+		void* pointer = glMapBuffer(GL_ARRAY_BUFFER, (unsigned int) access);
+		GLBAssertWH(pointer, MapBufferFaild, "Failed to map the vertex buffer!");
+		return (float*) pointer;
+	}
+
+	void VertexBuffer::Unmap() const
+	{
+		Bind();
+		GLBAssertWH(glUnmapBuffer(GL_ARRAY_BUFFER), UnmapBufferFaild, "Failed to unmap the vertex buffer!");
 	}
 
 }

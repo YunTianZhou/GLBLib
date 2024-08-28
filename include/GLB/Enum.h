@@ -13,6 +13,13 @@ namespace glb {
 		Dynamic = GL_DYNAMIC_DRAW,
 	};
 
+	enum class BufferAccess
+	{
+		ReadOnly = GL_READ_ONLY,
+		WriteOnly = GL_WRITE_ONLY,
+		ReadWrite = GL_READ_WRITE,
+	};
+
 	using Enum_t = unsigned int;
 
 	class Enum
@@ -32,7 +39,7 @@ namespace glb {
 		inline static const Enum_t HalfFloat = GL_HALF_FLOAT;
 	};
 
-	inline unsigned int glb::Enum::GetSizeOfType(unsigned int type)
+	inline unsigned int glb::Enum::GetSizeOfType(Enum_t type)
 	{
 		switch (type)
 		{

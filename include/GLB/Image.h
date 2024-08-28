@@ -30,9 +30,9 @@ namespace glb {
 
 		inline int GetWidth() const { return m_width; };
 		inline int GetHeight() const { return m_height; };
+		inline int IsExist() const { return m_width && m_height && !m_pixels.empty(); };
 		inline std::vector <unsigned char>& GetPixels() { return m_pixels; };
 		inline const std::vector <unsigned char>& GetPixels() const { return m_pixels; };
-		inline int IsExist() const { return m_width && m_height && !m_pixels.empty(); };
 
 		inline void Free();
 
