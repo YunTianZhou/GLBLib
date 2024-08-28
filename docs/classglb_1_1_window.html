@@ -1,0 +1,2020 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>GLBLib: glb::Window Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.drawio.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GLBLib
+   </div>
+   <div id="projectbrief">A graphics library based on OpenGL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classglb_1_1_window.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="classglb_1_1_window-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">glb::Window Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Manages a GLFW window and provides an interface for interacting with it.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_window_8h_source.html">Window.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglb_1_1_window_1_1_position__t.html">Position_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the position of the window on the screen.  <a href="structglb_1_1_window_1_1_position__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglb_1_1_window_1_1_size__t.html">Size_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the size of the window.  <a href="structglb_1_1_window_1_1_size__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:aaa24d610123c7b3c751d8136bd6e2db1" id="r_aaa24d610123c7b3c751d8136bd6e2db1"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa24d610123c7b3c751d8136bd6e2db1">Callback</a> { <br />
+&#160;&#160;<a class="el" href="#aaa24d610123c7b3c751d8136bd6e2db1ad3d2e617335f08df83599665eef8a418">Close</a>
+, <a class="el" href="#aaa24d610123c7b3c751d8136bd6e2db1a6f6cb72d544962fa333e2e34ce64f719">Size</a>
+, <a class="el" href="#aaa24d610123c7b3c751d8136bd6e2db1a048f247ef00bb80cc022b8b4eb7ba26d">FramebufferSize</a>
+, <a class="el" href="#aaa24d610123c7b3c751d8136bd6e2db1a52f5e0bc3859bc5f5e25130b6c7e8881">Position</a>
+, <br />
+&#160;&#160;<a class="el" href="#aaa24d610123c7b3c751d8136bd6e2db1a4f2165582c64e8a978621017c87b770b">Iconify</a>
+, <a class="el" href="#aaa24d610123c7b3c751d8136bd6e2db1a9369ba148ee259473fc1fb4939b6c2e8">Maximize</a>
+, <a class="el" href="#aaa24d610123c7b3c751d8136bd6e2db1ae24ee2487879116dcab772c0ac4fe341">Focus</a>
+, <a class="el" href="#aaa24d610123c7b3c751d8136bd6e2db1a63a6a88c066880c5ac42394a22803ca6">Refresh</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:aaa24d610123c7b3c751d8136bd6e2db1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classglb_1_1_enum.html" title="Provides functionality for handling OpenGL enumeration types.">Enum</a> representing different types of window callbacks.  <a href="#aaa24d610123c7b3c751d8136bd6e2db1">More...</a><br /></td></tr>
+<tr class="separator:aaa24d610123c7b3c751d8136bd6e2db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a23aafde252efd0a508c7b1185157245e" id="r_a23aafde252efd0a508c7b1185157245e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23aafde252efd0a508c7b1185157245e">Window</a> (<a class="el" href="classglb_1_1_window.html">Window</a> const &amp;)=delete</td></tr>
+<tr class="memdesc:a23aafde252efd0a508c7b1185157245e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow copying of <a class="el" href="classglb_1_1_window.html" title="Manages a GLFW window and provides an interface for interacting with it.">Window</a> instance.  <br /></td></tr>
+<tr class="separator:a23aafde252efd0a508c7b1185157245e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a160597a973da980269a6d0b79bd6ce28" id="r_a160597a973da980269a6d0b79bd6ce28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a160597a973da980269a6d0b79bd6ce28">operator=</a> (<a class="el" href="classglb_1_1_window.html">Window</a> const &amp;)=delete</td></tr>
+<tr class="memdesc:a160597a973da980269a6d0b79bd6ce28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow assignment of <a class="el" href="classglb_1_1_window.html" title="Manages a GLFW window and provides an interface for interacting with it.">Window</a> instance.  <br /></td></tr>
+<tr class="separator:a160597a973da980269a6d0b79bd6ce28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f46215bdbfb91ca695c547ff3e7aa79" id="r_a9f46215bdbfb91ca695c547ff3e7aa79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f46215bdbfb91ca695c547ff3e7aa79">~Window</a> ()</td></tr>
+<tr class="separator:a9f46215bdbfb91ca695c547ff3e7aa79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a6fa612fe749a984725d7982fde88b6" id="r_a2a6fa612fe749a984725d7982fde88b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a6fa612fe749a984725d7982fde88b6">Destroy</a> ()</td></tr>
+<tr class="memdesc:a2a6fa612fe749a984725d7982fde88b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the window and cleans up resources.  <br /></td></tr>
+<tr class="separator:a2a6fa612fe749a984725d7982fde88b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeababf18f4f7f08b249495582ba2c805" id="r_aeababf18f4f7f08b249495582ba2c805"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeababf18f4f7f08b249495582ba2c805">SetCallback</a> (<a class="el" href="#aaa24d610123c7b3c751d8136bd6e2db1">Callback</a> type, void *callback)</td></tr>
+<tr class="memdesc:aeababf18f4f7f08b249495582ba2c805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a callback function for a specified window event.  <br /></td></tr>
+<tr class="separator:aeababf18f4f7f08b249495582ba2c805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6bf949801c4b65f133fc29eaf019c0d" id="r_ab6bf949801c4b65f133fc29eaf019c0d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6bf949801c4b65f133fc29eaf019c0d">DisableCallback</a> (<a class="el" href="#aaa24d610123c7b3c751d8136bd6e2db1">Callback</a> type)</td></tr>
+<tr class="memdesc:ab6bf949801c4b65f133fc29eaf019c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables a callback function for a specified window event.  <br /></td></tr>
+<tr class="separator:ab6bf949801c4b65f133fc29eaf019c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a1f080e928b2259a65294219e095354" id="r_a0a1f080e928b2259a65294219e095354"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a1f080e928b2259a65294219e095354">IsExist</a> () const</td></tr>
+<tr class="memdesc:a0a1f080e928b2259a65294219e095354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the window exists.  <br /></td></tr>
+<tr class="separator:a0a1f080e928b2259a65294219e095354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e0fe64dd8796115d9f07b83191c6d89" id="r_a1e0fe64dd8796115d9f07b83191c6d89"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e0fe64dd8796115d9f07b83191c6d89">IsOpen</a> () const</td></tr>
+<tr class="memdesc:a1e0fe64dd8796115d9f07b83191c6d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the window is open.  <br /></td></tr>
+<tr class="separator:a1e0fe64dd8796115d9f07b83191c6d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bfb93aee182614f791bf1006bd78257" id="r_a3bfb93aee182614f791bf1006bd78257"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bfb93aee182614f791bf1006bd78257">GetTitle</a> () const</td></tr>
+<tr class="memdesc:a3bfb93aee182614f791bf1006bd78257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the title of the window.  <br /></td></tr>
+<tr class="separator:a3bfb93aee182614f791bf1006bd78257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4707ff9e89c9f7417d6692e3693469d" id="r_ad4707ff9e89c9f7417d6692e3693469d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structglb_1_1_window_1_1_size__t.html">Size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4707ff9e89c9f7417d6692e3693469d">GetSize</a> () const</td></tr>
+<tr class="memdesc:ad4707ff9e89c9f7417d6692e3693469d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the size of the window.  <br /></td></tr>
+<tr class="separator:ad4707ff9e89c9f7417d6692e3693469d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac03d7f614fea28d81258a33c7ef90fa8" id="r_ac03d7f614fea28d81258a33c7ef90fa8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac03d7f614fea28d81258a33c7ef90fa8">GetWidth</a> () const</td></tr>
+<tr class="memdesc:ac03d7f614fea28d81258a33c7ef90fa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the width of the window.  <br /></td></tr>
+<tr class="separator:ac03d7f614fea28d81258a33c7ef90fa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaa09a73639c561b2d349dd1728e330f" id="r_aaaa09a73639c561b2d349dd1728e330f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaaa09a73639c561b2d349dd1728e330f">GeHeight</a> () const</td></tr>
+<tr class="memdesc:aaaa09a73639c561b2d349dd1728e330f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the height of the window.  <br /></td></tr>
+<tr class="separator:aaaa09a73639c561b2d349dd1728e330f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a725f32a284356ede7f905c1f85f1d498" id="r_a725f32a284356ede7f905c1f85f1d498"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structglb_1_1_window_1_1_size__t.html">Size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a725f32a284356ede7f905c1f85f1d498">GetFramebufferSize</a> () const</td></tr>
+<tr class="memdesc:a725f32a284356ede7f905c1f85f1d498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the size of the framebuffer.  <br /></td></tr>
+<tr class="separator:a725f32a284356ede7f905c1f85f1d498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9597f50737c48c78d094d2b70e6b20ab" id="r_a9597f50737c48c78d094d2b70e6b20ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9597f50737c48c78d094d2b70e6b20ab">GetFramebufferWidth</a> () const</td></tr>
+<tr class="memdesc:a9597f50737c48c78d094d2b70e6b20ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the width of the framebuffer.  <br /></td></tr>
+<tr class="separator:a9597f50737c48c78d094d2b70e6b20ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31c20d3758965bcc2ff2bc37e3853880" id="r_a31c20d3758965bcc2ff2bc37e3853880"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31c20d3758965bcc2ff2bc37e3853880">GeFramebufferHeight</a> () const</td></tr>
+<tr class="memdesc:a31c20d3758965bcc2ff2bc37e3853880"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the height of the framebuffer.  <br /></td></tr>
+<tr class="separator:a31c20d3758965bcc2ff2bc37e3853880"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41d51c13e2b1b13e9664d033de6bb3fd" id="r_a41d51c13e2b1b13e9664d033de6bb3fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structglb_1_1_window_1_1_position__t.html">Position_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41d51c13e2b1b13e9664d033de6bb3fd">GetPosition</a> () const</td></tr>
+<tr class="memdesc:a41d51c13e2b1b13e9664d033de6bb3fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the position of the window.  <br /></td></tr>
+<tr class="separator:a41d51c13e2b1b13e9664d033de6bb3fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20754261bf8006142b2a7142ecb815f8" id="r_a20754261bf8006142b2a7142ecb815f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20754261bf8006142b2a7142ecb815f8">GetXPosition</a> () const</td></tr>
+<tr class="memdesc:a20754261bf8006142b2a7142ecb815f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the x-coordinate of the window position.  <br /></td></tr>
+<tr class="separator:a20754261bf8006142b2a7142ecb815f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a608c58552b7d3f5b671fc4dd2c889897" id="r_a608c58552b7d3f5b671fc4dd2c889897"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a608c58552b7d3f5b671fc4dd2c889897">GetYPosition</a> () const</td></tr>
+<tr class="memdesc:a608c58552b7d3f5b671fc4dd2c889897"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the y-coordinate of the window position.  <br /></td></tr>
+<tr class="separator:a608c58552b7d3f5b671fc4dd2c889897"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2420b73ac14a9f0f74c32b10e22a4f67" id="r_a2420b73ac14a9f0f74c32b10e22a4f67"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2420b73ac14a9f0f74c32b10e22a4f67">IsIconified</a> () const</td></tr>
+<tr class="memdesc:a2420b73ac14a9f0f74c32b10e22a4f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the window is iconified.  <br /></td></tr>
+<tr class="separator:a2420b73ac14a9f0f74c32b10e22a4f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4efb0b9ded1b857372e7129c4492e409" id="r_a4efb0b9ded1b857372e7129c4492e409"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4efb0b9ded1b857372e7129c4492e409">IsMaximized</a> () const</td></tr>
+<tr class="memdesc:a4efb0b9ded1b857372e7129c4492e409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the window is maximized.  <br /></td></tr>
+<tr class="separator:a4efb0b9ded1b857372e7129c4492e409"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9789a145b1ead681ad892bab292de5c" id="r_ac9789a145b1ead681ad892bab292de5c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9789a145b1ead681ad892bab292de5c">IsVisible</a> () const</td></tr>
+<tr class="memdesc:ac9789a145b1ead681ad892bab292de5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the window is visible.  <br /></td></tr>
+<tr class="separator:ac9789a145b1ead681ad892bab292de5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d24912683e721584c5ad9ab043f71c3" id="r_a3d24912683e721584c5ad9ab043f71c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d24912683e721584c5ad9ab043f71c3">IsPinned</a> () const</td></tr>
+<tr class="memdesc:a3d24912683e721584c5ad9ab043f71c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the window is focused.  <br /></td></tr>
+<tr class="separator:a3d24912683e721584c5ad9ab043f71c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9241a9eb607c48520b5c567dc104de37" id="r_a9241a9eb607c48520b5c567dc104de37"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9241a9eb607c48520b5c567dc104de37">GetOpacity</a> () const</td></tr>
+<tr class="memdesc:a9241a9eb607c48520b5c567dc104de37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the opacity of the window.  <br /></td></tr>
+<tr class="separator:a9241a9eb607c48520b5c567dc104de37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7df63627f5df57fc5b2d5cc7ccd036b" id="r_af7df63627f5df57fc5b2d5cc7ccd036b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7df63627f5df57fc5b2d5cc7ccd036b">SetSize</a> (int width, int height) const</td></tr>
+<tr class="memdesc:af7df63627f5df57fc5b2d5cc7ccd036b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the size of the window.  <br /></td></tr>
+<tr class="separator:af7df63627f5df57fc5b2d5cc7ccd036b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefec2eab6bdf782dd3117e3cd3d46f6e" id="r_aefec2eab6bdf782dd3117e3cd3d46f6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefec2eab6bdf782dd3117e3cd3d46f6e">SetSize</a> (<a class="el" href="structglb_1_1_window_1_1_size__t.html">Size_t</a> size) const</td></tr>
+<tr class="memdesc:aefec2eab6bdf782dd3117e3cd3d46f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the size of the window.  <br /></td></tr>
+<tr class="separator:aefec2eab6bdf782dd3117e3cd3d46f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a101a979c5cfdb3a22d2c814c08fd2903" id="r_a101a979c5cfdb3a22d2c814c08fd2903"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a101a979c5cfdb3a22d2c814c08fd2903">SetPosition</a> (int xpos, int ypos) const</td></tr>
+<tr class="memdesc:a101a979c5cfdb3a22d2c814c08fd2903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position of the window.  <br /></td></tr>
+<tr class="separator:a101a979c5cfdb3a22d2c814c08fd2903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5af0390d55f4964dde7b643879f1a7a6" id="r_a5af0390d55f4964dde7b643879f1a7a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5af0390d55f4964dde7b643879f1a7a6">SetPosition</a> (<a class="el" href="structglb_1_1_window_1_1_position__t.html">Position_t</a> position) const</td></tr>
+<tr class="memdesc:a5af0390d55f4964dde7b643879f1a7a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position of the window.  <br /></td></tr>
+<tr class="separator:a5af0390d55f4964dde7b643879f1a7a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30f0f7d177a440b04d1503f60699cdfb" id="r_a30f0f7d177a440b04d1503f60699cdfb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30f0f7d177a440b04d1503f60699cdfb">SetSizeLimit</a> (int minWidth, int minHeight, int maxWidth, int maxHeight) const</td></tr>
+<tr class="memdesc:a30f0f7d177a440b04d1503f60699cdfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the size limits of the window.  <br /></td></tr>
+<tr class="separator:a30f0f7d177a440b04d1503f60699cdfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b49a4ef245b5f7f9176cd3f0aee6d43" id="r_a7b49a4ef245b5f7f9176cd3f0aee6d43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b49a4ef245b5f7f9176cd3f0aee6d43">SetSizeLimit</a> (<a class="el" href="structglb_1_1_window_1_1_size__t.html">Size_t</a> min, <a class="el" href="structglb_1_1_window_1_1_size__t.html">Size_t</a> max) const</td></tr>
+<tr class="memdesc:a7b49a4ef245b5f7f9176cd3f0aee6d43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the size limits of the window.  <br /></td></tr>
+<tr class="separator:a7b49a4ef245b5f7f9176cd3f0aee6d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ce6060c04093def27810eb63d5f170e" id="r_a7ce6060c04093def27810eb63d5f170e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ce6060c04093def27810eb63d5f170e">DisableSizeLimit</a> () const</td></tr>
+<tr class="memdesc:a7ce6060c04093def27810eb63d5f170e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables the size limits of the window.  <br /></td></tr>
+<tr class="separator:a7ce6060c04093def27810eb63d5f170e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ef7a6fc651816ab6303674d2fa3b2a8" id="r_a3ef7a6fc651816ab6303674d2fa3b2a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ef7a6fc651816ab6303674d2fa3b2a8">SetTitle</a> (std::string title)</td></tr>
+<tr class="memdesc:a3ef7a6fc651816ab6303674d2fa3b2a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the title of the window.  <br /></td></tr>
+<tr class="separator:a3ef7a6fc651816ab6303674d2fa3b2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76f3946971cff7473f7119f044c4c9dc" id="r_a76f3946971cff7473f7119f044c4c9dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76f3946971cff7473f7119f044c4c9dc">SetIcon</a> (<a class="el" href="classglb_1_1_image.html">Image</a> &amp;icon) const</td></tr>
+<tr class="memdesc:a76f3946971cff7473f7119f044c4c9dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the icon of the window.  <br /></td></tr>
+<tr class="separator:a76f3946971cff7473f7119f044c4c9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f93d93969d9526d76e20f4cbf04fb8f" id="r_a7f93d93969d9526d76e20f4cbf04fb8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f93d93969d9526d76e20f4cbf04fb8f">SetIconAndFree</a> (<a class="el" href="classglb_1_1_image.html">Image</a> &amp;icon) const</td></tr>
+<tr class="memdesc:a7f93d93969d9526d76e20f4cbf04fb8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the icon of the window and frees the associated resources.  <br /></td></tr>
+<tr class="separator:a7f93d93969d9526d76e20f4cbf04fb8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff256fa58992abde1b8314460de4b63c" id="r_aff256fa58992abde1b8314460de4b63c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff256fa58992abde1b8314460de4b63c">SetIcon</a> (<a class="el" href="classglb_1_1_image.html">Image</a> icons[], int size) const</td></tr>
+<tr class="memdesc:aff256fa58992abde1b8314460de4b63c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the icons of the window.  <br /></td></tr>
+<tr class="separator:aff256fa58992abde1b8314460de4b63c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21a9b5c967ef289222a45924e353df1e" id="r_a21a9b5c967ef289222a45924e353df1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21a9b5c967ef289222a45924e353df1e">SetIconAndFree</a> (<a class="el" href="classglb_1_1_image.html">Image</a> icons[], int size) const</td></tr>
+<tr class="memdesc:a21a9b5c967ef289222a45924e353df1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the icons of the window and frees the associated resources.  <br /></td></tr>
+<tr class="separator:a21a9b5c967ef289222a45924e353df1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac73fd94f16b1bfcaad9709e0da3c0978" id="r_ac73fd94f16b1bfcaad9709e0da3c0978"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac73fd94f16b1bfcaad9709e0da3c0978">SetDefaultIcon</a> () const</td></tr>
+<tr class="memdesc:ac73fd94f16b1bfcaad9709e0da3c0978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default icon for the window.  <br /></td></tr>
+<tr class="separator:ac73fd94f16b1bfcaad9709e0da3c0978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae60bc1657fb289a135acddceb9e4ee1b" id="r_ae60bc1657fb289a135acddceb9e4ee1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae60bc1657fb289a135acddceb9e4ee1b">SetAspectRatio</a> (int numer, int denom) const</td></tr>
+<tr class="memdesc:ae60bc1657fb289a135acddceb9e4ee1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the aspect ratio of the window.  <br /></td></tr>
+<tr class="separator:ae60bc1657fb289a135acddceb9e4ee1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a504a0712b5015727e721bec8e86c554c" id="r_a504a0712b5015727e721bec8e86c554c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a504a0712b5015727e721bec8e86c554c">DisableAspectRatio</a> () const</td></tr>
+<tr class="memdesc:a504a0712b5015727e721bec8e86c554c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables the aspect ratio of the window.  <br /></td></tr>
+<tr class="separator:a504a0712b5015727e721bec8e86c554c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6369d0eea10721e19ab6928a303e45ce" id="r_a6369d0eea10721e19ab6928a303e45ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6369d0eea10721e19ab6928a303e45ce">SetOpacity</a> (float opacity) const</td></tr>
+<tr class="memdesc:a6369d0eea10721e19ab6928a303e45ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the opacity of the window.  <br /></td></tr>
+<tr class="separator:a6369d0eea10721e19ab6928a303e45ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae73628bea4a5f74febc8ccd9a62374a8" id="r_ae73628bea4a5f74febc8ccd9a62374a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae73628bea4a5f74febc8ccd9a62374a8">SetSwapInterval</a> (int interval) const</td></tr>
+<tr class="memdesc:ae73628bea4a5f74febc8ccd9a62374a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the swap interval for the window.  <br /></td></tr>
+<tr class="separator:ae73628bea4a5f74febc8ccd9a62374a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a705ee67bcd2db81dba3f8dd91ed38f70" id="r_a705ee67bcd2db81dba3f8dd91ed38f70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a705ee67bcd2db81dba3f8dd91ed38f70">Iconify</a> () const</td></tr>
+<tr class="memdesc:a705ee67bcd2db81dba3f8dd91ed38f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iconifies the window.  <br /></td></tr>
+<tr class="separator:a705ee67bcd2db81dba3f8dd91ed38f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bab6d18f6f744b5718e62b959b17f43" id="r_a5bab6d18f6f744b5718e62b959b17f43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bab6d18f6f744b5718e62b959b17f43">Maximize</a> () const</td></tr>
+<tr class="memdesc:a5bab6d18f6f744b5718e62b959b17f43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximizes the window.  <br /></td></tr>
+<tr class="separator:a5bab6d18f6f744b5718e62b959b17f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90562bc772c5c073da8a4612033547ad" id="r_a90562bc772c5c073da8a4612033547ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90562bc772c5c073da8a4612033547ad">Restore</a> () const</td></tr>
+<tr class="memdesc:a90562bc772c5c073da8a4612033547ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restores the window to its previous state.  <br /></td></tr>
+<tr class="separator:a90562bc772c5c073da8a4612033547ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a435ec48684a4af945a8d55c40ec69e08" id="r_a435ec48684a4af945a8d55c40ec69e08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a435ec48684a4af945a8d55c40ec69e08">EnableResize</a> () const</td></tr>
+<tr class="memdesc:a435ec48684a4af945a8d55c40ec69e08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables window resizing.  <br /></td></tr>
+<tr class="separator:a435ec48684a4af945a8d55c40ec69e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad17633184e6dbf925c03618cbf86c363" id="r_ad17633184e6dbf925c03618cbf86c363"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad17633184e6dbf925c03618cbf86c363">DisableResize</a> () const</td></tr>
+<tr class="memdesc:ad17633184e6dbf925c03618cbf86c363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables window resizing.  <br /></td></tr>
+<tr class="separator:ad17633184e6dbf925c03618cbf86c363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06f79657b9ec12496604e3f2277786b7" id="r_a06f79657b9ec12496604e3f2277786b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06f79657b9ec12496604e3f2277786b7">Hide</a> () const</td></tr>
+<tr class="memdesc:a06f79657b9ec12496604e3f2277786b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hides the window.  <br /></td></tr>
+<tr class="separator:a06f79657b9ec12496604e3f2277786b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa059ba1e09695e002b8f5580c0883969" id="r_aa059ba1e09695e002b8f5580c0883969"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa059ba1e09695e002b8f5580c0883969">Show</a> () const</td></tr>
+<tr class="memdesc:aa059ba1e09695e002b8f5580c0883969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows the window.  <br /></td></tr>
+<tr class="separator:aa059ba1e09695e002b8f5580c0883969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38d1257f52dc8e4241e1f5820ddb5959" id="r_a38d1257f52dc8e4241e1f5820ddb5959"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38d1257f52dc8e4241e1f5820ddb5959">Focus</a> () const</td></tr>
+<tr class="memdesc:a38d1257f52dc8e4241e1f5820ddb5959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Focuses the window.  <br /></td></tr>
+<tr class="separator:a38d1257f52dc8e4241e1f5820ddb5959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b9380dce13fdfee27561133123274a7" id="r_a0b9380dce13fdfee27561133123274a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b9380dce13fdfee27561133123274a7">RequestAttention</a> () const</td></tr>
+<tr class="memdesc:a0b9380dce13fdfee27561133123274a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests attention for the window.  <br /></td></tr>
+<tr class="separator:a0b9380dce13fdfee27561133123274a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8740734b909d7514dae4c0607ce1654d" id="r_a8740734b909d7514dae4c0607ce1654d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8740734b909d7514dae4c0607ce1654d">PollEvents</a> () const</td></tr>
+<tr class="memdesc:a8740734b909d7514dae4c0607ce1654d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polls events for the window.  <br /></td></tr>
+<tr class="separator:a8740734b909d7514dae4c0607ce1654d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2270442cf85bf8be13cf5b5e32152fc" id="r_af2270442cf85bf8be13cf5b5e32152fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2270442cf85bf8be13cf5b5e32152fc">SwapBuffers</a> () const</td></tr>
+<tr class="memdesc:af2270442cf85bf8be13cf5b5e32152fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the buffers of the window.  <br /></td></tr>
+<tr class="separator:af2270442cf85bf8be13cf5b5e32152fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a67736c5ba401bb1e0781c3518a3def86" id="r_a67736c5ba401bb1e0781c3518a3def86"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classglb_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67736c5ba401bb1e0781c3518a3def86">Create</a> (int width, int height, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a67736c5ba401bb1e0781c3518a3def86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and initializes a <a class="el" href="classglb_1_1_window.html" title="Manages a GLFW window and provides an interface for interacting with it.">Window</a> instance.  <br /></td></tr>
+<tr class="separator:a67736c5ba401bb1e0781c3518a3def86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4e3d57ed1fce24a298dad9d65b22ae0" id="r_af4e3d57ed1fce24a298dad9d65b22ae0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classglb_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4e3d57ed1fce24a298dad9d65b22ae0">GetInstance</a> ()</td></tr>
+<tr class="memdesc:af4e3d57ed1fce24a298dad9d65b22ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the singleton instance of the <a class="el" href="classglb_1_1_window.html" title="Manages a GLFW window and provides an interface for interacting with it.">Window</a>.  <br /></td></tr>
+<tr class="separator:af4e3d57ed1fce24a298dad9d65b22ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9ef09b5298b6b15c7b196f936cae6a1" id="r_ae9ef09b5298b6b15c7b196f936cae6a1"><td class="memItemLeft" align="right" valign="top">static GLFWwindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9ef09b5298b6b15c7b196f936cae6a1">GetGLFWwindow</a> ()</td></tr>
+<tr class="memdesc:ae9ef09b5298b6b15c7b196f936cae6a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the underlying GLFW window handle.  <br /></td></tr>
+<tr class="separator:ae9ef09b5298b6b15c7b196f936cae6a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manages a GLFW window and provides an interface for interacting with it. </p>
+<p>The <a class="el" href="classglb_1_1_window.html" title="Manages a GLFW window and provides an interface for interacting with it.">Window</a> class wraps around the GLFW window functionality, providing methods to create, manage, and interact with a window. It includes methods to get and set window properties, handle callbacks, and perform various window operations. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="aaa24d610123c7b3c751d8136bd6e2db1" name="aaa24d610123c7b3c751d8136bd6e2db1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa24d610123c7b3c751d8136bd6e2db1">&#9670;&#160;</a></span>Callback</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#aaa24d610123c7b3c751d8136bd6e2db1">glb::Window::Callback</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classglb_1_1_enum.html" title="Provides functionality for handling OpenGL enumeration types.">Enum</a> representing different types of window callbacks. </p>
+<p><a class="el" href="classglb_1_1_enum.html" title="Provides functionality for handling OpenGL enumeration types.">Enum</a> values correspond to different types of window events that can be handled via callback functions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aaa24d610123c7b3c751d8136bd6e2db1ad3d2e617335f08df83599665eef8a418" name="aaa24d610123c7b3c751d8136bd6e2db1ad3d2e617335f08df83599665eef8a418"></a>Close&#160;</td><td class="fielddoc"><p>Close window callback (None) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa24d610123c7b3c751d8136bd6e2db1a6f6cb72d544962fa333e2e34ce64f719" name="aaa24d610123c7b3c751d8136bd6e2db1a6f6cb72d544962fa333e2e34ce64f719"></a>Size&#160;</td><td class="fielddoc"><p>Resize window callback (int width, int height) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa24d610123c7b3c751d8136bd6e2db1a048f247ef00bb80cc022b8b4eb7ba26d" name="aaa24d610123c7b3c751d8136bd6e2db1a048f247ef00bb80cc022b8b4eb7ba26d"></a>FramebufferSize&#160;</td><td class="fielddoc"><p>Framebuffer size callback (int width, int height) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa24d610123c7b3c751d8136bd6e2db1a52f5e0bc3859bc5f5e25130b6c7e8881" name="aaa24d610123c7b3c751d8136bd6e2db1a52f5e0bc3859bc5f5e25130b6c7e8881"></a>Position&#160;</td><td class="fielddoc"><p>Move window callback (int xpos, int ypos) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa24d610123c7b3c751d8136bd6e2db1a4f2165582c64e8a978621017c87b770b" name="aaa24d610123c7b3c751d8136bd6e2db1a4f2165582c64e8a978621017c87b770b"></a>Iconify&#160;</td><td class="fielddoc"><p><a class="el" href="classglb_1_1_window.html" title="Manages a GLFW window and provides an interface for interacting with it.">Window</a> iconification callback (int iconified) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa24d610123c7b3c751d8136bd6e2db1a9369ba148ee259473fc1fb4939b6c2e8" name="aaa24d610123c7b3c751d8136bd6e2db1a9369ba148ee259473fc1fb4939b6c2e8"></a>Maximize&#160;</td><td class="fielddoc"><p><a class="el" href="classglb_1_1_window.html" title="Manages a GLFW window and provides an interface for interacting with it.">Window</a> maximization callback (int maximized) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa24d610123c7b3c751d8136bd6e2db1ae24ee2487879116dcab772c0ac4fe341" name="aaa24d610123c7b3c751d8136bd6e2db1ae24ee2487879116dcab772c0ac4fe341"></a>Focus&#160;</td><td class="fielddoc"><p><a class="el" href="classglb_1_1_window.html" title="Manages a GLFW window and provides an interface for interacting with it.">Window</a> Focus callback (int focused) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa24d610123c7b3c751d8136bd6e2db1a63a6a88c066880c5ac42394a22803ca6" name="aaa24d610123c7b3c751d8136bd6e2db1a63a6a88c066880c5ac42394a22803ca6"></a>Refresh&#160;</td><td class="fielddoc"><p><a class="el" href="classglb_1_1_window.html" title="Manages a GLFW window and provides an interface for interacting with it.">Window</a> damage and refresh callback (None) </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a23aafde252efd0a508c7b1185157245e" name="a23aafde252efd0a508c7b1185157245e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23aafde252efd0a508c7b1185157245e">&#9670;&#160;</a></span>Window()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">glb::Window::Window </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classglb_1_1_window.html">Window</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disallow copying of <a class="el" href="classglb_1_1_window.html" title="Manages a GLFW window and provides an interface for interacting with it.">Window</a> instance. </p>
+
+</div>
+</div>
+<a id="a9f46215bdbfb91ca695c547ff3e7aa79" name="a9f46215bdbfb91ca695c547ff3e7aa79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f46215bdbfb91ca695c547ff3e7aa79">&#9670;&#160;</a></span>~Window()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">glb::Window::~Window </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a67736c5ba401bb1e0781c3518a3def86" name="a67736c5ba401bb1e0781c3518a3def86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67736c5ba401bb1e0781c3518a3def86">&#9670;&#160;</a></span>Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classglb_1_1_window.html">Window</a> &amp; glb::Window::Create </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates and initializes a <a class="el" href="classglb_1_1_window.html" title="Manages a GLFW window and provides an interface for interacting with it.">Window</a> instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>The initial width of the window in pixels. </td></tr>
+    <tr><td class="paramname">height</td><td>The initial height of the window in pixels. </td></tr>
+    <tr><td class="paramname">name</td><td>The title of the window. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the created <a class="el" href="classglb_1_1_window.html" title="Manages a GLFW window and provides an interface for interacting with it.">Window</a> instance.</dd></dl>
+<p>This method creates a new <a class="el" href="classglb_1_1_window.html" title="Manages a GLFW window and provides an interface for interacting with it.">Window</a> instance with the specified dimensions and title. If a window already exists, it returns the existing instance. </p>
+
+</div>
+</div>
+<a id="a2a6fa612fe749a984725d7982fde88b6" name="a2a6fa612fe749a984725d7982fde88b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a6fa612fe749a984725d7982fde88b6">&#9670;&#160;</a></span>Destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::Destroy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destroys the window and cleans up resources. </p>
+<p>This method destroys the window and releases associated resources. </p>
+
+</div>
+</div>
+<a id="a504a0712b5015727e721bec8e86c554c" name="a504a0712b5015727e721bec8e86c554c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a504a0712b5015727e721bec8e86c554c">&#9670;&#160;</a></span>DisableAspectRatio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::DisableAspectRatio </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disables the aspect ratio of the window. </p>
+
+</div>
+</div>
+<a id="ab6bf949801c4b65f133fc29eaf019c0d" name="ab6bf949801c4b65f133fc29eaf019c0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6bf949801c4b65f133fc29eaf019c0d">&#9670;&#160;</a></span>DisableCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool glb::Window::DisableCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aaa24d610123c7b3c751d8136bd6e2db1">Callback</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disables a callback function for a specified window event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type of callback event to disable. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the callback was disabled successfully, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ad17633184e6dbf925c03618cbf86c363" name="ad17633184e6dbf925c03618cbf86c363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad17633184e6dbf925c03618cbf86c363">&#9670;&#160;</a></span>DisableResize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::DisableResize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disables window resizing. </p>
+
+</div>
+</div>
+<a id="a7ce6060c04093def27810eb63d5f170e" name="a7ce6060c04093def27810eb63d5f170e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ce6060c04093def27810eb63d5f170e">&#9670;&#160;</a></span>DisableSizeLimit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::DisableSizeLimit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disables the size limits of the window. </p>
+
+</div>
+</div>
+<a id="a435ec48684a4af945a8d55c40ec69e08" name="a435ec48684a4af945a8d55c40ec69e08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a435ec48684a4af945a8d55c40ec69e08">&#9670;&#160;</a></span>EnableResize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::EnableResize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enables window resizing. </p>
+
+</div>
+</div>
+<a id="a38d1257f52dc8e4241e1f5820ddb5959" name="a38d1257f52dc8e4241e1f5820ddb5959"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38d1257f52dc8e4241e1f5820ddb5959">&#9670;&#160;</a></span>Focus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::Focus </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Focuses the window. </p>
+
+</div>
+</div>
+<a id="a31c20d3758965bcc2ff2bc37e3853880" name="a31c20d3758965bcc2ff2bc37e3853880"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31c20d3758965bcc2ff2bc37e3853880">&#9670;&#160;</a></span>GeFramebufferHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int glb::Window::GeFramebufferHeight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the height of the framebuffer. </p>
+<dl class="section return"><dt>Returns</dt><dd>The height of the framebuffer in pixels. </dd></dl>
+
+</div>
+</div>
+<a id="aaaa09a73639c561b2d349dd1728e330f" name="aaaa09a73639c561b2d349dd1728e330f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaa09a73639c561b2d349dd1728e330f">&#9670;&#160;</a></span>GeHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int glb::Window::GeHeight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the height of the window. </p>
+<dl class="section return"><dt>Returns</dt><dd>The height of the window in pixels. </dd></dl>
+
+</div>
+</div>
+<a id="a725f32a284356ede7f905c1f85f1d498" name="a725f32a284356ede7f905c1f85f1d498"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a725f32a284356ede7f905c1f85f1d498">&#9670;&#160;</a></span>GetFramebufferSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structglb_1_1_window_1_1_size__t.html">Window::Size_t</a> glb::Window::GetFramebufferSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the size of the framebuffer. </p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structglb_1_1_window_1_1_size__t.html" title="Represents the size of the window.">Size_t</a> structure containing the width and height of the framebuffer. </dd></dl>
+
+</div>
+</div>
+<a id="a9597f50737c48c78d094d2b70e6b20ab" name="a9597f50737c48c78d094d2b70e6b20ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9597f50737c48c78d094d2b70e6b20ab">&#9670;&#160;</a></span>GetFramebufferWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int glb::Window::GetFramebufferWidth </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the width of the framebuffer. </p>
+<dl class="section return"><dt>Returns</dt><dd>The width of the framebuffer in pixels. </dd></dl>
+
+</div>
+</div>
+<a id="ae9ef09b5298b6b15c7b196f936cae6a1" name="ae9ef09b5298b6b15c7b196f936cae6a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9ef09b5298b6b15c7b196f936cae6a1">&#9670;&#160;</a></span>GetGLFWwindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static GLFWwindow * glb::Window::GetGLFWwindow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the underlying GLFW window handle. </p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the GLFWwindow object. </dd></dl>
+
+</div>
+</div>
+<a id="af4e3d57ed1fce24a298dad9d65b22ae0" name="af4e3d57ed1fce24a298dad9d65b22ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4e3d57ed1fce24a298dad9d65b22ae0">&#9670;&#160;</a></span>GetInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classglb_1_1_window.html">Window</a> &amp; glb::Window::GetInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the singleton instance of the <a class="el" href="classglb_1_1_window.html" title="Manages a GLFW window and provides an interface for interacting with it.">Window</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the <a class="el" href="classglb_1_1_window.html" title="Manages a GLFW window and provides an interface for interacting with it.">Window</a> instance.</dd></dl>
+<p>This method returns the singleton instance of the <a class="el" href="classglb_1_1_window.html" title="Manages a GLFW window and provides an interface for interacting with it.">Window</a>. If the window has not been created yet, it asserts and raises an error. </p>
+
+</div>
+</div>
+<a id="a9241a9eb607c48520b5c567dc104de37" name="a9241a9eb607c48520b5c567dc104de37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9241a9eb607c48520b5c567dc104de37">&#9670;&#160;</a></span>GetOpacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float glb::Window::GetOpacity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the opacity of the window. </p>
+<dl class="section return"><dt>Returns</dt><dd>The opacity of the window as a float. </dd></dl>
+
+</div>
+</div>
+<a id="a41d51c13e2b1b13e9664d033de6bb3fd" name="a41d51c13e2b1b13e9664d033de6bb3fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41d51c13e2b1b13e9664d033de6bb3fd">&#9670;&#160;</a></span>GetPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structglb_1_1_window_1_1_position__t.html">Window::Position_t</a> glb::Window::GetPosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the position of the window. </p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structglb_1_1_window_1_1_position__t.html" title="Represents the position of the window on the screen.">Position_t</a> structure containing the x and y coordinates of the window. </dd></dl>
+
+</div>
+</div>
+<a id="ad4707ff9e89c9f7417d6692e3693469d" name="ad4707ff9e89c9f7417d6692e3693469d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4707ff9e89c9f7417d6692e3693469d">&#9670;&#160;</a></span>GetSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structglb_1_1_window_1_1_size__t.html">Window::Size_t</a> glb::Window::GetSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the size of the window. </p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structglb_1_1_window_1_1_size__t.html" title="Represents the size of the window.">Size_t</a> structure containing the width and height of the window. </dd></dl>
+
+</div>
+</div>
+<a id="a3bfb93aee182614f791bf1006bd78257" name="a3bfb93aee182614f791bf1006bd78257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bfb93aee182614f791bf1006bd78257">&#9670;&#160;</a></span>GetTitle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string glb::Window::GetTitle </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the title of the window. </p>
+<dl class="section return"><dt>Returns</dt><dd>The title of the window as a string. </dd></dl>
+
+</div>
+</div>
+<a id="ac03d7f614fea28d81258a33c7ef90fa8" name="ac03d7f614fea28d81258a33c7ef90fa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac03d7f614fea28d81258a33c7ef90fa8">&#9670;&#160;</a></span>GetWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int glb::Window::GetWidth </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the width of the window. </p>
+<dl class="section return"><dt>Returns</dt><dd>The width of the window in pixels. </dd></dl>
+
+</div>
+</div>
+<a id="a20754261bf8006142b2a7142ecb815f8" name="a20754261bf8006142b2a7142ecb815f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20754261bf8006142b2a7142ecb815f8">&#9670;&#160;</a></span>GetXPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int glb::Window::GetXPosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the x-coordinate of the window position. </p>
+<dl class="section return"><dt>Returns</dt><dd>The x-coordinate of the window in pixels. </dd></dl>
+
+</div>
+</div>
+<a id="a608c58552b7d3f5b671fc4dd2c889897" name="a608c58552b7d3f5b671fc4dd2c889897"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a608c58552b7d3f5b671fc4dd2c889897">&#9670;&#160;</a></span>GetYPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int glb::Window::GetYPosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the y-coordinate of the window position. </p>
+<dl class="section return"><dt>Returns</dt><dd>The y-coordinate of the window in pixels. </dd></dl>
+
+</div>
+</div>
+<a id="a06f79657b9ec12496604e3f2277786b7" name="a06f79657b9ec12496604e3f2277786b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06f79657b9ec12496604e3f2277786b7">&#9670;&#160;</a></span>Hide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::Hide </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Hides the window. </p>
+
+</div>
+</div>
+<a id="a705ee67bcd2db81dba3f8dd91ed38f70" name="a705ee67bcd2db81dba3f8dd91ed38f70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a705ee67bcd2db81dba3f8dd91ed38f70">&#9670;&#160;</a></span>Iconify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::Iconify </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Iconifies the window. </p>
+
+</div>
+</div>
+<a id="a0a1f080e928b2259a65294219e095354" name="a0a1f080e928b2259a65294219e095354"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a1f080e928b2259a65294219e095354">&#9670;&#160;</a></span>IsExist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int glb::Window::IsExist </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the window exists. </p>
+<dl class="section return"><dt>Returns</dt><dd>1 if the window exists, 0 otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a2420b73ac14a9f0f74c32b10e22a4f67" name="a2420b73ac14a9f0f74c32b10e22a4f67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2420b73ac14a9f0f74c32b10e22a4f67">&#9670;&#160;</a></span>IsIconified()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool glb::Window::IsIconified </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the window is iconified. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the window is iconified, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a4efb0b9ded1b857372e7129c4492e409" name="a4efb0b9ded1b857372e7129c4492e409"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4efb0b9ded1b857372e7129c4492e409">&#9670;&#160;</a></span>IsMaximized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool glb::Window::IsMaximized </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the window is maximized. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the window is maximized, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a1e0fe64dd8796115d9f07b83191c6d89" name="a1e0fe64dd8796115d9f07b83191c6d89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e0fe64dd8796115d9f07b83191c6d89">&#9670;&#160;</a></span>IsOpen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int glb::Window::IsOpen </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the window is open. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the window is not closed, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a3d24912683e721584c5ad9ab043f71c3" name="a3d24912683e721584c5ad9ab043f71c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d24912683e721584c5ad9ab043f71c3">&#9670;&#160;</a></span>IsPinned()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool glb::Window::IsPinned </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the window is focused. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the window is focused, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ac9789a145b1ead681ad892bab292de5c" name="ac9789a145b1ead681ad892bab292de5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9789a145b1ead681ad892bab292de5c">&#9670;&#160;</a></span>IsVisible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool glb::Window::IsVisible </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the window is visible. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the window is visible, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a5bab6d18f6f744b5718e62b959b17f43" name="a5bab6d18f6f744b5718e62b959b17f43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bab6d18f6f744b5718e62b959b17f43">&#9670;&#160;</a></span>Maximize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::Maximize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maximizes the window. </p>
+
+</div>
+</div>
+<a id="a160597a973da980269a6d0b79bd6ce28" name="a160597a973da980269a6d0b79bd6ce28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a160597a973da980269a6d0b79bd6ce28">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classglb_1_1_window.html">Window</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disallow assignment of <a class="el" href="classglb_1_1_window.html" title="Manages a GLFW window and provides an interface for interacting with it.">Window</a> instance. </p>
+
+</div>
+</div>
+<a id="a8740734b909d7514dae4c0607ce1654d" name="a8740734b909d7514dae4c0607ce1654d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8740734b909d7514dae4c0607ce1654d">&#9670;&#160;</a></span>PollEvents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::PollEvents </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Polls events for the window. </p>
+
+</div>
+</div>
+<a id="a0b9380dce13fdfee27561133123274a7" name="a0b9380dce13fdfee27561133123274a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b9380dce13fdfee27561133123274a7">&#9670;&#160;</a></span>RequestAttention()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::RequestAttention </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Requests attention for the window. </p>
+
+</div>
+</div>
+<a id="a90562bc772c5c073da8a4612033547ad" name="a90562bc772c5c073da8a4612033547ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90562bc772c5c073da8a4612033547ad">&#9670;&#160;</a></span>Restore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::Restore </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Restores the window to its previous state. </p>
+
+</div>
+</div>
+<a id="ae60bc1657fb289a135acddceb9e4ee1b" name="ae60bc1657fb289a135acddceb9e4ee1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae60bc1657fb289a135acddceb9e4ee1b">&#9670;&#160;</a></span>SetAspectRatio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::SetAspectRatio </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>numer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>denom</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the aspect ratio of the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numer</td><td>Numerator of the aspect ratio. </td></tr>
+    <tr><td class="paramname">denom</td><td>Denominator of the aspect ratio. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeababf18f4f7f08b249495582ba2c805" name="aeababf18f4f7f08b249495582ba2c805"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeababf18f4f7f08b249495582ba2c805">&#9670;&#160;</a></span>SetCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool glb::Window::SetCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aaa24d610123c7b3c751d8136bd6e2db1">Callback</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>callback</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a callback function for a specified window event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type of callback event. </td></tr>
+    <tr><td class="paramname">callback</td><td>Pointer to the callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the callback was set successfully, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ac73fd94f16b1bfcaad9709e0da3c0978" name="ac73fd94f16b1bfcaad9709e0da3c0978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac73fd94f16b1bfcaad9709e0da3c0978">&#9670;&#160;</a></span>SetDefaultIcon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::SetDefaultIcon </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the default icon for the window. </p>
+
+</div>
+</div>
+<a id="a76f3946971cff7473f7119f044c4c9dc" name="a76f3946971cff7473f7119f044c4c9dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76f3946971cff7473f7119f044c4c9dc">&#9670;&#160;</a></span>SetIcon() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::SetIcon </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classglb_1_1_image.html">Image</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>icon</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the icon of the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">icon</td><td>An <a class="el" href="classglb_1_1_image.html" title="Represents an image with various operations for loading, saving, and manipulating image data.">Image</a> object representing the icon. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aff256fa58992abde1b8314460de4b63c" name="aff256fa58992abde1b8314460de4b63c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff256fa58992abde1b8314460de4b63c">&#9670;&#160;</a></span>SetIcon() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::SetIcon </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classglb_1_1_image.html">Image</a></td>          <td class="paramname"><span class="paramname"><em>icons</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the icons of the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">icons</td><td>An array of <a class="el" href="classglb_1_1_image.html" title="Represents an image with various operations for loading, saving, and manipulating image data.">Image</a> objects representing the icons. </td></tr>
+    <tr><td class="paramname">size</td><td>The number of icons in the array. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7f93d93969d9526d76e20f4cbf04fb8f" name="a7f93d93969d9526d76e20f4cbf04fb8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f93d93969d9526d76e20f4cbf04fb8f">&#9670;&#160;</a></span>SetIconAndFree() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::SetIconAndFree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classglb_1_1_image.html">Image</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>icon</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the icon of the window and frees the associated resources. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">icon</td><td>An <a class="el" href="classglb_1_1_image.html" title="Represents an image with various operations for loading, saving, and manipulating image data.">Image</a> object representing the icon. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a21a9b5c967ef289222a45924e353df1e" name="a21a9b5c967ef289222a45924e353df1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21a9b5c967ef289222a45924e353df1e">&#9670;&#160;</a></span>SetIconAndFree() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::SetIconAndFree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classglb_1_1_image.html">Image</a></td>          <td class="paramname"><span class="paramname"><em>icons</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the icons of the window and frees the associated resources. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">icons</td><td>An array of <a class="el" href="classglb_1_1_image.html" title="Represents an image with various operations for loading, saving, and manipulating image data.">Image</a> objects representing the icons. </td></tr>
+    <tr><td class="paramname">size</td><td>The number of icons in the array. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6369d0eea10721e19ab6928a303e45ce" name="a6369d0eea10721e19ab6928a303e45ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6369d0eea10721e19ab6928a303e45ce">&#9670;&#160;</a></span>SetOpacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::SetOpacity </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>opacity</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the opacity of the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">opacity</td><td>The new opacity value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a101a979c5cfdb3a22d2c814c08fd2903" name="a101a979c5cfdb3a22d2c814c08fd2903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a101a979c5cfdb3a22d2c814c08fd2903">&#9670;&#160;</a></span>SetPosition() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::SetPosition </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>xpos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ypos</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the position of the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xpos</td><td>The x-coordinate of the window position in pixels. </td></tr>
+    <tr><td class="paramname">ypos</td><td>The y-coordinate of the window position in pixels. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5af0390d55f4964dde7b643879f1a7a6" name="a5af0390d55f4964dde7b643879f1a7a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5af0390d55f4964dde7b643879f1a7a6">&#9670;&#160;</a></span>SetPosition() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::SetPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structglb_1_1_window_1_1_position__t.html">Position_t</a></td>          <td class="paramname"><span class="paramname"><em>position</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the position of the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>A <a class="el" href="structglb_1_1_window_1_1_position__t.html" title="Represents the position of the window on the screen.">Position_t</a> structure containing the x and y coordinates of the window position. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af7df63627f5df57fc5b2d5cc7ccd036b" name="af7df63627f5df57fc5b2d5cc7ccd036b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7df63627f5df57fc5b2d5cc7ccd036b">&#9670;&#160;</a></span>SetSize() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::SetSize </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the size of the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>The width of the window in pixels. </td></tr>
+    <tr><td class="paramname">height</td><td>The height of the window in pixels. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aefec2eab6bdf782dd3117e3cd3d46f6e" name="aefec2eab6bdf782dd3117e3cd3d46f6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefec2eab6bdf782dd3117e3cd3d46f6e">&#9670;&#160;</a></span>SetSize() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::SetSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structglb_1_1_window_1_1_size__t.html">Size_t</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the size of the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>A <a class="el" href="structglb_1_1_window_1_1_size__t.html" title="Represents the size of the window.">Size_t</a> structure containing the width and height of the window. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a30f0f7d177a440b04d1503f60699cdfb" name="a30f0f7d177a440b04d1503f60699cdfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30f0f7d177a440b04d1503f60699cdfb">&#9670;&#160;</a></span>SetSizeLimit() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::SetSizeLimit </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>minWidth</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>minHeight</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>maxWidth</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>maxHeight</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the size limits of the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">minWidth</td><td>Minimum width of the window in pixels. </td></tr>
+    <tr><td class="paramname">minHeight</td><td>Minimum height of the window in pixels. </td></tr>
+    <tr><td class="paramname">maxWidth</td><td>Maximum width of the window in pixels. </td></tr>
+    <tr><td class="paramname">maxHeight</td><td>Maximum height of the window in pixels.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>To specify only a minimum size or only a maximum one, set the other pair to -1. </p>
+
+</div>
+</div>
+<a id="a7b49a4ef245b5f7f9176cd3f0aee6d43" name="a7b49a4ef245b5f7f9176cd3f0aee6d43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b49a4ef245b5f7f9176cd3f0aee6d43">&#9670;&#160;</a></span>SetSizeLimit() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::SetSizeLimit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structglb_1_1_window_1_1_size__t.html">Size_t</a></td>          <td class="paramname"><span class="paramname"><em>min</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structglb_1_1_window_1_1_size__t.html">Size_t</a></td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the size limits of the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min</td><td>Minimum size of the window. </td></tr>
+    <tr><td class="paramname">max</td><td>Maximum size of the window.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>To specify only a minimum size or only a maximum one, set the other pair to -1. </p>
+
+</div>
+</div>
+<a id="ae73628bea4a5f74febc8ccd9a62374a8" name="ae73628bea4a5f74febc8ccd9a62374a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae73628bea4a5f74febc8ccd9a62374a8">&#9670;&#160;</a></span>SetSwapInterval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::SetSwapInterval </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>interval</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the swap interval for the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">interval</td><td>The swap interval value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3ef7a6fc651816ab6303674d2fa3b2a8" name="a3ef7a6fc651816ab6303674d2fa3b2a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ef7a6fc651816ab6303674d2fa3b2a8">&#9670;&#160;</a></span>SetTitle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::SetTitle </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>title</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the title of the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>The new title of the window. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa059ba1e09695e002b8f5580c0883969" name="aa059ba1e09695e002b8f5580c0883969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa059ba1e09695e002b8f5580c0883969">&#9670;&#160;</a></span>Show()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::Show </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Shows the window. </p>
+
+</div>
+</div>
+<a id="af2270442cf85bf8be13cf5b5e32152fc" name="af2270442cf85bf8be13cf5b5e32152fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2270442cf85bf8be13cf5b5e32152fc">&#9670;&#160;</a></span>SwapBuffers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void glb::Window::SwapBuffers </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Swaps the buffers of the window. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>include/GLB/<a class="el" href="_window_8h_source.html">Window.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceglb.html">glb</a></li><li class="navelem"><a class="el" href="classglb_1_1_window.html">Window</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

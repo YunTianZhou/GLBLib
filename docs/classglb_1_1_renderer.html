@@ -1,0 +1,502 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>GLBLib: glb::Renderer Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.drawio.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GLBLib
+   </div>
+   <div id="projectbrief">A graphics library based on OpenGL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classglb_1_1_renderer.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="classglb_1_1_renderer-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">glb::Renderer Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Provides an interface for rendering operations in OpenGL applications.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_renderer_8h_source.html">Renderer.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a956c5297b268c947a69b45c50f241b06" id="r_a956c5297b268c947a69b45c50f241b06"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a956c5297b268c947a69b45c50f241b06">Mode</a> { <br />
+&#160;&#160;<a class="el" href="#a956c5297b268c947a69b45c50f241b06a75dd5f1160a3f02b6fae89c54361a1b3">Points</a> = GL_POINTS
+, <a class="el" href="#a956c5297b268c947a69b45c50f241b06ae7f9e73b8edd21f420a63b3ace5768a2">LineStrip</a> = GL_LINE_STRIP
+, <a class="el" href="#a956c5297b268c947a69b45c50f241b06a2ba065d2b3004087cc8f111bf56f134b">LineLoop</a> = GL_LINE_LOOP
+, <a class="el" href="#a956c5297b268c947a69b45c50f241b06aa0b0293a2db49f5f93c15a62e095c819">Lines</a> = GL_LINES
+, <br />
+&#160;&#160;<a class="el" href="#a956c5297b268c947a69b45c50f241b06a826457761e4d352b8f54d7d47b80dbaa">LineStripAdjacency</a> = GL_LINE_STRIP_ADJACENCY
+, <a class="el" href="#a956c5297b268c947a69b45c50f241b06a72ba2961719d09dc64d6088bb7b6e13a">LinesAdjacency</a> = GL_LINES_ADJACENCY
+, <a class="el" href="#a956c5297b268c947a69b45c50f241b06a1da0b9ead8b051940a89214bae22831c">TriangleStrip</a> = GL_TRIANGLE_STRIP
+, <a class="el" href="#a956c5297b268c947a69b45c50f241b06a18d58fde618e4a30e2dfdc122e693047">TriangleFan</a> = GL_TRIANGLE_FAN
+, <br />
+&#160;&#160;<a class="el" href="#a956c5297b268c947a69b45c50f241b06a7ca66fdfaad3eb33fc65d7490178f856">Triangles</a> = GL_TRIANGLES
+, <a class="el" href="#a956c5297b268c947a69b45c50f241b06a6b682fd6550f90f75722e4a7d38f3949">TriangleStripAdjacency</a> = GL_TRIANGLE_STRIP_ADJACENCY
+, <a class="el" href="#a956c5297b268c947a69b45c50f241b06a17eff3f9b5c0afdaacaeaf79238e36d5">TrianglesAdjacency</a> = GL_TRIANGLES_ADJACENCY
+, <a class="el" href="#a956c5297b268c947a69b45c50f241b06ac4d283323af70979073f5cb6145f3a4b">Patches</a> = GL_PATCHES
+<br />
+ }</td></tr>
+<tr class="memdesc:a956c5297b268c947a69b45c50f241b06"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classglb_1_1_enum.html" title="Provides functionality for handling OpenGL enumeration types.">Enum</a> class for specifying the drawing mode.  <a href="#a956c5297b268c947a69b45c50f241b06">More...</a><br /></td></tr>
+<tr class="separator:a956c5297b268c947a69b45c50f241b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a656c4f0870ac76041b6bf85151adbb6a" id="r_a656c4f0870ac76041b6bf85151adbb6a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a656c4f0870ac76041b6bf85151adbb6a">Clear</a> ()</td></tr>
+<tr class="memdesc:a656c4f0870ac76041b6bf85151adbb6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the color buffer.  <br /></td></tr>
+<tr class="separator:a656c4f0870ac76041b6bf85151adbb6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05d76593500ca2d318ac34e3f9f3ca15" id="r_a05d76593500ca2d318ac34e3f9f3ca15"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05d76593500ca2d318ac34e3f9f3ca15">SetClearColor</a> (float r, float g, float b, float a)</td></tr>
+<tr class="memdesc:a05d76593500ca2d318ac34e3f9f3ca15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the clear color for the color buffer.  <br /></td></tr>
+<tr class="separator:a05d76593500ca2d318ac34e3f9f3ca15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f2d71965c17dcc085ce08f2102d0888" id="r_a5f2d71965c17dcc085ce08f2102d0888"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f2d71965c17dcc085ce08f2102d0888">SetViewport</a> (int x, int y, int width, int height)</td></tr>
+<tr class="memdesc:a5f2d71965c17dcc085ce08f2102d0888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the viewport dimensions.  <br /></td></tr>
+<tr class="separator:a5f2d71965c17dcc085ce08f2102d0888"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3cf98d23d473df6508e726790565399" id="r_ae3cf98d23d473df6508e726790565399"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3cf98d23d473df6508e726790565399">DrawArray</a> (<a class="el" href="#a956c5297b268c947a69b45c50f241b06">Mode</a> mode, const <a class="el" href="classglb_1_1_vertex_array.html">VertexArray</a> &amp;va, const <a class="el" href="classglb_1_1_shader.html">Shader</a> &amp;shader, unsigned int first, unsigned int count)</td></tr>
+<tr class="memdesc:ae3cf98d23d473df6508e726790565399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a range of vertices using a specified mode.  <br /></td></tr>
+<tr class="separator:ae3cf98d23d473df6508e726790565399"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae973637df6c5fd2a2161361497708f45" id="r_ae973637df6c5fd2a2161361497708f45"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae973637df6c5fd2a2161361497708f45">DrawElements</a> (<a class="el" href="#a956c5297b268c947a69b45c50f241b06">Mode</a> mode, const <a class="el" href="classglb_1_1_vertex_array.html">VertexArray</a> &amp;va, const <a class="el" href="classglb_1_1_index_buffer.html">IndexBuffer</a> &amp;ib, const <a class="el" href="classglb_1_1_shader.html">Shader</a> &amp;shader, int count=-1, unsigned int first=0)</td></tr>
+<tr class="memdesc:ae973637df6c5fd2a2161361497708f45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws elements using a specified mode.  <br /></td></tr>
+<tr class="separator:ae973637df6c5fd2a2161361497708f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Provides an interface for rendering operations in OpenGL applications. </p>
+<p>The <code><a class="el" href="classglb_1_1_renderer.html" title="Provides an interface for rendering operations in OpenGL applications.">Renderer</a></code> class offers methods for clearing the screen, drawing arrays and elements, and setting rendering parameters such as clear color and viewport size. It supports various drawing modes as defined by OpenGL. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a956c5297b268c947a69b45c50f241b06" name="a956c5297b268c947a69b45c50f241b06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a956c5297b268c947a69b45c50f241b06">&#9670;&#160;</a></span>Mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a956c5297b268c947a69b45c50f241b06">glb::Renderer::Mode</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classglb_1_1_enum.html" title="Provides functionality for handling OpenGL enumeration types.">Enum</a> class for specifying the drawing mode. </p>
+<p>This enumeration defines different rendering modes used in OpenGL for drawing primitives. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a956c5297b268c947a69b45c50f241b06a75dd5f1160a3f02b6fae89c54361a1b3" name="a956c5297b268c947a69b45c50f241b06a75dd5f1160a3f02b6fae89c54361a1b3"></a>Points&#160;</td><td class="fielddoc"><p>Draw points. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a956c5297b268c947a69b45c50f241b06ae7f9e73b8edd21f420a63b3ace5768a2" name="a956c5297b268c947a69b45c50f241b06ae7f9e73b8edd21f420a63b3ace5768a2"></a>LineStrip&#160;</td><td class="fielddoc"><p>Draw a connected group of line segments. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a956c5297b268c947a69b45c50f241b06a2ba065d2b3004087cc8f111bf56f134b" name="a956c5297b268c947a69b45c50f241b06a2ba065d2b3004087cc8f111bf56f134b"></a>LineLoop&#160;</td><td class="fielddoc"><p>Draw a connected group of line segments, closing the loop. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a956c5297b268c947a69b45c50f241b06aa0b0293a2db49f5f93c15a62e095c819" name="a956c5297b268c947a69b45c50f241b06aa0b0293a2db49f5f93c15a62e095c819"></a>Lines&#160;</td><td class="fielddoc"><p>Draw separate line segments. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a956c5297b268c947a69b45c50f241b06a826457761e4d352b8f54d7d47b80dbaa" name="a956c5297b268c947a69b45c50f241b06a826457761e4d352b8f54d7d47b80dbaa"></a>LineStripAdjacency&#160;</td><td class="fielddoc"><p>Draw a connected group of line segments with adjacency information. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a956c5297b268c947a69b45c50f241b06a72ba2961719d09dc64d6088bb7b6e13a" name="a956c5297b268c947a69b45c50f241b06a72ba2961719d09dc64d6088bb7b6e13a"></a>LinesAdjacency&#160;</td><td class="fielddoc"><p>Draw separate line segments with adjacency information. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a956c5297b268c947a69b45c50f241b06a1da0b9ead8b051940a89214bae22831c" name="a956c5297b268c947a69b45c50f241b06a1da0b9ead8b051940a89214bae22831c"></a>TriangleStrip&#160;</td><td class="fielddoc"><p>Draw a connected group of triangles. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a956c5297b268c947a69b45c50f241b06a18d58fde618e4a30e2dfdc122e693047" name="a956c5297b268c947a69b45c50f241b06a18d58fde618e4a30e2dfdc122e693047"></a>TriangleFan&#160;</td><td class="fielddoc"><p>Draw a connected group of triangles sharing a common vertex. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a956c5297b268c947a69b45c50f241b06a7ca66fdfaad3eb33fc65d7490178f856" name="a956c5297b268c947a69b45c50f241b06a7ca66fdfaad3eb33fc65d7490178f856"></a>Triangles&#160;</td><td class="fielddoc"><p>Draw separate triangles. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a956c5297b268c947a69b45c50f241b06a6b682fd6550f90f75722e4a7d38f3949" name="a956c5297b268c947a69b45c50f241b06a6b682fd6550f90f75722e4a7d38f3949"></a>TriangleStripAdjacency&#160;</td><td class="fielddoc"><p>Draw a connected group of triangles with adjacency information. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a956c5297b268c947a69b45c50f241b06a17eff3f9b5c0afdaacaeaf79238e36d5" name="a956c5297b268c947a69b45c50f241b06a17eff3f9b5c0afdaacaeaf79238e36d5"></a>TrianglesAdjacency&#160;</td><td class="fielddoc"><p>Draw separate triangles with adjacency information. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a956c5297b268c947a69b45c50f241b06ac4d283323af70979073f5cb6145f3a4b" name="a956c5297b268c947a69b45c50f241b06ac4d283323af70979073f5cb6145f3a4b"></a>Patches&#160;</td><td class="fielddoc"><p>Draw patches for tessellation. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a656c4f0870ac76041b6bf85151adbb6a" name="a656c4f0870ac76041b6bf85151adbb6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a656c4f0870ac76041b6bf85151adbb6a">&#9670;&#160;</a></span>Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void glb::Renderer::Clear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clears the color buffer. </p>
+<p>This method clears the color buffer to the color set by <code><a class="el" href="#a05d76593500ca2d318ac34e3f9f3ca15" title="Sets the clear color for the color buffer.">SetClearColor()</a></code>. </p>
+
+</div>
+</div>
+<a id="ae3cf98d23d473df6508e726790565399" name="ae3cf98d23d473df6508e726790565399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3cf98d23d473df6508e726790565399">&#9670;&#160;</a></span>DrawArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void glb::Renderer::DrawArray </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a956c5297b268c947a69b45c50f241b06">Mode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classglb_1_1_vertex_array.html">VertexArray</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>va</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classglb_1_1_shader.html">Shader</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>shader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>first</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>count</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draws a range of vertices using a specified mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>The drawing mode to use. </td></tr>
+    <tr><td class="paramname">va</td><td>The vertex array to use for drawing. </td></tr>
+    <tr><td class="paramname">shader</td><td>The shader to use for rendering. </td></tr>
+    <tr><td class="paramname">first</td><td>The starting index of the vertices to draw. </td></tr>
+    <tr><td class="paramname">count</td><td>The number of vertices to draw. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae973637df6c5fd2a2161361497708f45" name="ae973637df6c5fd2a2161361497708f45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae973637df6c5fd2a2161361497708f45">&#9670;&#160;</a></span>DrawElements()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void glb::Renderer::DrawElements </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a956c5297b268c947a69b45c50f241b06">Mode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classglb_1_1_vertex_array.html">VertexArray</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>va</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classglb_1_1_index_buffer.html">IndexBuffer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ib</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classglb_1_1_shader.html">Shader</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>shader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draws elements using a specified mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>The drawing mode to use. </td></tr>
+    <tr><td class="paramname">va</td><td>The vertex array to use for drawing. </td></tr>
+    <tr><td class="paramname">ib</td><td>The index buffer to use for rendering. </td></tr>
+    <tr><td class="paramname">shader</td><td>The shader to use for rendering. </td></tr>
+    <tr><td class="paramname">count</td><td>The number of elements to draw. If negative, all elements are drawn. </td></tr>
+    <tr><td class="paramname">first</td><td>The starting index of the elements to draw. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a05d76593500ca2d318ac34e3f9f3ca15" name="a05d76593500ca2d318ac34e3f9f3ca15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05d76593500ca2d318ac34e3f9f3ca15">&#9670;&#160;</a></span>SetClearColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void glb::Renderer::SetClearColor </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>a</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the clear color for the color buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>The red component of the clear color (0.0 to 1.0). </td></tr>
+    <tr><td class="paramname">g</td><td>The green component of the clear color (0.0 to 1.0). </td></tr>
+    <tr><td class="paramname">b</td><td>The blue component of the clear color (0.0 to 1.0). </td></tr>
+    <tr><td class="paramname">a</td><td>The alpha component of the clear color (0.0 to 1.0). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5f2d71965c17dcc085ce08f2102d0888" name="a5f2d71965c17dcc085ce08f2102d0888"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f2d71965c17dcc085ce08f2102d0888">&#9670;&#160;</a></span>SetViewport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void glb::Renderer::SetViewport </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the viewport dimensions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The x-coordinate of the lower-left corner of the viewport. </td></tr>
+    <tr><td class="paramname">y</td><td>The y-coordinate of the lower-left corner of the viewport. </td></tr>
+    <tr><td class="paramname">width</td><td>The width of the viewport. </td></tr>
+    <tr><td class="paramname">height</td><td>The height of the viewport. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>include/GLB/<a class="el" href="_renderer_8h_source.html">Renderer.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceglb.html">glb</a></li><li class="navelem"><a class="el" href="classglb_1_1_renderer.html">Renderer</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

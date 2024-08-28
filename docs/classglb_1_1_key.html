@@ -1,0 +1,945 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>GLBLib: glb::Key Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.drawio.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GLBLib
+   </div>
+   <div id="projectbrief">A graphics library based on OpenGL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classglb_1_1_key.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="classglb_1_1_key-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">glb::Key Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Provides an interface for handling keyboard input in OpenGL applications using GLFW.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_key_8h_source.html">Key.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ad0f577cfd0cb4ed7b586a2dbb917ff74" id="r_ad0f577cfd0cb4ed7b586a2dbb917ff74"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74">Type</a> { <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a01ae2e552c349bd5608af0f670f8ebc2">Unknow</a> = GLFW_KEY_UNKNOWN
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74ad511f8439ecde36647437fbba67a4394">Space</a> = GLFW_KEY_SPACE
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74ab6ac6f84bcb33f9b5186bda6b4c8b399">Apostrophe</a> = GLFW_KEY_APOSTROPHE
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a58be47db9455679e6a44df2eff9c9fa6">Comma</a> = GLFW_KEY_COMMA
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a453fb623e752c5993f65bc410fd74fe5">Minus</a> = GLFW_KEY_MINUS
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a1901606ea069a83dc7beea17881ef95a">Period</a> = GLFW_KEY_PERIOD
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a358cfe58715d680d9ab09f82e4010cbc">Slash</a> = GLFW_KEY_SLASH
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74aaf269d1e4ffb0df48d9cdf6b4d591a58">Key0</a> = GLFW_KEY_0
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74af64f4f750f097b4421a050c9d11d9c14">Key1</a> = GLFW_KEY_1
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74ac31650e34686537020ee36190e71da5b">Key2</a> = GLFW_KEY_2
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a3d81009a6cd9a27e5ee8043024070dfb">Key3</a> = GLFW_KEY_3
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74ae08e48afa7b3099b0df15613b907a648">Key4</a> = GLFW_KEY_4
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a850176141118349ca686347d2eed0b55">Key5</a> = GLFW_KEY_5
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74aa0b2886a19d886ed19252edbda722a51">Key6</a> = GLFW_KEY_6
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a4275a26eae5db36de134edf05c64e44a">Key7</a> = GLFW_KEY_7
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a69a678929c3e0b081c385c16535414a3">Key8</a> = GLFW_KEY_8
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a2ebdff99c5eacb157ec10aab842b082d">Key9</a> = GLFW_KEY_9
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a9806fa37a3ecd39bf637c203aa011ed0">Semicolon</a> = GLFW_KEY_SEMICOLON
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74af5f286e73bda105e538310b3190f75c5">Equal</a> = GLFW_KEY_EQUAL
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a7fc56270e7a70fa81a5935b72eacbe29">A</a> = GLFW_KEY_A
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a9d5ed678fe57bcca610140957afab571">B</a> = GLFW_KEY_B
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a0d61f8370cad1d412f80b84d143e1257">C</a> = GLFW_KEY_C
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74af623e75af30e62bbd73d6df5b50bb7b5">D</a> = GLFW_KEY_D
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a3a3ea00cfc35332cedf6e5e9a32e94da">E</a> = GLFW_KEY_E
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a800618943025315f869e4e1f09471012">F</a> = GLFW_KEY_F
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74adfcf28d0734569a6a693bc8194de62bf">G</a> = GLFW_KEY_G
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74ac1d9f50f86825a1a2302ec2449c17196">H</a> = GLFW_KEY_H
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74add7536794b63bf90eccfd37f9b147d7f">I</a> = GLFW_KEY_I
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74aff44570aca8241914870afbc310cdb85">J</a> = GLFW_KEY_J
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74aa5f3c6a11b03839d46af9fb43c97c188">K</a> = GLFW_KEY_K
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74ad20caec3b48a1eef164cb4ca81ba2587">L</a> = GLFW_KEY_L
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a69691c7bdcc3ce6d5d8a1361f22d04ac">M</a> = GLFW_KEY_M
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a8d9c307cb7f3c4a32822a51922d1ceaa">N</a> = GLFW_KEY_N
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74af186217753c37b9b9f958d906208506e">O</a> = GLFW_KEY_O
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a44c29edb103a2872f519ad0c9a0fdaaa">P</a> = GLFW_KEY_P
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74af09564c9ca56850d4cd6b3319e541aee">Q</a> = GLFW_KEY_Q
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74ae1e1d3d40573127e9ee0480caf1283d6">R</a> = GLFW_KEY_R
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a5dbc98dcc983a70728bd082d1a47546e">S</a> = GLFW_KEY_S
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> = GLFW_KEY_T
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a4c614360da93c0a041b22e537de151eb">U</a> = GLFW_KEY_U
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a5206560a306a2e085a437fd258eb57ce">V</a> = GLFW_KEY_V
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a61e9c06ea9a85a5088a499df6458d276">W</a> = GLFW_KEY_W
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a02129bb861061d1a052c592e2dc6b383">X</a> = GLFW_KEY_X
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a57cec4137b614c87cb4e24a3d003a3e0">Y</a> = GLFW_KEY_Y
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a21c2e59531c8710156d34a3c30ac81d5">Z</a> = GLFW_KEY_Z
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a481c09f513474b2d31ba5c2992947b17">LeftBracket</a> = GLFW_KEY_LEFT_BRACKET
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74af6c6379402dce27659f7cffee6bc1f00">Backslash</a> = GLFW_KEY_BACKSLASH
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a455364d8991395f71ef9ccc5cc449e5c">RightBracket</a> = GLFW_KEY_RIGHT_BRACKET
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a45428446946e929576498c7f5d36f230">GraveAccent</a> = GLFW_KEY_GRAVE_ACCENT
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a74c7c1760efb02a127a01f7d7457b61d">World1</a> = GLFW_KEY_WORLD_1
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a8bf6b1dbf5254c134b06997c602799a3">World2</a> = GLFW_KEY_WORLD_2
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a013ec032d3460d4be4431c6ab1f8f224">Escape</a> = GLFW_KEY_ESCAPE
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74af1851d5600eae616ee802a31ac74701b">Enter</a> = GLFW_KEY_ENTER
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a5c6ba25104401c9ee0650230fc6ba413">Tab</a> = GLFW_KEY_TAB
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74acd7d13ceea728b08555f7c818cfb13ef">Backspace</a> = GLFW_KEY_BACKSPACE
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74aa458be0f08b7e4ff3c0f633c100176c0">Insert</a> = GLFW_KEY_INSERT
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74af2a6c498fb90ee345d997f888fce3b18">Delete</a> = GLFW_KEY_DELETE
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a92b09c7c48c520c3c55e497875da437c">Right</a> = GLFW_KEY_RIGHT
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a945d5e233cf7d6240f6b783b36a374ff">Left</a> = GLFW_KEY_LEFT
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a08a38277b0309070706f6652eeae9a53">Down</a> = GLFW_KEY_DOWN
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a258f49887ef8d14ac268c92b02503aaa">Up</a> = GLFW_KEY_UP
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a9b869c510c75c5827ac82e49d4340927">PageUp</a> = GLFW_KEY_PAGE_UP
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74aee3677bcca83ece9384b01e43952bf33">PageDown</a> = GLFW_KEY_PAGE_DOWN
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a8cf04a9734132302f96da8e113e80ce5">Home</a> = GLFW_KEY_HOME
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a87557f11575c0ad78e4e28abedc13b6e">End</a> = GLFW_KEY_END
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a8d0f4171170104d094d8b6d4f8bf49e6">CapsLock</a> = GLFW_KEY_CAPS_LOCK
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a7d7902d5e2998e4fb2b8694a2de4ff65">ScrollLock</a> = GLFW_KEY_SCROLL_LOCK
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74acf6cc0261135c6d163fd4305375773d2">NumLock</a> = GLFW_KEY_NUM_LOCK
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74abf54024481cd2ad6bbb9ae44b7312472">PrintScreen</a> = GLFW_KEY_PRINT_SCREEN
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a105b296a83f9c105355403f3332af50f">Pause</a> = GLFW_KEY_PAUSE
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74ae1dffc8709f31a4987c8a88334107e89">F1</a> = GLFW_KEY_F1
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74afe5c3684dce76cdd9f7f42430868aa74">F2</a> = GLFW_KEY_F2
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a4b6bf4b531770872d4328ce69bef5627">F3</a> = GLFW_KEY_F3
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74ae7e0e72401a9f2718ed0f39f2861d702">F4</a> = GLFW_KEY_F4
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a37f438df6a6d5ba4c17ef8ca58562f00">F5</a> = GLFW_KEY_F5
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a1faf42f2823f184eb2c9f0dffe5d73f2">F6</a> = GLFW_KEY_F6
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a47489eb597b7db34caa24b1fc78fc839">F7</a> = GLFW_KEY_F7
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a4787509ad9f9d747a81a30e9dde3d4a7">F8</a> = GLFW_KEY_F8
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a892a245e287c163080b23db737d3c4c9">F9</a> = GLFW_KEY_F9
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74ab213ce22ca6ad4eda8db82966b9b6e5a">F10</a> = GLFW_KEY_F10
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a643b0662422d1d0dffa3fca2e2bf28a8">F11</a> = GLFW_KEY_F11
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74ae902674982fc99aa343cdd94da7476c3">F12</a> = GLFW_KEY_F12
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a95dfde4807d4d6a9eec499203b3c24a0">F13</a> = GLFW_KEY_F13
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a2468649b6215c4cdd2aef5095b3f5932">F14</a> = GLFW_KEY_F14
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74ae53b55851b9ff4979f2c3ff434a4a138">F15</a> = GLFW_KEY_F15
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a56d8353718e6fdc78b8d69078a2cdb94">F16</a> = GLFW_KEY_F16
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74affa5882d1ddcf903bf0d0dbc30bfc604">F17</a> = GLFW_KEY_F17
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a810b30cdfc07fd7fff553a94b828ff78">F18</a> = GLFW_KEY_F18
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74acd7c2a221ef5d0a34acc0bcd679b2054">F19</a> = GLFW_KEY_F19
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74afc335adb3d69d3d8270769e1923ea4dc">F20</a> = GLFW_KEY_F20
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a77e9eee7c579eef5f3731ecf1053c02e">F21</a> = GLFW_KEY_F21
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a7fa06ead699fcbd63132370ffe13335a">F22</a> = GLFW_KEY_F22
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a889645d530078147e7dc69a9caadc31e">F23</a> = GLFW_KEY_F23
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74aebd7820c520d05eca2d775c37d141273">F24</a> = GLFW_KEY_F24
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74aabf9846f265ae3dea4bf9d740f5cb1aa">F25</a> = GLFW_KEY_F25
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74ad12b3b1c93c35b6d0ed53406e0b845e8">Kp_0</a> = GLFW_KEY_KP_0
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a699135587d11ea88bcd0293ec16c4e88">Kp_1</a> = GLFW_KEY_KP_1
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a1c08549e0211b27f6e5cf432c9fc20ce">Kp_2</a> = GLFW_KEY_KP_2
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a50b8c53f607ccb3b07f2cec14b22a3f4">Kp_3</a> = GLFW_KEY_KP_3
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74ac875f8abfd2077f0ad9ddbfccd7817ec">Kp_4</a> = GLFW_KEY_KP_4
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a6212c02b65f2c00299ff29bfa5266a2a">Kp_5</a> = GLFW_KEY_KP_5
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a2ab9d39c882ac7b961b2252622cd420b">Kp_6</a> = GLFW_KEY_KP_6
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a90ed0324ff9ab13e4cc8f38f12e7aee5">Kp_7</a> = GLFW_KEY_KP_7
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a781396cb8131eb6c9dd59fe9c2044c65">Kp_8</a> = GLFW_KEY_KP_8
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74af0e42e334589ad8374cb2d3690cd69e7">Kp_9</a> = GLFW_KEY_KP_9
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a176febb8bd57bad37061c8eaff9748cf">Kp_decimal</a> = GLFW_KEY_KP_DECIMAL
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74aa1fda2e9d6f710994b9b00d03340aa4a">Kp_divide</a> = GLFW_KEY_KP_DIVIDE
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a0aadee2dfd48376e84166e19632ceb06">Kp_multiply</a> = GLFW_KEY_KP_MULTIPLY
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74ad9e7337eeea2f02215595391efecc479">Kp_subtract</a> = GLFW_KEY_KP_SUBTRACT
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a8cbdb76b34734651ddd5a5100ec6be6a">Kp_add</a> = GLFW_KEY_KP_ADD
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a3e98677b79ad87604618f83ca60f7594">Kp_enter</a> = GLFW_KEY_KP_ENTER
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74aa5fd48c421bc16af06d8f7a66d384056">Kp_equal</a> = GLFW_KEY_KP_EQUAL
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a982621712db76f723b7bb88b631dc64d">LeftShift</a> = GLFW_KEY_LEFT_SHIFT
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a641642d3718d5db8994a79d51b43e88c">LeftControl</a> = GLFW_KEY_LEFT_CONTROL
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a96f9c4eb595a467d02e35c723f63ebf7">LeftAlt</a> = GLFW_KEY_LEFT_ALT
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a4bd45bf12e08f60072b6962e9f7794c2">LeftSuper</a> = GLFW_KEY_LEFT_SUPER
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a317d4a7487ee62605713987d4a037f83">RightShift</a> = GLFW_KEY_RIGHT_SHIFT
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a857bb13bb233ca520283eb9886509b65">RightControl</a> = GLFW_KEY_RIGHT_CONTROL
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74ad88bad98046b623323aa6ca28eefa6d5">RightAlt</a> = GLFW_KEY_RIGHT_ALT
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74a0cc5a9f113dc1147c8eeae2f0199f9f2">RightSuper</a> = GLFW_KEY_RIGHT_SUPER
+, <br />
+&#160;&#160;<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74ab61541208db7fa7dba42c85224405911">Menu</a> = GLFW_KEY_MENU
+, <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74ad55b30607c2a9a2616347d6edb789f6b">Last</a> = GLFW_KEY_LAST
+<br />
+ }</td></tr>
+<tr class="memdesc:ad0f577cfd0cb4ed7b586a2dbb917ff74"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classglb_1_1_enum.html" title="Provides functionality for handling OpenGL enumeration types.">Enum</a> class for representing keyboard keys.  <a href="#ad0f577cfd0cb4ed7b586a2dbb917ff74">More...</a><br /></td></tr>
+<tr class="separator:ad0f577cfd0cb4ed7b586a2dbb917ff74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27e89d0ba9ffdc545201b9c804bec902" id="r_a27e89d0ba9ffdc545201b9c804bec902"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27e89d0ba9ffdc545201b9c804bec902">Mode</a> { <a class="el" href="#a27e89d0ba9ffdc545201b9c804bec902af103c3b68c43a2ed3fc02e2e517b13d4">StickyKeys</a> = GLFW_STICKY_KEYS
+, <a class="el" href="#a27e89d0ba9ffdc545201b9c804bec902acfa87cabab5f6de117f68750097ed7a3">StickyMouseButtons</a> = GLFW_STICKY_MOUSE_BUTTONS
+, <a class="el" href="#a27e89d0ba9ffdc545201b9c804bec902ab102cab3f691532798b30057a45297e9">LockKeyMods</a> = GLFW_LOCK_KEY_MODS
+, <a class="el" href="#a27e89d0ba9ffdc545201b9c804bec902a20bb95651bbc5186747759809073c8f1">RawMouseMotion</a> = GLFW_RAW_MOUSE_MOTION
+ }</td></tr>
+<tr class="memdesc:a27e89d0ba9ffdc545201b9c804bec902"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classglb_1_1_enum.html" title="Provides functionality for handling OpenGL enumeration types.">Enum</a> class for input mode options.  <a href="#a27e89d0ba9ffdc545201b9c804bec902">More...</a><br /></td></tr>
+<tr class="separator:a27e89d0ba9ffdc545201b9c804bec902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9240bda6805b20c02898cb27016ae234" id="r_a9240bda6805b20c02898cb27016ae234"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9240bda6805b20c02898cb27016ae234">Callback</a> { <a class="el" href="#a9240bda6805b20c02898cb27016ae234a897356954c2cd3d41b221e3f24f99bba">Key</a>
+, <a class="el" href="#a9240bda6805b20c02898cb27016ae234a8e95e84813830072b7516cfaa7dbc1a9">Char</a>
+ }</td></tr>
+<tr class="memdesc:a9240bda6805b20c02898cb27016ae234"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classglb_1_1_enum.html" title="Provides functionality for handling OpenGL enumeration types.">Enum</a> class for different callback types.  <a href="#a9240bda6805b20c02898cb27016ae234">More...</a><br /></td></tr>
+<tr class="separator:a9240bda6805b20c02898cb27016ae234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a69ee2a9acb7d42fcaa1ba4148930e7c3" id="r_a69ee2a9acb7d42fcaa1ba4148930e7c3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69ee2a9acb7d42fcaa1ba4148930e7c3">IsPressed</a> (<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74">Type</a> key)</td></tr>
+<tr class="memdesc:a69ee2a9acb7d42fcaa1ba4148930e7c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a key is currently pressed.  <br /></td></tr>
+<tr class="separator:a69ee2a9acb7d42fcaa1ba4148930e7c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bd52461989708a1b22582a94a1be975" id="r_a3bd52461989708a1b22582a94a1be975"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bd52461989708a1b22582a94a1be975">SetInputMode</a> (<a class="el" href="#a27e89d0ba9ffdc545201b9c804bec902">Mode</a> mode, bool value)</td></tr>
+<tr class="memdesc:a3bd52461989708a1b22582a94a1be975"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the input mode for the specified mode.  <br /></td></tr>
+<tr class="separator:a3bd52461989708a1b22582a94a1be975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a760a90e76e7505ada3e5e9ea02125a21" id="r_a760a90e76e7505ada3e5e9ea02125a21"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a760a90e76e7505ada3e5e9ea02125a21">GetScanCode</a> (<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74">Type</a> key)</td></tr>
+<tr class="memdesc:a760a90e76e7505ada3e5e9ea02125a21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the scan code for a specified key.  <br /></td></tr>
+<tr class="separator:a760a90e76e7505ada3e5e9ea02125a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ff77e0d7e2f89a05c8aa65c2f60a746" id="r_a5ff77e0d7e2f89a05c8aa65c2f60a746"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ff77e0d7e2f89a05c8aa65c2f60a746">ToString</a> (<a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74">Type</a> key)</td></tr>
+<tr class="memdesc:a5ff77e0d7e2f89a05c8aa65c2f60a746"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a key to its string representation.  <br /></td></tr>
+<tr class="separator:a5ff77e0d7e2f89a05c8aa65c2f60a746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbd3911efbabadfca996172546967070" id="r_adbd3911efbabadfca996172546967070"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbd3911efbabadfca996172546967070">ToString</a> (int scancode)</td></tr>
+<tr class="memdesc:adbd3911efbabadfca996172546967070"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a scan code to its string representation.  <br /></td></tr>
+<tr class="separator:adbd3911efbabadfca996172546967070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9386f32311b1314e680ea7d7436211ee" id="r_a9386f32311b1314e680ea7d7436211ee"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9386f32311b1314e680ea7d7436211ee">SetCallback</a> (<a class="el" href="#a9240bda6805b20c02898cb27016ae234">Callback</a> type, void *callback)</td></tr>
+<tr class="memdesc:a9386f32311b1314e680ea7d7436211ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a callback for a specific type of input event.  <br /></td></tr>
+<tr class="separator:a9386f32311b1314e680ea7d7436211ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea216e8888400e32f01d9aaf4514ae25" id="r_aea216e8888400e32f01d9aaf4514ae25"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea216e8888400e32f01d9aaf4514ae25">DisableCallback</a> (<a class="el" href="#a9240bda6805b20c02898cb27016ae234">Callback</a> type)</td></tr>
+<tr class="memdesc:aea216e8888400e32f01d9aaf4514ae25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables a callback for a specific type of input event.  <br /></td></tr>
+<tr class="separator:aea216e8888400e32f01d9aaf4514ae25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Provides an interface for handling keyboard input in OpenGL applications using GLFW. </p>
+<p>The <code><a class="el" href="classglb_1_1_key.html" title="Provides an interface for handling keyboard input in OpenGL applications using GLFW.">Key</a></code> class provides functionality for querying and managing keyboard input, including key states, scan codes, and input modes. It also supports setting and disabling input callbacks. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a9240bda6805b20c02898cb27016ae234" name="a9240bda6805b20c02898cb27016ae234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9240bda6805b20c02898cb27016ae234">&#9670;&#160;</a></span>Callback</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a9240bda6805b20c02898cb27016ae234">glb::Key::Callback</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classglb_1_1_enum.html" title="Provides functionality for handling OpenGL enumeration types.">Enum</a> class for different callback types. </p>
+<p>This enumeration defines the types of callbacks that can be set using GLFW functions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9240bda6805b20c02898cb27016ae234a897356954c2cd3d41b221e3f24f99bba" name="a9240bda6805b20c02898cb27016ae234a897356954c2cd3d41b221e3f24f99bba"></a>Key&#160;</td><td class="fielddoc"><p><a class="el" href="classglb_1_1_key.html" title="Provides an interface for handling keyboard input in OpenGL applications using GLFW.">Key</a> input callback (int key, int scancode, int action, int mods). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9240bda6805b20c02898cb27016ae234a8e95e84813830072b7516cfaa7dbc1a9" name="a9240bda6805b20c02898cb27016ae234a8e95e84813830072b7516cfaa7dbc1a9"></a>Char&#160;</td><td class="fielddoc"><p>Text input callback (unsigned int codepoint). </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a27e89d0ba9ffdc545201b9c804bec902" name="a27e89d0ba9ffdc545201b9c804bec902"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27e89d0ba9ffdc545201b9c804bec902">&#9670;&#160;</a></span>Mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a27e89d0ba9ffdc545201b9c804bec902">glb::Key::Mode</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classglb_1_1_enum.html" title="Provides functionality for handling OpenGL enumeration types.">Enum</a> class for input mode options. </p>
+<p>This enumeration provides constants for various input modes that can be set using GLFW functions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a27e89d0ba9ffdc545201b9c804bec902af103c3b68c43a2ed3fc02e2e517b13d4" name="a27e89d0ba9ffdc545201b9c804bec902af103c3b68c43a2ed3fc02e2e517b13d4"></a>StickyKeys&#160;</td><td class="fielddoc"><p>Sticky keys mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a27e89d0ba9ffdc545201b9c804bec902acfa87cabab5f6de117f68750097ed7a3" name="a27e89d0ba9ffdc545201b9c804bec902acfa87cabab5f6de117f68750097ed7a3"></a>StickyMouseButtons&#160;</td><td class="fielddoc"><p>Sticky mouse buttons mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a27e89d0ba9ffdc545201b9c804bec902ab102cab3f691532798b30057a45297e9" name="a27e89d0ba9ffdc545201b9c804bec902ab102cab3f691532798b30057a45297e9"></a>LockKeyMods&#160;</td><td class="fielddoc"><p>Lock key modifiers mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a27e89d0ba9ffdc545201b9c804bec902a20bb95651bbc5186747759809073c8f1" name="a27e89d0ba9ffdc545201b9c804bec902a20bb95651bbc5186747759809073c8f1"></a>RawMouseMotion&#160;</td><td class="fielddoc"><p>Raw mouse motion mode. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ad0f577cfd0cb4ed7b586a2dbb917ff74" name="ad0f577cfd0cb4ed7b586a2dbb917ff74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0f577cfd0cb4ed7b586a2dbb917ff74">&#9670;&#160;</a></span>Type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74">glb::Key::Type</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classglb_1_1_enum.html" title="Provides functionality for handling OpenGL enumeration types.">Enum</a> class for representing keyboard keys. </p>
+<p>This enumeration provides constants for various keyboard keys as defined by GLFW. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a01ae2e552c349bd5608af0f670f8ebc2" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a01ae2e552c349bd5608af0f670f8ebc2"></a>Unknow&#160;</td><td class="fielddoc"><p>Unknown key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74ad511f8439ecde36647437fbba67a4394" name="ad0f577cfd0cb4ed7b586a2dbb917ff74ad511f8439ecde36647437fbba67a4394"></a>Space&#160;</td><td class="fielddoc"><p>Spacebar. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74ab6ac6f84bcb33f9b5186bda6b4c8b399" name="ad0f577cfd0cb4ed7b586a2dbb917ff74ab6ac6f84bcb33f9b5186bda6b4c8b399"></a>Apostrophe&#160;</td><td class="fielddoc"><p>Apostrophe key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a58be47db9455679e6a44df2eff9c9fa6" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a58be47db9455679e6a44df2eff9c9fa6"></a>Comma&#160;</td><td class="fielddoc"><p>Comma key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a453fb623e752c5993f65bc410fd74fe5" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a453fb623e752c5993f65bc410fd74fe5"></a>Minus&#160;</td><td class="fielddoc"><p>Minus key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a1901606ea069a83dc7beea17881ef95a" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a1901606ea069a83dc7beea17881ef95a"></a>Period&#160;</td><td class="fielddoc"><p>Period key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a358cfe58715d680d9ab09f82e4010cbc" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a358cfe58715d680d9ab09f82e4010cbc"></a>Slash&#160;</td><td class="fielddoc"><p>Slash key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74aaf269d1e4ffb0df48d9cdf6b4d591a58" name="ad0f577cfd0cb4ed7b586a2dbb917ff74aaf269d1e4ffb0df48d9cdf6b4d591a58"></a>Key0&#160;</td><td class="fielddoc"><p>Number 0 key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74af64f4f750f097b4421a050c9d11d9c14" name="ad0f577cfd0cb4ed7b586a2dbb917ff74af64f4f750f097b4421a050c9d11d9c14"></a>Key1&#160;</td><td class="fielddoc"><p>Number 1 key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74ac31650e34686537020ee36190e71da5b" name="ad0f577cfd0cb4ed7b586a2dbb917ff74ac31650e34686537020ee36190e71da5b"></a>Key2&#160;</td><td class="fielddoc"><p>Number 2 key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a3d81009a6cd9a27e5ee8043024070dfb" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a3d81009a6cd9a27e5ee8043024070dfb"></a>Key3&#160;</td><td class="fielddoc"><p>Number 3 key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74ae08e48afa7b3099b0df15613b907a648" name="ad0f577cfd0cb4ed7b586a2dbb917ff74ae08e48afa7b3099b0df15613b907a648"></a>Key4&#160;</td><td class="fielddoc"><p>Number 4 key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a850176141118349ca686347d2eed0b55" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a850176141118349ca686347d2eed0b55"></a>Key5&#160;</td><td class="fielddoc"><p>Number 5 key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74aa0b2886a19d886ed19252edbda722a51" name="ad0f577cfd0cb4ed7b586a2dbb917ff74aa0b2886a19d886ed19252edbda722a51"></a>Key6&#160;</td><td class="fielddoc"><p>Number 6 key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a4275a26eae5db36de134edf05c64e44a" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a4275a26eae5db36de134edf05c64e44a"></a>Key7&#160;</td><td class="fielddoc"><p>Number 7 key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a69a678929c3e0b081c385c16535414a3" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a69a678929c3e0b081c385c16535414a3"></a>Key8&#160;</td><td class="fielddoc"><p>Number 8 key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a2ebdff99c5eacb157ec10aab842b082d" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a2ebdff99c5eacb157ec10aab842b082d"></a>Key9&#160;</td><td class="fielddoc"><p>Number 9 key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a9806fa37a3ecd39bf637c203aa011ed0" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a9806fa37a3ecd39bf637c203aa011ed0"></a>Semicolon&#160;</td><td class="fielddoc"><p>Semicolon key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74af5f286e73bda105e538310b3190f75c5" name="ad0f577cfd0cb4ed7b586a2dbb917ff74af5f286e73bda105e538310b3190f75c5"></a>Equal&#160;</td><td class="fielddoc"><p>Equal key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a7fc56270e7a70fa81a5935b72eacbe29" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a7fc56270e7a70fa81a5935b72eacbe29"></a>A&#160;</td><td class="fielddoc"><p>A key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a9d5ed678fe57bcca610140957afab571" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a9d5ed678fe57bcca610140957afab571"></a>B&#160;</td><td class="fielddoc"><p>B key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a0d61f8370cad1d412f80b84d143e1257" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a0d61f8370cad1d412f80b84d143e1257"></a>C&#160;</td><td class="fielddoc"><p>C key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74af623e75af30e62bbd73d6df5b50bb7b5" name="ad0f577cfd0cb4ed7b586a2dbb917ff74af623e75af30e62bbd73d6df5b50bb7b5"></a>D&#160;</td><td class="fielddoc"><p>D key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a3a3ea00cfc35332cedf6e5e9a32e94da" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a3a3ea00cfc35332cedf6e5e9a32e94da"></a>E&#160;</td><td class="fielddoc"><p>E key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a800618943025315f869e4e1f09471012" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a800618943025315f869e4e1f09471012"></a>F&#160;</td><td class="fielddoc"><p>F key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74adfcf28d0734569a6a693bc8194de62bf" name="ad0f577cfd0cb4ed7b586a2dbb917ff74adfcf28d0734569a6a693bc8194de62bf"></a>G&#160;</td><td class="fielddoc"><p>G key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74ac1d9f50f86825a1a2302ec2449c17196" name="ad0f577cfd0cb4ed7b586a2dbb917ff74ac1d9f50f86825a1a2302ec2449c17196"></a>H&#160;</td><td class="fielddoc"><p>H key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74add7536794b63bf90eccfd37f9b147d7f" name="ad0f577cfd0cb4ed7b586a2dbb917ff74add7536794b63bf90eccfd37f9b147d7f"></a>I&#160;</td><td class="fielddoc"><p>I key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74aff44570aca8241914870afbc310cdb85" name="ad0f577cfd0cb4ed7b586a2dbb917ff74aff44570aca8241914870afbc310cdb85"></a>J&#160;</td><td class="fielddoc"><p>J key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74aa5f3c6a11b03839d46af9fb43c97c188" name="ad0f577cfd0cb4ed7b586a2dbb917ff74aa5f3c6a11b03839d46af9fb43c97c188"></a>K&#160;</td><td class="fielddoc"><p>K key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74ad20caec3b48a1eef164cb4ca81ba2587" name="ad0f577cfd0cb4ed7b586a2dbb917ff74ad20caec3b48a1eef164cb4ca81ba2587"></a>L&#160;</td><td class="fielddoc"><p>L key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a69691c7bdcc3ce6d5d8a1361f22d04ac" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a69691c7bdcc3ce6d5d8a1361f22d04ac"></a>M&#160;</td><td class="fielddoc"><p>M key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a8d9c307cb7f3c4a32822a51922d1ceaa" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a8d9c307cb7f3c4a32822a51922d1ceaa"></a>N&#160;</td><td class="fielddoc"><p>N key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74af186217753c37b9b9f958d906208506e" name="ad0f577cfd0cb4ed7b586a2dbb917ff74af186217753c37b9b9f958d906208506e"></a>O&#160;</td><td class="fielddoc"><p>O key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a44c29edb103a2872f519ad0c9a0fdaaa" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a44c29edb103a2872f519ad0c9a0fdaaa"></a>P&#160;</td><td class="fielddoc"><p>P key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74af09564c9ca56850d4cd6b3319e541aee" name="ad0f577cfd0cb4ed7b586a2dbb917ff74af09564c9ca56850d4cd6b3319e541aee"></a>Q&#160;</td><td class="fielddoc"><p>Q key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74ae1e1d3d40573127e9ee0480caf1283d6" name="ad0f577cfd0cb4ed7b586a2dbb917ff74ae1e1d3d40573127e9ee0480caf1283d6"></a>R&#160;</td><td class="fielddoc"><p>R key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a5dbc98dcc983a70728bd082d1a47546e" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a5dbc98dcc983a70728bd082d1a47546e"></a>S&#160;</td><td class="fielddoc"><p>S key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74ab9ece18c950afbfa6b0fdbfa4ff731d3" name="ad0f577cfd0cb4ed7b586a2dbb917ff74ab9ece18c950afbfa6b0fdbfa4ff731d3"></a>T&#160;</td><td class="fielddoc"><p>T key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a4c614360da93c0a041b22e537de151eb" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a4c614360da93c0a041b22e537de151eb"></a>U&#160;</td><td class="fielddoc"><p>U key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a5206560a306a2e085a437fd258eb57ce" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a5206560a306a2e085a437fd258eb57ce"></a>V&#160;</td><td class="fielddoc"><p>V key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a61e9c06ea9a85a5088a499df6458d276" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a61e9c06ea9a85a5088a499df6458d276"></a>W&#160;</td><td class="fielddoc"><p>W key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a02129bb861061d1a052c592e2dc6b383" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a02129bb861061d1a052c592e2dc6b383"></a>X&#160;</td><td class="fielddoc"><p>X key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a57cec4137b614c87cb4e24a3d003a3e0" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a57cec4137b614c87cb4e24a3d003a3e0"></a>Y&#160;</td><td class="fielddoc"><p>Y key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a21c2e59531c8710156d34a3c30ac81d5" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a21c2e59531c8710156d34a3c30ac81d5"></a>Z&#160;</td><td class="fielddoc"><p>Z key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a481c09f513474b2d31ba5c2992947b17" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a481c09f513474b2d31ba5c2992947b17"></a>LeftBracket&#160;</td><td class="fielddoc"><p>Left bracket key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74af6c6379402dce27659f7cffee6bc1f00" name="ad0f577cfd0cb4ed7b586a2dbb917ff74af6c6379402dce27659f7cffee6bc1f00"></a>Backslash&#160;</td><td class="fielddoc"><p>Backslash key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a455364d8991395f71ef9ccc5cc449e5c" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a455364d8991395f71ef9ccc5cc449e5c"></a>RightBracket&#160;</td><td class="fielddoc"><p>Right bracket key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a45428446946e929576498c7f5d36f230" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a45428446946e929576498c7f5d36f230"></a>GraveAccent&#160;</td><td class="fielddoc"><p>Grave accent key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a74c7c1760efb02a127a01f7d7457b61d" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a74c7c1760efb02a127a01f7d7457b61d"></a>World1&#160;</td><td class="fielddoc"><p>World 1 key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a8bf6b1dbf5254c134b06997c602799a3" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a8bf6b1dbf5254c134b06997c602799a3"></a>World2&#160;</td><td class="fielddoc"><p>World 2 key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a013ec032d3460d4be4431c6ab1f8f224" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a013ec032d3460d4be4431c6ab1f8f224"></a>Escape&#160;</td><td class="fielddoc"><p>Escape key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74af1851d5600eae616ee802a31ac74701b" name="ad0f577cfd0cb4ed7b586a2dbb917ff74af1851d5600eae616ee802a31ac74701b"></a>Enter&#160;</td><td class="fielddoc"><p>Enter key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a5c6ba25104401c9ee0650230fc6ba413" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a5c6ba25104401c9ee0650230fc6ba413"></a>Tab&#160;</td><td class="fielddoc"><p>Tab key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74acd7d13ceea728b08555f7c818cfb13ef" name="ad0f577cfd0cb4ed7b586a2dbb917ff74acd7d13ceea728b08555f7c818cfb13ef"></a>Backspace&#160;</td><td class="fielddoc"><p>Backspace key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74aa458be0f08b7e4ff3c0f633c100176c0" name="ad0f577cfd0cb4ed7b586a2dbb917ff74aa458be0f08b7e4ff3c0f633c100176c0"></a>Insert&#160;</td><td class="fielddoc"><p>Insert key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74af2a6c498fb90ee345d997f888fce3b18" name="ad0f577cfd0cb4ed7b586a2dbb917ff74af2a6c498fb90ee345d997f888fce3b18"></a>Delete&#160;</td><td class="fielddoc"><p>Delete key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a92b09c7c48c520c3c55e497875da437c" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a92b09c7c48c520c3c55e497875da437c"></a>Right&#160;</td><td class="fielddoc"><p>Right arrow key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a945d5e233cf7d6240f6b783b36a374ff" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a945d5e233cf7d6240f6b783b36a374ff"></a>Left&#160;</td><td class="fielddoc"><p>Left arrow key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a08a38277b0309070706f6652eeae9a53" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a08a38277b0309070706f6652eeae9a53"></a>Down&#160;</td><td class="fielddoc"><p>Down arrow key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a258f49887ef8d14ac268c92b02503aaa" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a258f49887ef8d14ac268c92b02503aaa"></a>Up&#160;</td><td class="fielddoc"><p>Up arrow key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a9b869c510c75c5827ac82e49d4340927" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a9b869c510c75c5827ac82e49d4340927"></a>PageUp&#160;</td><td class="fielddoc"><p>Page Up key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74aee3677bcca83ece9384b01e43952bf33" name="ad0f577cfd0cb4ed7b586a2dbb917ff74aee3677bcca83ece9384b01e43952bf33"></a>PageDown&#160;</td><td class="fielddoc"><p>Page Down key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a8cf04a9734132302f96da8e113e80ce5" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a8cf04a9734132302f96da8e113e80ce5"></a>Home&#160;</td><td class="fielddoc"><p>Home key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a87557f11575c0ad78e4e28abedc13b6e" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a87557f11575c0ad78e4e28abedc13b6e"></a>End&#160;</td><td class="fielddoc"><p>End key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a8d0f4171170104d094d8b6d4f8bf49e6" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a8d0f4171170104d094d8b6d4f8bf49e6"></a>CapsLock&#160;</td><td class="fielddoc"><p>Caps Lock key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a7d7902d5e2998e4fb2b8694a2de4ff65" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a7d7902d5e2998e4fb2b8694a2de4ff65"></a>ScrollLock&#160;</td><td class="fielddoc"><p>Scroll Lock key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74acf6cc0261135c6d163fd4305375773d2" name="ad0f577cfd0cb4ed7b586a2dbb917ff74acf6cc0261135c6d163fd4305375773d2"></a>NumLock&#160;</td><td class="fielddoc"><p>Num Lock key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74abf54024481cd2ad6bbb9ae44b7312472" name="ad0f577cfd0cb4ed7b586a2dbb917ff74abf54024481cd2ad6bbb9ae44b7312472"></a>PrintScreen&#160;</td><td class="fielddoc"><p>Print Screen key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a105b296a83f9c105355403f3332af50f" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a105b296a83f9c105355403f3332af50f"></a>Pause&#160;</td><td class="fielddoc"><p>Pause key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74ae1dffc8709f31a4987c8a88334107e89" name="ad0f577cfd0cb4ed7b586a2dbb917ff74ae1dffc8709f31a4987c8a88334107e89"></a>F1&#160;</td><td class="fielddoc"><p>Function key F1. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74afe5c3684dce76cdd9f7f42430868aa74" name="ad0f577cfd0cb4ed7b586a2dbb917ff74afe5c3684dce76cdd9f7f42430868aa74"></a>F2&#160;</td><td class="fielddoc"><p>Function key F2. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a4b6bf4b531770872d4328ce69bef5627" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a4b6bf4b531770872d4328ce69bef5627"></a>F3&#160;</td><td class="fielddoc"><p>Function key F3. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74ae7e0e72401a9f2718ed0f39f2861d702" name="ad0f577cfd0cb4ed7b586a2dbb917ff74ae7e0e72401a9f2718ed0f39f2861d702"></a>F4&#160;</td><td class="fielddoc"><p>Function key F4. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a37f438df6a6d5ba4c17ef8ca58562f00" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a37f438df6a6d5ba4c17ef8ca58562f00"></a>F5&#160;</td><td class="fielddoc"><p>Function key F5. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a1faf42f2823f184eb2c9f0dffe5d73f2" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a1faf42f2823f184eb2c9f0dffe5d73f2"></a>F6&#160;</td><td class="fielddoc"><p>Function key F6. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a47489eb597b7db34caa24b1fc78fc839" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a47489eb597b7db34caa24b1fc78fc839"></a>F7&#160;</td><td class="fielddoc"><p>Function key F7. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a4787509ad9f9d747a81a30e9dde3d4a7" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a4787509ad9f9d747a81a30e9dde3d4a7"></a>F8&#160;</td><td class="fielddoc"><p>Function key F8. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a892a245e287c163080b23db737d3c4c9" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a892a245e287c163080b23db737d3c4c9"></a>F9&#160;</td><td class="fielddoc"><p>Function key F9. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74ab213ce22ca6ad4eda8db82966b9b6e5a" name="ad0f577cfd0cb4ed7b586a2dbb917ff74ab213ce22ca6ad4eda8db82966b9b6e5a"></a>F10&#160;</td><td class="fielddoc"><p>Function key F10. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a643b0662422d1d0dffa3fca2e2bf28a8" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a643b0662422d1d0dffa3fca2e2bf28a8"></a>F11&#160;</td><td class="fielddoc"><p>Function key F11. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74ae902674982fc99aa343cdd94da7476c3" name="ad0f577cfd0cb4ed7b586a2dbb917ff74ae902674982fc99aa343cdd94da7476c3"></a>F12&#160;</td><td class="fielddoc"><p>Function key F12. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a95dfde4807d4d6a9eec499203b3c24a0" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a95dfde4807d4d6a9eec499203b3c24a0"></a>F13&#160;</td><td class="fielddoc"><p>Function key F13. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a2468649b6215c4cdd2aef5095b3f5932" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a2468649b6215c4cdd2aef5095b3f5932"></a>F14&#160;</td><td class="fielddoc"><p>Function key F14. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74ae53b55851b9ff4979f2c3ff434a4a138" name="ad0f577cfd0cb4ed7b586a2dbb917ff74ae53b55851b9ff4979f2c3ff434a4a138"></a>F15&#160;</td><td class="fielddoc"><p>Function key F15. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a56d8353718e6fdc78b8d69078a2cdb94" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a56d8353718e6fdc78b8d69078a2cdb94"></a>F16&#160;</td><td class="fielddoc"><p>Function key F16. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74affa5882d1ddcf903bf0d0dbc30bfc604" name="ad0f577cfd0cb4ed7b586a2dbb917ff74affa5882d1ddcf903bf0d0dbc30bfc604"></a>F17&#160;</td><td class="fielddoc"><p>Function key F17. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a810b30cdfc07fd7fff553a94b828ff78" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a810b30cdfc07fd7fff553a94b828ff78"></a>F18&#160;</td><td class="fielddoc"><p>Function key F18. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74acd7c2a221ef5d0a34acc0bcd679b2054" name="ad0f577cfd0cb4ed7b586a2dbb917ff74acd7c2a221ef5d0a34acc0bcd679b2054"></a>F19&#160;</td><td class="fielddoc"><p>Function key F19. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74afc335adb3d69d3d8270769e1923ea4dc" name="ad0f577cfd0cb4ed7b586a2dbb917ff74afc335adb3d69d3d8270769e1923ea4dc"></a>F20&#160;</td><td class="fielddoc"><p>Function key F20. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a77e9eee7c579eef5f3731ecf1053c02e" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a77e9eee7c579eef5f3731ecf1053c02e"></a>F21&#160;</td><td class="fielddoc"><p>Function key F21. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a7fa06ead699fcbd63132370ffe13335a" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a7fa06ead699fcbd63132370ffe13335a"></a>F22&#160;</td><td class="fielddoc"><p>Function key F22. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a889645d530078147e7dc69a9caadc31e" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a889645d530078147e7dc69a9caadc31e"></a>F23&#160;</td><td class="fielddoc"><p>Function key F23. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74aebd7820c520d05eca2d775c37d141273" name="ad0f577cfd0cb4ed7b586a2dbb917ff74aebd7820c520d05eca2d775c37d141273"></a>F24&#160;</td><td class="fielddoc"><p>Function key F24. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74aabf9846f265ae3dea4bf9d740f5cb1aa" name="ad0f577cfd0cb4ed7b586a2dbb917ff74aabf9846f265ae3dea4bf9d740f5cb1aa"></a>F25&#160;</td><td class="fielddoc"><p>Function key F25. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74ad12b3b1c93c35b6d0ed53406e0b845e8" name="ad0f577cfd0cb4ed7b586a2dbb917ff74ad12b3b1c93c35b6d0ed53406e0b845e8"></a>Kp_0&#160;</td><td class="fielddoc"><p>Keypad number 0. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a699135587d11ea88bcd0293ec16c4e88" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a699135587d11ea88bcd0293ec16c4e88"></a>Kp_1&#160;</td><td class="fielddoc"><p>Keypad number 1. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a1c08549e0211b27f6e5cf432c9fc20ce" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a1c08549e0211b27f6e5cf432c9fc20ce"></a>Kp_2&#160;</td><td class="fielddoc"><p>Keypad number 2. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a50b8c53f607ccb3b07f2cec14b22a3f4" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a50b8c53f607ccb3b07f2cec14b22a3f4"></a>Kp_3&#160;</td><td class="fielddoc"><p>Keypad number 3. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74ac875f8abfd2077f0ad9ddbfccd7817ec" name="ad0f577cfd0cb4ed7b586a2dbb917ff74ac875f8abfd2077f0ad9ddbfccd7817ec"></a>Kp_4&#160;</td><td class="fielddoc"><p>Keypad number 4. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a6212c02b65f2c00299ff29bfa5266a2a" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a6212c02b65f2c00299ff29bfa5266a2a"></a>Kp_5&#160;</td><td class="fielddoc"><p>Keypad number 5. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a2ab9d39c882ac7b961b2252622cd420b" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a2ab9d39c882ac7b961b2252622cd420b"></a>Kp_6&#160;</td><td class="fielddoc"><p>Keypad number 6. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a90ed0324ff9ab13e4cc8f38f12e7aee5" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a90ed0324ff9ab13e4cc8f38f12e7aee5"></a>Kp_7&#160;</td><td class="fielddoc"><p>Keypad number 7. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a781396cb8131eb6c9dd59fe9c2044c65" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a781396cb8131eb6c9dd59fe9c2044c65"></a>Kp_8&#160;</td><td class="fielddoc"><p>Keypad number 8. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74af0e42e334589ad8374cb2d3690cd69e7" name="ad0f577cfd0cb4ed7b586a2dbb917ff74af0e42e334589ad8374cb2d3690cd69e7"></a>Kp_9&#160;</td><td class="fielddoc"><p>Keypad number 9. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a176febb8bd57bad37061c8eaff9748cf" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a176febb8bd57bad37061c8eaff9748cf"></a>Kp_decimal&#160;</td><td class="fielddoc"><p>Keypad decimal point. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74aa1fda2e9d6f710994b9b00d03340aa4a" name="ad0f577cfd0cb4ed7b586a2dbb917ff74aa1fda2e9d6f710994b9b00d03340aa4a"></a>Kp_divide&#160;</td><td class="fielddoc"><p>Keypad divide key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a0aadee2dfd48376e84166e19632ceb06" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a0aadee2dfd48376e84166e19632ceb06"></a>Kp_multiply&#160;</td><td class="fielddoc"><p>Keypad multiply key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74ad9e7337eeea2f02215595391efecc479" name="ad0f577cfd0cb4ed7b586a2dbb917ff74ad9e7337eeea2f02215595391efecc479"></a>Kp_subtract&#160;</td><td class="fielddoc"><p>Keypad subtract key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a8cbdb76b34734651ddd5a5100ec6be6a" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a8cbdb76b34734651ddd5a5100ec6be6a"></a>Kp_add&#160;</td><td class="fielddoc"><p>Keypad add key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a3e98677b79ad87604618f83ca60f7594" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a3e98677b79ad87604618f83ca60f7594"></a>Kp_enter&#160;</td><td class="fielddoc"><p>Keypad enter key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74aa5fd48c421bc16af06d8f7a66d384056" name="ad0f577cfd0cb4ed7b586a2dbb917ff74aa5fd48c421bc16af06d8f7a66d384056"></a>Kp_equal&#160;</td><td class="fielddoc"><p>Keypad equal key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a982621712db76f723b7bb88b631dc64d" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a982621712db76f723b7bb88b631dc64d"></a>LeftShift&#160;</td><td class="fielddoc"><p>Left Shift key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a641642d3718d5db8994a79d51b43e88c" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a641642d3718d5db8994a79d51b43e88c"></a>LeftControl&#160;</td><td class="fielddoc"><p>Left Control key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a96f9c4eb595a467d02e35c723f63ebf7" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a96f9c4eb595a467d02e35c723f63ebf7"></a>LeftAlt&#160;</td><td class="fielddoc"><p>Left Alt key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a4bd45bf12e08f60072b6962e9f7794c2" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a4bd45bf12e08f60072b6962e9f7794c2"></a>LeftSuper&#160;</td><td class="fielddoc"><p>Left Super (Windows) key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a317d4a7487ee62605713987d4a037f83" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a317d4a7487ee62605713987d4a037f83"></a>RightShift&#160;</td><td class="fielddoc"><p>Right Shift key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a857bb13bb233ca520283eb9886509b65" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a857bb13bb233ca520283eb9886509b65"></a>RightControl&#160;</td><td class="fielddoc"><p>Right Control key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74ad88bad98046b623323aa6ca28eefa6d5" name="ad0f577cfd0cb4ed7b586a2dbb917ff74ad88bad98046b623323aa6ca28eefa6d5"></a>RightAlt&#160;</td><td class="fielddoc"><p>Right Alt key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74a0cc5a9f113dc1147c8eeae2f0199f9f2" name="ad0f577cfd0cb4ed7b586a2dbb917ff74a0cc5a9f113dc1147c8eeae2f0199f9f2"></a>RightSuper&#160;</td><td class="fielddoc"><p>Right Super (Windows) key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74ab61541208db7fa7dba42c85224405911" name="ad0f577cfd0cb4ed7b586a2dbb917ff74ab61541208db7fa7dba42c85224405911"></a>Menu&#160;</td><td class="fielddoc"><p>Menu key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0f577cfd0cb4ed7b586a2dbb917ff74ad55b30607c2a9a2616347d6edb789f6b" name="ad0f577cfd0cb4ed7b586a2dbb917ff74ad55b30607c2a9a2616347d6edb789f6b"></a>Last&#160;</td><td class="fielddoc"><p>Last key constant. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aea216e8888400e32f01d9aaf4514ae25" name="aea216e8888400e32f01d9aaf4514ae25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea216e8888400e32f01d9aaf4514ae25">&#9670;&#160;</a></span>DisableCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool glb::Key::DisableCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a9240bda6805b20c02898cb27016ae234">Callback</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disables a callback for a specific type of input event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type of callback to disable. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the callback was successfully disabled, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a760a90e76e7505ada3e5e9ea02125a21" name="a760a90e76e7505ada3e5e9ea02125a21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a760a90e76e7505ada3e5e9ea02125a21">&#9670;&#160;</a></span>GetScanCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int glb::Key::GetScanCode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74">Type</a></td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the scan code for a specified key. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key to get the scan code for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The scan code for the specified key. </dd></dl>
+
+</div>
+</div>
+<a id="a69ee2a9acb7d42fcaa1ba4148930e7c3" name="a69ee2a9acb7d42fcaa1ba4148930e7c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69ee2a9acb7d42fcaa1ba4148930e7c3">&#9670;&#160;</a></span>IsPressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool glb::Key::IsPressed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74">Type</a></td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if a key is currently pressed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the key is pressed, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a9386f32311b1314e680ea7d7436211ee" name="a9386f32311b1314e680ea7d7436211ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9386f32311b1314e680ea7d7436211ee">&#9670;&#160;</a></span>SetCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool glb::Key::SetCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a9240bda6805b20c02898cb27016ae234">Callback</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>callback</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets a callback for a specific type of input event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type of callback to set. </td></tr>
+    <tr><td class="paramname">callback</td><td>The callback function to set. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the callback was successfully set, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a3bd52461989708a1b22582a94a1be975" name="a3bd52461989708a1b22582a94a1be975"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bd52461989708a1b22582a94a1be975">&#9670;&#160;</a></span>SetInputMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void glb::Key::SetInputMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a27e89d0ba9ffdc545201b9c804bec902">Mode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the input mode for the specified mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>The input mode to set. </td></tr>
+    <tr><td class="paramname">value</td><td>The value to set for the mode (true or false). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adbd3911efbabadfca996172546967070" name="adbd3911efbabadfca996172546967070"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbd3911efbabadfca996172546967070">&#9670;&#160;</a></span>ToString() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string glb::Key::ToString </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>scancode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts a scan code to its string representation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scancode</td><td>The scan code to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The string representation of the scan code. </dd></dl>
+
+</div>
+</div>
+<a id="a5ff77e0d7e2f89a05c8aa65c2f60a746" name="a5ff77e0d7e2f89a05c8aa65c2f60a746"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ff77e0d7e2f89a05c8aa65c2f60a746">&#9670;&#160;</a></span>ToString() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string glb::Key::ToString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ad0f577cfd0cb4ed7b586a2dbb917ff74">Type</a></td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts a key to its string representation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The string representation of the key. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>include/GLB/<a class="el" href="_key_8h_source.html">Key.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceglb.html">glb</a></li><li class="navelem"><a class="el" href="classglb_1_1_key.html">Key</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>GLBLib: API Sheet</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.drawio.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GLBLib
+   </div>
+   <div id="projectbrief">A graphics library based on OpenGL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('md__a_p_i___s_h_e_e_t.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">API Sheet</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md10"></a></p>
+<p>Welcome to the API Sheet for GLBLib. This document is designed to provide an overview of the various APIs available in the library, enabling you to quickly understand and navigate its functionality.</p>
+<h1><a class="anchor" id="autotoc_md11"></a>
+Window</h1>
+<div class="fragment"><div class="line"><span class="keyword">class </span>Window</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">struct </span>Size_t </div>
+<div class="line">{ </div>
+<div class="line">    <span class="keywordtype">int</span> width = 0, height = 0; </div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">struct </span>Position_t </div>
+<div class="line">{ </div>
+<div class="line">    <span class="keywordtype">int</span> x = 0, y = 0; </div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">enum class</span> Callback</div>
+<div class="line">{</div>
+<div class="line">    Close,</div>
+<div class="line">    Size,</div>
+<div class="line">    FramebufferSize,</div>
+<div class="line">    Position,</div>
+<div class="line">    Iconify,</div>
+<div class="line">    Maximize,</div>
+<div class="line">    Focus,</div>
+<div class="line">    Refresh,</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">Window(Window <span class="keyword">const</span>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><span class="keywordtype">void</span> operator=(Window <span class="keyword">const</span>&amp;) = <span class="keyword">delete</span>; </div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> Window&amp; Create(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><span class="keyword">static</span> Window&amp; GetInstance();</div>
+<div class="line"><span class="keyword">static</span> GLFWwindow* GetGLFWwindow();</div>
+<div class="line"><span class="keywordtype">void</span> Destroy();</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">bool</span> SetCallback(Callback type, <span class="keywordtype">void</span>* callback);</div>
+<div class="line"><span class="keywordtype">bool</span> DisableCallback(Callback type);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> IsExist() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">int</span> IsOpen() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">bool</span> IsIconified() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">bool</span> IsMaximized() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">bool</span> IsVisible() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">bool</span> IsPinned() <span class="keyword">const</span>;</div>
+<div class="line"> </div>
+<div class="line">std::string GetTitle() <span class="keyword">const</span>;</div>
+<div class="line">Size_t GetSize() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">int</span> GetWidth() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">int</span> GeHeight() <span class="keyword">const</span>;</div>
+<div class="line">Size_t GetFramebufferSize() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">int</span> GetFramebufferWidth() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">int</span> GeFramebufferHeight() <span class="keyword">const</span>;</div>
+<div class="line">Position_t GetPosition() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">int</span> GetXPosition() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">int</span> GetYPosition() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">float</span> GetOpacity() <span class="keyword">const</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> SetSize(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height) <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> SetSize(Size_t size) <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> SetPosition(<span class="keywordtype">int</span> xpos, <span class="keywordtype">int</span> ypos) <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> SetPosition(Position_t position) <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> SetSizeLimit(<span class="keywordtype">int</span> minWidth, <span class="keywordtype">int</span> minHeight, <span class="keywordtype">int</span> maxWidth, <span class="keywordtype">int</span> maxHeight) <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> SetSizeLimit(Size_t min, Size_t max) <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> DisableSizeLimit() <span class="keyword">const</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> SetTitle(std::string title);</div>
+<div class="line"><span class="keywordtype">void</span> SetIcon(Image&amp; icon) <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> SetIconAndFree(Image&amp; icon) <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> SetIcon(Image icons[], <span class="keywordtype">int</span> size) <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> SetIconAndFree(Image icons[], <span class="keywordtype">int</span> size) <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> SetDefaultIcon() <span class="keyword">const</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> SetAspectRatio(<span class="keywordtype">int</span> numer, <span class="keywordtype">int</span> denom) <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> DisableAspectRatio() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> SetOpacity(<span class="keywordtype">float</span> opacity) <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> SetSwapInterval(<span class="keywordtype">int</span> interval) <span class="keyword">const</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> Iconify() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> Maximize() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> Restore() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> EnableResize() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> DisableResize() <span class="keyword">const</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> Hide() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> Show() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> Focus() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> RequestAttention() <span class="keyword">const</span>;</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> PollEvents() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> SwapBuffers() <span class="keyword">const</span>;</div>
+<div class="line"> </div>
+<div class="line">};</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md12"></a>
+Cursor</h1>
+<div class="fragment"><div class="line"><span class="keyword">class </span>Cursor</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">struct </span>Position_t</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">double</span> x = 0.0;</div>
+<div class="line">    <span class="keywordtype">double</span> y = 0.0;</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">enum class</span> Button</div>
+<div class="line">{</div>
+<div class="line">    Left,</div>
+<div class="line">    Right,</div>
+<div class="line">    Middle,</div>
+<div class="line">    <span class="comment">// ...</span></div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">enum class</span> Callback</div>
+<div class="line">{</div>
+<div class="line">    Position,</div>
+<div class="line">    Enter,</div>
+<div class="line">    MouseButton,</div>
+<div class="line">    Scroll,</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">Cursor() = <span class="keyword">delete</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">bool</span> IsButtonPressed(Button button);</div>
+<div class="line"><span class="keyword">static</span> Position_t GetPosition();</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">bool</span> SetCallback(Callback type, <span class="keywordtype">void</span>* callback);</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">bool</span> DisableCallback(Callback type);</div>
+<div class="line"> </div>
+<div class="line">};</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md13"></a>
+Key</h1>
+<div class="fragment"><div class="line"><span class="keyword">class </span>Key</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">enum class</span> Type</div>
+<div class="line">{</div>
+<div class="line">    Unknow,</div>
+<div class="line">    Space,</div>
+<div class="line">    Apostrophe,</div>
+<div class="line">    Comma,</div>
+<div class="line">    Minus,</div>
+<div class="line">    Period,</div>
+<div class="line">    Slash,</div>
+<div class="line">    <span class="comment">//...</span></div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">enum class</span> Mode</div>
+<div class="line">{</div>
+<div class="line">    StickyKeys,</div>
+<div class="line">    StickyMouseButtons,</div>
+<div class="line">    LockKeyMods,</div>
+<div class="line">    RawMouseMotion,</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">enum class</span> Callback</div>
+<div class="line">{</div>
+<div class="line">    Key, </div>
+<div class="line">    Char,</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">bool</span> IsPressed(Type key);</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> SetInputMode(Mode mode, <span class="keywordtype">bool</span> value);</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">int</span> GetScanCode(Type key);</div>
+<div class="line"><span class="keyword">static</span> std::string ToString(Type key);</div>
+<div class="line"><span class="keyword">static</span> std::string ToString(<span class="keywordtype">int</span> scancode);</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">bool</span> SetCallback(Callback type, <span class="keywordtype">void</span>* callback);</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">bool</span> DisableCallback(Callback type);</div>
+<div class="line">    </div>
+<div class="line">};</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md14"></a>
+Renderer</h1>
+<div class="fragment"><div class="line"><span class="keyword">class </span>Renderer</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">enum class</span> Mode</div>
+<div class="line">{</div>
+<div class="line">    Points,</div>
+<div class="line">    LineStrip,</div>
+<div class="line">    LineLoop,</div>
+<div class="line">    Lines,</div>
+<div class="line">    LineStripAdjacency,</div>
+<div class="line">    LinesAdjacency,</div>
+<div class="line">    TriangleStrip,</div>
+<div class="line">    TriangleFan,</div>
+<div class="line">    Triangles,</div>
+<div class="line">    TriangleStripAdjacency,</div>
+<div class="line">    TrianglesAdjacency,</div>
+<div class="line">    Patches,</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">Renderer() = <span class="keyword">delete</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> Clear();</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> SetClearColor(<span class="keywordtype">float</span> r, <span class="keywordtype">float</span> g, <span class="keywordtype">float</span> b, <span class="keywordtype">float</span> a);</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> SetViewport(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> DrawArray(Mode mode, <span class="keyword">const</span> VertexArray&amp; va, <span class="keyword">const</span> Shader&amp; shader, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> first, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count);</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> DrawElements(Mode mode, <span class="keyword">const</span> VertexArray&amp; va, <span class="keyword">const</span> IndexBuffer&amp; ib, <span class="keyword">const</span> Shader&amp; shader, <span class="keywordtype">int</span> count = -1, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> first = 0);</div>
+<div class="line">    </div>
+<div class="line">};</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md15"></a>
+Shader</h1>
+<div class="fragment"><div class="line"><span class="keyword">class </span>Shader</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">explicit</span> Shader(<span class="keyword">const</span> ShaderProgramSource&amp; source);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> Bind() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> Unbind() <span class="keyword">const</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">void</span> SetUniformVec1(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> T&amp; v0);</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">void</span> SetUniformVec2(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> T&amp; v0, <span class="keyword">const</span> T&amp; v1);</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">void</span> SetUniformVec3(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> T&amp; v0, <span class="keyword">const</span> T&amp; v1, <span class="keyword">const</span> T&amp; v2);</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">void</span> SetUniformVec4(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> T&amp; v0, <span class="keyword">const</span> T&amp; v1, <span class="keyword">const</span> T&amp; v2, <span class="keyword">const</span> T&amp; v3);</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">void</span> SetUniformVec1Array(<span class="keyword">const</span> std::string&amp; name, <span class="keywordtype">int</span> count, <span class="keyword">const</span> T* value);</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">void</span> SetUniformVec2Array(<span class="keyword">const</span> std::string&amp; name, <span class="keywordtype">int</span> count, <span class="keyword">const</span> T* value);</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">void</span> SetUniformVec3Array(<span class="keyword">const</span> std::string&amp; name, <span class="keywordtype">int</span> count, <span class="keyword">const</span> T* value);</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">void</span> SetUniformVec4Array(<span class="keyword">const</span> std::string&amp; name, <span class="keywordtype">int</span> count, <span class="keyword">const</span> T* value);</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">void</span> SetUniformMatrix(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> T&amp; matrix);</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">void</span> SetUniformMatrixArray(<span class="keyword">const</span> std::string&amp; name, <span class="keywordtype">int</span> count, <span class="keyword">const</span> T* matrices);</div>
+<div class="line"> </div>
+<div class="line">};</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md16"></a>
+ShaderProgramSource</h1>
+<div class="fragment"><div class="line"><span class="keyword">class </span>ShaderProgramSource</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> ShaderProgramSource ReadFromFile(<span class="keyword">const</span> std::string&amp; filepath);</div>
+<div class="line"><span class="keyword">static</span> ShaderProgramSource ReadFromFile(<span class="keyword">const</span> std::string&amp; vertex, <span class="keyword">const</span> std::string&amp; fragment);</div>
+<div class="line"> </div>
+<div class="line">std::string VertexSource;</div>
+<div class="line">std::string FragmentSource;</div>
+<div class="line"> </div>
+<div class="line">};</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md17"></a>
+Image</h1>
+<div class="fragment"><div class="line"><span class="keyword">class </span>Image</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line">Image();</div>
+<div class="line">Image(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* pixels);</div>
+<div class="line"><span class="keyword">explicit</span> Image(<span class="keyword">const</span> std::string&amp; filepath);</div>
+<div class="line">Image(Image&amp;&amp; other) <span class="keyword">noexcept</span>;</div>
+<div class="line">Image&amp; operator=(Image&amp;&amp; other) <span class="keyword">noexcept</span>;</div>
+<div class="line">Image(<span class="keyword">const</span> Image&amp;) <span class="keyword">noexcept</span>;</div>
+<div class="line">Image&amp; operator=(<span class="keyword">const</span> Image&amp;) <span class="keyword">noexcept</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">bool</span> LoadFromFile(<span class="keyword">const</span> std::string&amp; filepath);</div>
+<div class="line"><span class="keywordtype">bool</span> SaveToFile(<span class="keyword">const</span> std::string&amp; filepath);</div>
+<div class="line"><span class="keywordtype">void</span> FlipHorizontally();</div>
+<div class="line"><span class="keywordtype">void</span> FlipVertically();</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> GetWidth() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">int</span> GetHeight() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">int</span> IsExist() <span class="keyword">const</span>;</div>
+<div class="line">std::vector&lt;unsigned char&gt;&amp; GetPixels();</div>
+<div class="line"><span class="keyword">const</span> std::vector&lt;unsigned char&gt;&amp; GetPixels() <span class="keyword">const</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> Free();</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> Free(Image&amp; image);</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> Free(Image images[], <span class="keywordtype">int</span> size);</div>
+<div class="line">    </div>
+<div class="line">};</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md18"></a>
+Texture</h1>
+<div class="fragment"><div class="line"><span class="keyword">class </span>Texture</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line">Texture(<span class="keyword">const</span> std::string&amp; filepath);</div>
+<div class="line">Texture(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* buffer);</div>
+<div class="line">Texture(<span class="keyword">const</span> Image&amp; image);</div>
+<div class="line"> </div>
+<div class="line">Texture(<span class="keyword">const</span> Texture&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line">Texture&amp; operator=(<span class="keyword">const</span> Texture&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> Bind(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> slot = 0) <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> Unbind() <span class="keyword">const</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> GetWidth() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">int</span> GetHeight() <span class="keyword">const</span>;</div>
+<div class="line">    </div>
+<div class="line">};</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md19"></a>
+VertexArray</h1>
+<div class="fragment"><div class="line"><span class="keyword">class </span>VertexArray</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line">VertexArray();</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> AddBuffer(<span class="keyword">const</span> VertexBuffer&amp; vb, <span class="keyword">const</span> VertexBufferLayout&amp; layout);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> Bind() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> Unbind() <span class="keyword">const</span>;</div>
+<div class="line">    </div>
+<div class="line">};</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md20"></a>
+Enum - About buffers</h1>
+<div class="fragment"><div class="line"><span class="keyword">enum class</span> BufferUsage</div>
+<div class="line">{</div>
+<div class="line">    Stream,</div>
+<div class="line">    Static,</div>
+<div class="line">    Dynamic,</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">enum class</span> BufferAccess</div>
+<div class="line">{</div>
+<div class="line">    ReadOnly,</div>
+<div class="line">    WriteOnly,</div>
+<div class="line">    ReadWrite,</div>
+<div class="line">};</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md21"></a>
+VertexBuffer</h1>
+<div class="fragment"><div class="line"><span class="keyword">class </span>VertexBuffer</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">explicit</span> VertexBuffer(BufferUsage usage);</div>
+<div class="line">VertexBuffer(<span class="keywordtype">int</span> size, BufferUsage usage);</div>
+<div class="line">VertexBuffer(<span class="keywordtype">float</span> vertices[], <span class="keywordtype">int</span> size, BufferUsage usage);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> Bind() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> Unbind() <span class="keyword">const</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> GetSize() <span class="keyword">const</span>;</div>
+<div class="line">BufferUsage GetUsage() <span class="keyword">const</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> SetData(<span class="keywordtype">float</span> vertices[], <span class="keywordtype">int</span> size);</div>
+<div class="line"><span class="keywordtype">void</span> SetSubData(<span class="keyword">const</span> <span class="keywordtype">void</span>* data, <span class="keywordtype">int</span> offset, <span class="keywordtype">int</span> size);</div>
+<div class="line"><span class="keywordtype">float</span>* Map(BufferAccess access) <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> Unmap() <span class="keyword">const</span>;</div>
+<div class="line">    </div>
+<div class="line">};</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md22"></a>
+VertexBufferLayout</h1>
+<div class="fragment"><div class="line"><span class="keyword">class </span>VertexBufferLayout</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line">VertexBufferLayout();</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span>&lt;Enum_t type&gt;</div>
+<div class="line"><span class="keywordtype">void</span> Push(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count);</div>
+<div class="line"> </div>
+<div class="line">};</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md23"></a>
+IndexBuffer</h1>
+<div class="fragment"><div class="line"><span class="keyword">class </span>IndexBuffer</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">explicit</span> IndexBuffer(BufferUsage usage, Enum_t type = Enum::Uint);</div>
+<div class="line">IndexBuffer(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count, BufferUsage usage, Enum_t type = Enum::Uint);</div>
+<div class="line">IndexBuffer(<span class="keywordtype">void</span>* indices, <span class="keywordtype">int</span> count, BufferUsage usage, Enum_t type = Enum::Uint);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> Bind() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> Unbind() <span class="keyword">const</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> GetCount() <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> GetType() <span class="keyword">const</span>;</div>
+<div class="line">BufferUsage GetUsage() <span class="keyword">const</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> SetData(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count, <span class="keywordtype">void</span>* indices);</div>
+<div class="line"><span class="keywordtype">void</span> SetSubData(<span class="keyword">const</span> <span class="keywordtype">void</span>* data, <span class="keywordtype">int</span> offset, <span class="keywordtype">int</span> size);</div>
+<div class="line"><span class="keywordtype">void</span>* Map(BufferAccess access) <span class="keyword">const</span>;</div>
+<div class="line"><span class="keywordtype">void</span> Unmap() <span class="keyword">const</span>;</div>
+<div class="line">    </div>
+<div class="line">};</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md24"></a>
+UserPointer</h1>
+<div class="fragment"><div class="line"><span class="keyword">class </span>UserPointer</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> Set(<span class="keyword">const</span> std::string&amp; name, <span class="keywordtype">void</span>* value);</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T = <span class="keywordtype">void</span>&gt; <span class="keyword">static</span> T* Get(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> Delete(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> DeleteAll();</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">bool</span> Find(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line">    </div>
+<div class="line">};</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md25"></a>
+Debug</h1>
+<div class="fragment"><div class="line"><span class="keyword">class </span>Debug</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">enum class</span> Level</div>
+<div class="line">{</div>
+<div class="line">    WarnLow,</div>
+<div class="line">    WarnHigh,</div>
+<div class="line">    ErrorLow,</div>
+<div class="line">    ErrorHigh,</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">enum class</span> Type</div>
+<div class="line">{</div>
+<div class="line">    InvalidCallbackType,</div>
+<div class="line">    InvalidEnum,</div>
+<div class="line">    UnknowType,</div>
+<div class="line">    UnknowUniform,</div>
+<div class="line">    UnknowUserPointer,</div>
+<div class="line">    ObjectNonExist,</div>
+<div class="line">    DoubleFree,</div>
+<div class="line">    CopyImage,</div>
+<div class="line">    OpenFileFaild,</div>
+<div class="line">    ShaderCompiledFaild,</div>
+<div class="line">    LoadImageFaild,</div>
+<div class="line">    SaveImageFaild,</div>
+<div class="line">    MapBufferFaild,</div>
+<div class="line">    UnmapBufferFaild,</div>
+<div class="line">    GLFWErr,</div>
+<div class="line">    GLEWErr,</div>
+<div class="line">    OpenGLErr,</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using </span>CallbackFunc = void (*) (<span class="keyword">const</span> std::string&amp; file,</div>
+<div class="line">                               <span class="keyword">const</span> std::string&amp; function,</div>
+<div class="line">                               <span class="keywordtype">int</span> line,</div>
+<div class="line">                               Level level,</div>
+<div class="line">                               Type type,</div>
+<div class="line">                               <span class="keyword">const</span> std::string&amp; message);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> SetCallback(CallbackFunc callback);</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> DisableCallback();</div>
+<div class="line"> </div>
+<div class="line">};</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md26"></a>
+Enum</h1>
+<div class="fragment"><div class="line"><span class="keyword">using </span>Enum_t = <span class="keywordtype">unsigned</span> int;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>Enum</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> Enum_t Int;</div>
+<div class="line"><span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> Enum_t Float;</div>
+<div class="line"><span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> Enum_t Uint;</div>
+<div class="line"><span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> Enum_t Double;</div>
+<div class="line"><span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> Enum_t Short;</div>
+<div class="line"><span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> Enum_t Ushort;</div>
+<div class="line"><span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> Enum_t Ubyte;</div>
+<div class="line"><span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> Enum_t Byte;</div>
+<div class="line"><span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> Enum_t HalfFloat;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> GetSizeOfType(Enum_t type);</div>
+<div class="line"> </div>
+<div class="line">};</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

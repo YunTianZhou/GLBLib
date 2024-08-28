@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>GLBLib: include/GLB/Enum.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.drawio.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GLBLib
+   </div>
+   <div id="projectbrief">A graphics library based on OpenGL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_enum_8h_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Enum.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_enum_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;GL/glew.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;GLFW/glfw3.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_debug_8h.html">Debug.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceglb.html">glb</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="namespaceglb.html#aac72bab751949f90b0e731e69381ae63">   25</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespaceglb.html#aac72bab751949f90b0e731e69381ae63">BufferUsage</a></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_enumvalue" href="namespaceglb.html#aac72bab751949f90b0e731e69381ae63aeae835e83c0494a376229f254f7d3392">Stream</a> = GL_STREAM_DRAW,   </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_enumvalue" href="namespaceglb.html#aac72bab751949f90b0e731e69381ae63a84a8921b25f505d0d2077aeb5db4bc16">Static</a> = GL_STATIC_DRAW,   </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_enumvalue" href="namespaceglb.html#aac72bab751949f90b0e731e69381ae63a971fd8cc345d8bd9f92e9f7d88fdf20c">Dynamic</a> = GL_DYNAMIC_DRAW, </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>};</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="namespaceglb.html#aa08267b7441534d8a7dd1ea7c33025d7">   38</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespaceglb.html#aa08267b7441534d8a7dd1ea7c33025d7">BufferAccess</a></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_enumvalue" href="namespaceglb.html#aa08267b7441534d8a7dd1ea7c33025d7a131fb182a881796e7606ed6da27f1197">ReadOnly</a> = GL_READ_ONLY,   </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_enumvalue" href="namespaceglb.html#aa08267b7441534d8a7dd1ea7c33025d7a53dfe5089ae9e65887cb0215cb0098f5">WriteOnly</a> = GL_WRITE_ONLY, </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_enumvalue" href="namespaceglb.html#aa08267b7441534d8a7dd1ea7c33025d7a70a2a84088d405a2e3f1e3accaa16723">ReadWrite</a> = GL_READ_WRITE,  </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>};</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="namespaceglb.html#a6c16ccab463269824d71aaf8ee4708ff">   49</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespaceglb.html#a6c16ccab463269824d71aaf8ee4708ff">Enum_t</a> = <span class="keywordtype">unsigned</span> int;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="};">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classglb_1_1_enum.html">   57</a></span><span class="keyword">class </span><a class="code hl_class" href="classglb_1_1_enum.html">Enum</a></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>{</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classglb_1_1_enum.html#a993308a0491622f7578ade9b88e1d69b">GetSizeOfType</a>(<a class="code hl_typedef" href="namespaceglb.html#a6c16ccab463269824d71aaf8ee4708ff">Enum_t</a> type);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classglb_1_1_enum.html#a650fc30453590477e567eb94f96851c8">   73</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceglb.html#a6c16ccab463269824d71aaf8ee4708ff">Enum_t</a> <a class="code hl_variable" href="classglb_1_1_enum.html#a650fc30453590477e567eb94f96851c8">Int</a> = GL_INT;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classglb_1_1_enum.html#a80c95f14b705f3535a633a59d07d2fc4">   78</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceglb.html#a6c16ccab463269824d71aaf8ee4708ff">Enum_t</a> <a class="code hl_variable" href="classglb_1_1_enum.html#a80c95f14b705f3535a633a59d07d2fc4">Float</a> = GL_FLOAT;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classglb_1_1_enum.html#ab7b6e6b0afe028bae9c6404a7ac30727">   83</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceglb.html#a6c16ccab463269824d71aaf8ee4708ff">Enum_t</a> <a class="code hl_variable" href="classglb_1_1_enum.html#ab7b6e6b0afe028bae9c6404a7ac30727">Uint</a> = GL_UNSIGNED_INT;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classglb_1_1_enum.html#a1670dfe2b41d23c7253887e42190ca45">   88</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceglb.html#a6c16ccab463269824d71aaf8ee4708ff">Enum_t</a> <a class="code hl_variable" href="classglb_1_1_enum.html#a1670dfe2b41d23c7253887e42190ca45">Double</a> = GL_DOUBLE;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classglb_1_1_enum.html#ab324343621dc826555feed80152f575f">   93</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceglb.html#a6c16ccab463269824d71aaf8ee4708ff">Enum_t</a> <a class="code hl_variable" href="classglb_1_1_enum.html#ab324343621dc826555feed80152f575f">Short</a> = GL_SHORT;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classglb_1_1_enum.html#a0cd854ef55f76f3eeb8b720e7f7eea1d">   98</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceglb.html#a6c16ccab463269824d71aaf8ee4708ff">Enum_t</a> <a class="code hl_variable" href="classglb_1_1_enum.html#a0cd854ef55f76f3eeb8b720e7f7eea1d">Ushort</a> = GL_UNSIGNED_SHORT;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classglb_1_1_enum.html#a067573a01fe1457849f263911423d239">  103</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceglb.html#a6c16ccab463269824d71aaf8ee4708ff">Enum_t</a> <a class="code hl_variable" href="classglb_1_1_enum.html#a067573a01fe1457849f263911423d239">Ubyte</a> = GL_UNSIGNED_BYTE;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classglb_1_1_enum.html#a1e469976d6c2f287844619b04e12b9b9">  108</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceglb.html#a6c16ccab463269824d71aaf8ee4708ff">Enum_t</a> <a class="code hl_variable" href="classglb_1_1_enum.html#a1e469976d6c2f287844619b04e12b9b9">Byte</a> = GL_BYTE;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classglb_1_1_enum.html#a12adc4d0633d3b5725f553af48c03ece">  113</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceglb.html#a6c16ccab463269824d71aaf8ee4708ff">Enum_t</a> <a class="code hl_variable" href="classglb_1_1_enum.html#a12adc4d0633d3b5725f553af48c03ece">HalfFloat</a> = GL_HALF_FLOAT;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>};</div>
+</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment">// Inline function implementations</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classglb_1_1_enum.html#a993308a0491622f7578ade9b88e1d69b">  118</a></span><span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classglb_1_1_enum.html#a993308a0491622f7578ade9b88e1d69b">glb::Enum::GetSizeOfType</a>(<a class="code hl_typedef" href="namespaceglb.html#a6c16ccab463269824d71aaf8ee4708ff">Enum_t</a> type)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>{</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordflow">switch</span> (type)</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">case</span> Int:              <span class="keywordflow">return</span> 4; </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordflow">case</span> Float:            <span class="keywordflow">return</span> 4; </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">case</span> Uint:             <span class="keywordflow">return</span> 4; </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">case</span> Double:           <span class="keywordflow">return</span> 8; </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">case</span> Short:            <span class="keywordflow">return</span> 2; </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordflow">case</span> Ushort:           <span class="keywordflow">return</span> 2; </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordflow">case</span> Ubyte:            <span class="keywordflow">return</span> 1; </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">case</span> Byte:             <span class="keywordflow">return</span> 1; </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">case</span> HalfFloat:        <span class="keywordflow">return</span> 2; </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <a class="code hl_define" href="_debug_8h.html#ab60917a0108ddc0681171b34ec6a6afa">GLBWarnH</a>(UnknowType, <span class="stringliteral">&quot;Unsupported enum type &#39;&quot;</span> &lt;&lt; type &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>); </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>}</div>
+</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>} <span class="comment">// namespace glb</span></div>
+<div class="ttc" id="a_debug_8h_html"><div class="ttname"><a href="_debug_8h.html">Debug.h</a></div><div class="ttdoc">Provides debug utilities and log management.</div></div>
+<div class="ttc" id="a_debug_8h_html_ab60917a0108ddc0681171b34ec6a6afa"><div class="ttname"><a href="_debug_8h.html#ab60917a0108ddc0681171b34ec6a6afa">GLBWarnH</a></div><div class="ttdeci">#define GLBWarnH(t, m)</div><div class="ttdef"><b>Definition</b> Debug.h:24</div></div>
+<div class="ttc" id="aclassglb_1_1_enum_html"><div class="ttname"><a href="classglb_1_1_enum.html">glb::Enum</a></div><div class="ttdoc">Provides functionality for handling OpenGL enumeration types.</div><div class="ttdef"><b>Definition</b> Enum.h:58</div></div>
+<div class="ttc" id="aclassglb_1_1_enum_html_a067573a01fe1457849f263911423d239"><div class="ttname"><a href="classglb_1_1_enum.html#a067573a01fe1457849f263911423d239">glb::Enum::Ubyte</a></div><div class="ttdeci">static const Enum_t Ubyte</div><div class="ttdoc">OpenGL enumeration constant for unsigned byte type.</div><div class="ttdef"><b>Definition</b> Enum.h:103</div></div>
+<div class="ttc" id="aclassglb_1_1_enum_html_a0cd854ef55f76f3eeb8b720e7f7eea1d"><div class="ttname"><a href="classglb_1_1_enum.html#a0cd854ef55f76f3eeb8b720e7f7eea1d">glb::Enum::Ushort</a></div><div class="ttdeci">static const Enum_t Ushort</div><div class="ttdoc">OpenGL enumeration constant for unsigned short integer type.</div><div class="ttdef"><b>Definition</b> Enum.h:98</div></div>
+<div class="ttc" id="aclassglb_1_1_enum_html_a12adc4d0633d3b5725f553af48c03ece"><div class="ttname"><a href="classglb_1_1_enum.html#a12adc4d0633d3b5725f553af48c03ece">glb::Enum::HalfFloat</a></div><div class="ttdeci">static const Enum_t HalfFloat</div><div class="ttdoc">OpenGL enumeration constant for half-precision floating-point type.</div><div class="ttdef"><b>Definition</b> Enum.h:113</div></div>
+<div class="ttc" id="aclassglb_1_1_enum_html_a1670dfe2b41d23c7253887e42190ca45"><div class="ttname"><a href="classglb_1_1_enum.html#a1670dfe2b41d23c7253887e42190ca45">glb::Enum::Double</a></div><div class="ttdeci">static const Enum_t Double</div><div class="ttdoc">OpenGL enumeration constant for double-precision floating-point type.</div><div class="ttdef"><b>Definition</b> Enum.h:88</div></div>
+<div class="ttc" id="aclassglb_1_1_enum_html_a1e469976d6c2f287844619b04e12b9b9"><div class="ttname"><a href="classglb_1_1_enum.html#a1e469976d6c2f287844619b04e12b9b9">glb::Enum::Byte</a></div><div class="ttdeci">static const Enum_t Byte</div><div class="ttdoc">OpenGL enumeration constant for signed byte type.</div><div class="ttdef"><b>Definition</b> Enum.h:108</div></div>
+<div class="ttc" id="aclassglb_1_1_enum_html_a650fc30453590477e567eb94f96851c8"><div class="ttname"><a href="classglb_1_1_enum.html#a650fc30453590477e567eb94f96851c8">glb::Enum::Int</a></div><div class="ttdeci">static const Enum_t Int</div><div class="ttdoc">OpenGL enumeration constant for integer type.</div><div class="ttdef"><b>Definition</b> Enum.h:73</div></div>
+<div class="ttc" id="aclassglb_1_1_enum_html_a80c95f14b705f3535a633a59d07d2fc4"><div class="ttname"><a href="classglb_1_1_enum.html#a80c95f14b705f3535a633a59d07d2fc4">glb::Enum::Float</a></div><div class="ttdeci">static const Enum_t Float</div><div class="ttdoc">OpenGL enumeration constant for floating-point type.</div><div class="ttdef"><b>Definition</b> Enum.h:78</div></div>
+<div class="ttc" id="aclassglb_1_1_enum_html_a993308a0491622f7578ade9b88e1d69b"><div class="ttname"><a href="classglb_1_1_enum.html#a993308a0491622f7578ade9b88e1d69b">glb::Enum::GetSizeOfType</a></div><div class="ttdeci">static unsigned int GetSizeOfType(Enum_t type)</div><div class="ttdoc">Gets the size in bytes of a given OpenGL enumeration type.</div><div class="ttdef"><b>Definition</b> Enum.h:118</div></div>
+<div class="ttc" id="aclassglb_1_1_enum_html_ab324343621dc826555feed80152f575f"><div class="ttname"><a href="classglb_1_1_enum.html#ab324343621dc826555feed80152f575f">glb::Enum::Short</a></div><div class="ttdeci">static const Enum_t Short</div><div class="ttdoc">OpenGL enumeration constant for short integer type.</div><div class="ttdef"><b>Definition</b> Enum.h:93</div></div>
+<div class="ttc" id="aclassglb_1_1_enum_html_ab7b6e6b0afe028bae9c6404a7ac30727"><div class="ttname"><a href="classglb_1_1_enum.html#ab7b6e6b0afe028bae9c6404a7ac30727">glb::Enum::Uint</a></div><div class="ttdeci">static const Enum_t Uint</div><div class="ttdoc">OpenGL enumeration constant for unsigned integer type.</div><div class="ttdef"><b>Definition</b> Enum.h:83</div></div>
+<div class="ttc" id="anamespaceglb_html"><div class="ttname"><a href="namespaceglb.html">glb</a></div><div class="ttdef"><b>Definition</b> Cursor.h:16</div></div>
+<div class="ttc" id="anamespaceglb_html_a6c16ccab463269824d71aaf8ee4708ff"><div class="ttname"><a href="namespaceglb.html#a6c16ccab463269824d71aaf8ee4708ff">glb::Enum_t</a></div><div class="ttdeci">unsigned int Enum_t</div><div class="ttdoc">Type definition for an unsigned integer used in enumerations.</div><div class="ttdef"><b>Definition</b> Enum.h:49</div></div>
+<div class="ttc" id="anamespaceglb_html_aa08267b7441534d8a7dd1ea7c33025d7"><div class="ttname"><a href="namespaceglb.html#aa08267b7441534d8a7dd1ea7c33025d7">glb::BufferAccess</a></div><div class="ttdeci">BufferAccess</div><div class="ttdoc">Enumeration for different buffer access types in OpenGL.</div><div class="ttdef"><b>Definition</b> Enum.h:39</div></div>
+<div class="ttc" id="anamespaceglb_html_aa08267b7441534d8a7dd1ea7c33025d7a131fb182a881796e7606ed6da27f1197"><div class="ttname"><a href="namespaceglb.html#aa08267b7441534d8a7dd1ea7c33025d7a131fb182a881796e7606ed6da27f1197">glb::BufferAccess::ReadOnly</a></div><div class="ttdeci">@ ReadOnly</div><div class="ttdoc">Buffer is accessed for reading only.</div></div>
+<div class="ttc" id="anamespaceglb_html_aa08267b7441534d8a7dd1ea7c33025d7a53dfe5089ae9e65887cb0215cb0098f5"><div class="ttname"><a href="namespaceglb.html#aa08267b7441534d8a7dd1ea7c33025d7a53dfe5089ae9e65887cb0215cb0098f5">glb::BufferAccess::WriteOnly</a></div><div class="ttdeci">@ WriteOnly</div><div class="ttdoc">Buffer is accessed for writing only.</div></div>
+<div class="ttc" id="anamespaceglb_html_aa08267b7441534d8a7dd1ea7c33025d7a70a2a84088d405a2e3f1e3accaa16723"><div class="ttname"><a href="namespaceglb.html#aa08267b7441534d8a7dd1ea7c33025d7a70a2a84088d405a2e3f1e3accaa16723">glb::BufferAccess::ReadWrite</a></div><div class="ttdeci">@ ReadWrite</div><div class="ttdoc">Buffer is accessed for both reading and writing.</div></div>
+<div class="ttc" id="anamespaceglb_html_aac72bab751949f90b0e731e69381ae63"><div class="ttname"><a href="namespaceglb.html#aac72bab751949f90b0e731e69381ae63">glb::BufferUsage</a></div><div class="ttdeci">BufferUsage</div><div class="ttdoc">Enumeration for different buffer usage types in OpenGL.</div><div class="ttdef"><b>Definition</b> Enum.h:26</div></div>
+<div class="ttc" id="anamespaceglb_html_aac72bab751949f90b0e731e69381ae63a84a8921b25f505d0d2077aeb5db4bc16"><div class="ttname"><a href="namespaceglb.html#aac72bab751949f90b0e731e69381ae63a84a8921b25f505d0d2077aeb5db4bc16">glb::BufferUsage::Static</a></div><div class="ttdeci">@ Static</div><div class="ttdoc">Buffer is used for static data that will not be changed frequently.</div></div>
+<div class="ttc" id="anamespaceglb_html_aac72bab751949f90b0e731e69381ae63a971fd8cc345d8bd9f92e9f7d88fdf20c"><div class="ttname"><a href="namespaceglb.html#aac72bab751949f90b0e731e69381ae63a971fd8cc345d8bd9f92e9f7d88fdf20c">glb::BufferUsage::Dynamic</a></div><div class="ttdeci">@ Dynamic</div><div class="ttdoc">Buffer is used for dynamic data that will be updated frequently.</div></div>
+<div class="ttc" id="anamespaceglb_html_aac72bab751949f90b0e731e69381ae63aeae835e83c0494a376229f254f7d3392"><div class="ttname"><a href="namespaceglb.html#aac72bab751949f90b0e731e69381ae63aeae835e83c0494a376229f254f7d3392">glb::BufferUsage::Stream</a></div><div class="ttdeci">@ Stream</div><div class="ttdoc">Buffer is used for streaming data that will be drawn frequently.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ca1090a06da959dea9999d3826d641bf.html">GLB</a></li><li class="navelem"><a class="el" href="_enum_8h.html">Enum.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>
