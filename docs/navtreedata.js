@@ -35,24 +35,29 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Usage", "index.html#autotoc_md8", null ],
-    [ "Examples", "md__e_x_a_m_p_l_e_s.html", null ],
+    [ "Examples", "md__e_x_a_m_p_l_e_s.html", [
+      [ "Drawing Triangles & Basic functions", "md__e_x_a_m_p_l_e_s.html#autotoc_md10", [
+        [ "demo.cpp", "md__e_x_a_m_p_l_e_s.html#autotoc_md11", null ],
+        [ "shader.glsl", "md__e_x_a_m_p_l_e_s.html#autotoc_md12", null ]
+      ] ]
+    ] ],
     [ "API Sheet", "md__a_p_i___s_h_e_e_t.html", [
-      [ "Window", "md__a_p_i___s_h_e_e_t.html#autotoc_md11", null ],
-      [ "Cursor", "md__a_p_i___s_h_e_e_t.html#autotoc_md12", null ],
-      [ "Key", "md__a_p_i___s_h_e_e_t.html#autotoc_md13", null ],
-      [ "Renderer", "md__a_p_i___s_h_e_e_t.html#autotoc_md14", null ],
-      [ "Shader", "md__a_p_i___s_h_e_e_t.html#autotoc_md15", null ],
-      [ "ShaderProgramSource", "md__a_p_i___s_h_e_e_t.html#autotoc_md16", null ],
-      [ "Image", "md__a_p_i___s_h_e_e_t.html#autotoc_md17", null ],
-      [ "Texture", "md__a_p_i___s_h_e_e_t.html#autotoc_md18", null ],
-      [ "VertexArray", "md__a_p_i___s_h_e_e_t.html#autotoc_md19", null ],
-      [ "Enum - About buffers", "md__a_p_i___s_h_e_e_t.html#autotoc_md20", null ],
-      [ "VertexBuffer", "md__a_p_i___s_h_e_e_t.html#autotoc_md21", null ],
-      [ "VertexBufferLayout", "md__a_p_i___s_h_e_e_t.html#autotoc_md22", null ],
-      [ "IndexBuffer", "md__a_p_i___s_h_e_e_t.html#autotoc_md23", null ],
-      [ "UserPointer", "md__a_p_i___s_h_e_e_t.html#autotoc_md24", null ],
-      [ "Debug", "md__a_p_i___s_h_e_e_t.html#autotoc_md25", null ],
-      [ "Enum", "md__a_p_i___s_h_e_e_t.html#autotoc_md26", null ]
+      [ "Window", "md__a_p_i___s_h_e_e_t.html#autotoc_md14", null ],
+      [ "Cursor", "md__a_p_i___s_h_e_e_t.html#autotoc_md15", null ],
+      [ "Key", "md__a_p_i___s_h_e_e_t.html#autotoc_md16", null ],
+      [ "Renderer", "md__a_p_i___s_h_e_e_t.html#autotoc_md17", null ],
+      [ "Shader", "md__a_p_i___s_h_e_e_t.html#autotoc_md18", null ],
+      [ "ShaderProgramSource", "md__a_p_i___s_h_e_e_t.html#autotoc_md19", null ],
+      [ "Image", "md__a_p_i___s_h_e_e_t.html#autotoc_md20", null ],
+      [ "Texture", "md__a_p_i___s_h_e_e_t.html#autotoc_md21", null ],
+      [ "VertexArray", "md__a_p_i___s_h_e_e_t.html#autotoc_md22", null ],
+      [ "Enum - About buffers", "md__a_p_i___s_h_e_e_t.html#autotoc_md23", null ],
+      [ "VertexBuffer", "md__a_p_i___s_h_e_e_t.html#autotoc_md24", null ],
+      [ "VertexBufferLayout", "md__a_p_i___s_h_e_e_t.html#autotoc_md25", null ],
+      [ "IndexBuffer", "md__a_p_i___s_h_e_e_t.html#autotoc_md26", null ],
+      [ "UserPointer", "md__a_p_i___s_h_e_e_t.html#autotoc_md27", null ],
+      [ "Debug", "md__a_p_i___s_h_e_e_t.html#autotoc_md28", null ],
+      [ "Enum", "md__a_p_i___s_h_e_e_t.html#autotoc_md29", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -89,7 +94,7 @@ var NAVTREEINDEX =
 "_common_8h.html",
 "classglb_1_1_key.html#ad0f577cfd0cb4ed7b586a2dbb917ff74a2ab9d39c882ac7b961b2252622cd420b",
 "classglb_1_1_shader.html#a6c5e7ca12881850159185dbd1e2ee2e4",
-"md__a_p_i___s_h_e_e_t.html#autotoc_md24"
+"md__a_p_i___s_h_e_e_t.html#autotoc_md27"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

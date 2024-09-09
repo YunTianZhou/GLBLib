@@ -135,8 +135,220 @@ $(function(){initNavTree('md__e_x_a_m_p_l_e_s.html',''); initResizable(true); })
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md9"></a></p>
-<p>No examples available. </p>
-</div></div><!-- contents -->
+<h1><a class="anchor" id="autotoc_md10"></a>
+Drawing Triangles &amp; Basic functions</h1>
+<p>This example demonstrates how to use the GLBLib library to create a simple OpenGL application. It covers several key features of the library, including:</p>
+<ol type="1">
+<li>Window Creation and Management: How to create and manage a window using the <code><a class="el" href="classglb_1_1_window.html" title="Manages a GLFW window and provides an interface for interacting with it.">glb::Window</a></code> class, including setting the window title and icon.</li>
+<li>Rendering: How to set up vertex buffers, vertex arrays, and shaders to render a simple triangle on the screen.</li>
+<li>Callbacks: How to handle various input events like cursor movement, mouse clicks, and keyboard presses using callback functions.</li>
+<li>Resource Management: How to load and manipulate images, such as flipping them horizontally or vertically, and how to set these images as window icons.</li>
+<li>Debugging: How to set up and use a custom debug callback to log messages, including information like the file, function, and line number where the message originated.</li>
+</ol>
+<p>This example serves as a foundational reference for building more complex OpenGL applications using GLBLib.</p>
+<h2><a class="anchor" id="autotoc_md11"></a>
+demo.cpp</h2>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_g_l_b_8h.html">GLB/GLB.h</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Callback function for cursor entering the window</span></div>
+<div class="line"><span class="keywordtype">void</span> OnCursorEnter(<span class="keywordtype">int</span> enter)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Get a reference to the window instance</span></div>
+<div class="line">    <span class="keyword">auto</span>&amp; window = <a class="code hl_function" href="classglb_1_1_window.html#af4e3d57ed1fce24a298dad9d65b22ae0">glb::Window::GetInstance</a>();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Change window title and icon based on cursor enter/exit state</span></div>
+<div class="line">    <span class="keywordflow">if</span> (enter)</div>
+<div class="line">    {</div>
+<div class="line">        window.SetTitle(<span class="stringliteral">&quot;IN&quot;</span>);</div>
+<div class="line">        <a class="code hl_class" href="classglb_1_1_image.html">glb::Image</a>&amp; icon = <a class="code hl_function" href="classglb_1_1_user_pointer.html#ad24163a6c6edff25450c62a78216c54d">glb::UserPointer::Get&lt;glb::Image&gt;</a>(<span class="stringliteral">&quot;Icons&quot;</span>)[0];</div>
+<div class="line">        window.SetIcon(icon);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">    {</div>
+<div class="line">        window.SetTitle(<span class="stringliteral">&quot;OUT&quot;</span>);</div>
+<div class="line">        <a class="code hl_class" href="classglb_1_1_image.html">glb::Image</a>&amp; icon = <a class="code hl_function" href="classglb_1_1_user_pointer.html#ad24163a6c6edff25450c62a78216c54d">glb::UserPointer::Get&lt;glb::Image&gt;</a>(<span class="stringliteral">&quot;Icons&quot;</span>)[1];</div>
+<div class="line">        window.SetIcon(icon);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Callback function for mouse button events</span></div>
+<div class="line"><span class="keywordtype">void</span> OnMouseButton(<span class="keywordtype">int</span> button, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Example: Uncomment to print the button code to the console</span></div>
+<div class="line">    <span class="comment">// std::cout &lt;&lt; &quot;MouseButton: &quot; &lt;&lt; button &lt;&lt; std::endl;</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Callback function for window close events</span></div>
+<div class="line"><span class="keywordtype">void</span> OnWindowClose()</div>
+<div class="line">{</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Window is closing...&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Debug callback function for logging</span></div>
+<div class="line"><span class="keywordtype">void</span> DebugCallback(<span class="keyword">const</span> std::string&amp; file,</div>
+<div class="line">    <span class="keyword">const</span> std::string&amp; function,</div>
+<div class="line">    <span class="keywordtype">int</span> line,</div>
+<div class="line">    <a class="code hl_enumeration" href="classglb_1_1_debug.html#a5cb583add3cc0afc4ff3d105ea5d2bf4">glb::Debug::Level</a> level,</div>
+<div class="line">    <a class="code hl_enumeration" href="classglb_1_1_debug.html#ab1cd2bc4ce447ff23f3089bfff70c90d">glb::Debug::Type</a> type,</div>
+<div class="line">    <span class="keyword">const</span> std::string&amp; message)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Log the line number of the debug message</span></div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Debug message at line: &quot;</span> &lt;&lt; line &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Create a window with size 800x800 and title &quot;Hello GLB&quot;</span></div>
+<div class="line">    <a class="code hl_class" href="classglb_1_1_window.html">glb::Window</a>&amp; window = <a class="code hl_function" href="classglb_1_1_window.html#a67736c5ba401bb1e0781c3518a3def86">glb::Window::Create</a>(800, 800, <span class="stringliteral">&quot;Hello GLB&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Check if the window creation was successful</span></div>
+<div class="line">    <span class="keywordflow">if</span> (!window.<a class="code hl_function" href="classglb_1_1_window.html#a0a1f080e928b2259a65294219e095354">IsExist</a>())</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Define vertex data for a triangle</span></div>
+<div class="line">    <span class="keywordtype">float</span> vertices[] = {</div>
+<div class="line">        -0.5f, -0.5f, 1.0f, 0.0f, 0.0f,  <span class="comment">// Position and color</span></div>
+<div class="line">         0.5f, -0.5f, 0.0f, 1.0f, 0.0f,</div>
+<div class="line">         0.0f,  0.5f, 0.0f, 0.0f, 1.0f,</div>
+<div class="line">    };</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Create and set up the vertex buffer, vertex array, and layout</span></div>
+<div class="line">    <a class="code hl_class" href="classglb_1_1_vertex_buffer.html">glb::VertexBuffer</a> vb(vertices, <span class="keyword">sizeof</span>(vertices), <a class="code hl_enumvalue" href="namespaceglb.html#aac72bab751949f90b0e731e69381ae63a84a8921b25f505d0d2077aeb5db4bc16">glb::BufferUsage::Static</a>);</div>
+<div class="line">    <a class="code hl_class" href="classglb_1_1_vertex_array.html">glb::VertexArray</a> va;</div>
+<div class="line">    <a class="code hl_class" href="classglb_1_1_vertex_buffer_layout.html">glb::VertexBufferLayout</a> layout;</div>
+<div class="line">    layout.<a class="code hl_function" href="classglb_1_1_vertex_buffer_layout.html#a8dcce058e33e29e3a0e297d3f0a572e8">Push</a>&lt;<a class="code hl_variable" href="classglb_1_1_enum.html#a80c95f14b705f3535a633a59d07d2fc4">glb::Enum::Float</a>&gt;(2);  <span class="comment">// 2D position</span></div>
+<div class="line">    layout.<a class="code hl_function" href="classglb_1_1_vertex_buffer_layout.html#a8dcce058e33e29e3a0e297d3f0a572e8">Push</a>&lt;<a class="code hl_variable" href="classglb_1_1_enum.html#a80c95f14b705f3535a633a59d07d2fc4">glb::Enum::Float</a>&gt;(3);  <span class="comment">// RGB color</span></div>
+<div class="line">    va.<a class="code hl_function" href="classglb_1_1_vertex_array.html#a55a490f25a058c7a16d931396af17f18">AddBuffer</a>(vb, layout);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Load shader from file</span></div>
+<div class="line">    <a class="code hl_class" href="classglb_1_1_shader.html">glb::Shader</a> shader(<a class="code hl_function" href="classglb_1_1_shader_program_source.html#a187ff00a3b11b14c1af400141250664b">glb::ShaderProgramSource::ReadFromFile</a>(<span class="stringliteral">&quot;shader.glsl&quot;</span>));</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Set the clear color for the renderer</span></div>
+<div class="line">    <a class="code hl_function" href="classglb_1_1_renderer.html#a05d76593500ca2d318ac34e3f9f3ca15">glb::Renderer::SetClearColor</a>(0.0f, 0.0f, 0.0f, 1.0f);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Set up cursor callbacks</span></div>
+<div class="line">    <a class="code hl_function" href="classglb_1_1_cursor.html#abb1f704d8679beb60dd8ac30ff96ca52">glb::Cursor::SetCallback</a>(<a class="code hl_enumvalue" href="classglb_1_1_cursor.html#a614c8bb93fa2fe45c2884348f7b1bc29af1851d5600eae616ee802a31ac74701b">glb::Cursor::Callback::Enter</a>, OnCursorEnter);</div>
+<div class="line">    <a class="code hl_function" href="classglb_1_1_cursor.html#abb1f704d8679beb60dd8ac30ff96ca52">glb::Cursor::SetCallback</a>(<a class="code hl_enumvalue" href="classglb_1_1_cursor.html#a614c8bb93fa2fe45c2884348f7b1bc29a49dabe49d62a3521f7c10400138c38d5">glb::Cursor::Callback::MouseButton</a>, OnMouseButton);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Set up key callback</span></div>
+<div class="line">    <a class="code hl_function" href="classglb_1_1_key.html#a9386f32311b1314e680ea7d7436211ee">glb::Key::SetCallback</a>(<a class="code hl_enumvalue" href="classglb_1_1_key.html#a9240bda6805b20c02898cb27016ae234a897356954c2cd3d41b221e3f24f99bba">glb::Key::Callback::Key</a>, +[](<span class="keywordtype">int</span> key, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>) {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Key pressed: &quot;</span> &lt;&lt; key &lt;&lt; std::endl;</div>
+<div class="line">        });</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Load and prepare icons for the window</span></div>
+<div class="line">    <a class="code hl_class" href="classglb_1_1_image.html">glb::Image</a> icon1(<span class="stringliteral">&quot;path/to/the/first/icon&quot;</span>);</div>
+<div class="line">    <a class="code hl_class" href="classglb_1_1_image.html">glb::Image</a> icon2(<span class="stringliteral">&quot;path/to/the/second/icon&quot;</span>);</div>
+<div class="line">    icon1.FlipHorizontally();</div>
+<div class="line">    icon2.FlipVertically();</div>
+<div class="line">    <a class="code hl_class" href="classglb_1_1_image.html">glb::Image</a> icons[2] = { std::move(icon1), std::move(icon2) };</div>
+<div class="line">    window.<a class="code hl_function" href="classglb_1_1_window.html#a76f3946971cff7473f7119f044c4c9dc">SetIcon</a>(icons, 2);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Store icons in the user pointer for later access</span></div>
+<div class="line">    <a class="code hl_function" href="classglb_1_1_user_pointer.html#a91e69ca07e23dbad9696f2bd27ffa40f">glb::UserPointer::Set</a>(<span class="stringliteral">&quot;Icons&quot;</span>, icons);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Set up window close callback</span></div>
+<div class="line">    window.<a class="code hl_function" href="classglb_1_1_window.html#aeababf18f4f7f08b249495582ba2c805">SetCallback</a>(<a class="code hl_enumvalue" href="classglb_1_1_window.html#aaa24d610123c7b3c751d8136bd6e2db1ad3d2e617335f08df83599665eef8a418">glb::Window::Callback::Close</a>, OnWindowClose);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Example: Set up and disable window position callback</span></div>
+<div class="line">    window.<a class="code hl_function" href="classglb_1_1_window.html#aeababf18f4f7f08b249495582ba2c805">SetCallback</a>(<a class="code hl_enumvalue" href="classglb_1_1_window.html#aaa24d610123c7b3c751d8136bd6e2db1a52f5e0bc3859bc5f5e25130b6c7e8881">glb::Window::Callback::Position</a>, +[](<span class="keywordtype">int</span> xpos, <span class="keywordtype">int</span> ypos) {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Window position: &quot;</span> &lt;&lt; xpos &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; ypos &lt;&lt; std::endl;</div>
+<div class="line">        });</div>
+<div class="line">    window.<a class="code hl_function" href="classglb_1_1_window.html#ab6bf949801c4b65f133fc29eaf019c0d">DisableCallback</a>(<a class="code hl_enumvalue" href="classglb_1_1_window.html#aaa24d610123c7b3c751d8136bd6e2db1a52f5e0bc3859bc5f5e25130b6c7e8881">glb::Window::Callback::Position</a>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Main loop</span></div>
+<div class="line">    <span class="keywordflow">while</span> (window.<a class="code hl_function" href="classglb_1_1_window.html#a1e0fe64dd8796115d9f07b83191c6d89">IsOpen</a>())</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Clear the screen</span></div>
+<div class="line">        <a class="code hl_function" href="classglb_1_1_renderer.html#a656c4f0870ac76041b6bf85151adbb6a">glb::Renderer::Clear</a>();</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Update the viewport to match window size</span></div>
+<div class="line">        <a class="code hl_struct" href="structglb_1_1_window_1_1_size__t.html">glb::Window::Size_t</a> size = window.<a class="code hl_function" href="classglb_1_1_window.html#ad4707ff9e89c9f7417d6692e3693469d">GetSize</a>();</div>
+<div class="line">        <a class="code hl_function" href="classglb_1_1_renderer.html#a5f2d71965c17dcc085ce08f2102d0888">glb::Renderer::SetViewport</a>(0, 0, size.<a class="code hl_variable" href="structglb_1_1_window_1_1_size__t.html#ab8c7ebefe2b72897b18366de3bfdcc14">width</a>, size.<a class="code hl_variable" href="structglb_1_1_window_1_1_size__t.html#a7ad81801af6a463ad44dccc60d2c9cf6">height</a>);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Draw the triangle</span></div>
+<div class="line">        <a class="code hl_function" href="classglb_1_1_renderer.html#ae3cf98d23d473df6508e726790565399">glb::Renderer::DrawArray</a>(<a class="code hl_enumvalue" href="classglb_1_1_renderer.html#a956c5297b268c947a69b45c50f241b06a7ca66fdfaad3eb33fc65d7490178f856">glb::Renderer::Mode::Triangles</a>, va, shader, 0, 3);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Swap buffers and poll events</span></div>
+<div class="line">        window.<a class="code hl_function" href="classglb_1_1_window.html#af2270442cf85bf8be13cf5b5e32152fc">SwapBuffers</a>();</div>
+<div class="line">        window.<a class="code hl_function" href="classglb_1_1_window.html#a8740734b909d7514dae4c0607ce1654d">PollEvents</a>();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Destroy the window before exiting</span></div>
+<div class="line">    <span class="keywordflow">if</span> (window.<a class="code hl_function" href="classglb_1_1_window.html#a0a1f080e928b2259a65294219e095354">IsExist</a>())</div>
+<div class="line">        window.<a class="code hl_function" href="classglb_1_1_window.html#a2a6fa612fe749a984725d7982fde88b6">Destroy</a>();</div>
+<div class="line">}</div>
+<div class="ttc" id="a_g_l_b_8h_html"><div class="ttname"><a href="_g_l_b_8h.html">GLB.h</a></div><div class="ttdoc">Main header file for the GLB library.</div></div>
+<div class="ttc" id="aclassglb_1_1_cursor_html_a614c8bb93fa2fe45c2884348f7b1bc29a49dabe49d62a3521f7c10400138c38d5"><div class="ttname"><a href="classglb_1_1_cursor.html#a614c8bb93fa2fe45c2884348f7b1bc29a49dabe49d62a3521f7c10400138c38d5">glb::Cursor::Callback::MouseButton</a></div><div class="ttdeci">@ MouseButton</div><div class="ttdoc">Mouse button callback (int button, int action, int mods).</div></div>
+<div class="ttc" id="aclassglb_1_1_cursor_html_a614c8bb93fa2fe45c2884348f7b1bc29af1851d5600eae616ee802a31ac74701b"><div class="ttname"><a href="classglb_1_1_cursor.html#a614c8bb93fa2fe45c2884348f7b1bc29af1851d5600eae616ee802a31ac74701b">glb::Cursor::Callback::Enter</a></div><div class="ttdeci">@ Enter</div><div class="ttdoc">Cursor enter/leave callback (int enter).</div></div>
+<div class="ttc" id="aclassglb_1_1_cursor_html_abb1f704d8679beb60dd8ac30ff96ca52"><div class="ttname"><a href="classglb_1_1_cursor.html#abb1f704d8679beb60dd8ac30ff96ca52">glb::Cursor::SetCallback</a></div><div class="ttdeci">static bool SetCallback(Callback type, void *callback)</div><div class="ttdoc">Sets a callback function for a specific cursor event.</div></div>
+<div class="ttc" id="aclassglb_1_1_debug_html_a5cb583add3cc0afc4ff3d105ea5d2bf4"><div class="ttname"><a href="classglb_1_1_debug.html#a5cb583add3cc0afc4ff3d105ea5d2bf4">glb::Debug::Level</a></div><div class="ttdeci">Level</div><div class="ttdoc">Enumeration for different levels of logging.</div><div class="ttdef"><b>Definition</b> Debug.h:56</div></div>
+<div class="ttc" id="aclassglb_1_1_debug_html_ab1cd2bc4ce447ff23f3089bfff70c90d"><div class="ttname"><a href="classglb_1_1_debug.html#ab1cd2bc4ce447ff23f3089bfff70c90d">glb::Debug::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Enumeration for different types of debug messages.</div><div class="ttdef"><b>Definition</b> Debug.h:70</div></div>
+<div class="ttc" id="aclassglb_1_1_enum_html_a80c95f14b705f3535a633a59d07d2fc4"><div class="ttname"><a href="classglb_1_1_enum.html#a80c95f14b705f3535a633a59d07d2fc4">glb::Enum::Float</a></div><div class="ttdeci">static const Enum_t Float</div><div class="ttdoc">OpenGL enumeration constant for floating-point type.</div><div class="ttdef"><b>Definition</b> Enum.h:78</div></div>
+<div class="ttc" id="aclassglb_1_1_image_html"><div class="ttname"><a href="classglb_1_1_image.html">glb::Image</a></div><div class="ttdoc">Represents an image with various operations for loading, saving, and manipulating image data.</div><div class="ttdef"><b>Definition</b> Image.h:30</div></div>
+<div class="ttc" id="aclassglb_1_1_key_html_a9240bda6805b20c02898cb27016ae234a897356954c2cd3d41b221e3f24f99bba"><div class="ttname"><a href="classglb_1_1_key.html#a9240bda6805b20c02898cb27016ae234a897356954c2cd3d41b221e3f24f99bba">glb::Key::Callback::Key</a></div><div class="ttdeci">@ Key</div><div class="ttdoc">Key input callback (int key, int scancode, int action, int mods).</div></div>
+<div class="ttc" id="aclassglb_1_1_key_html_a9386f32311b1314e680ea7d7436211ee"><div class="ttname"><a href="classglb_1_1_key.html#a9386f32311b1314e680ea7d7436211ee">glb::Key::SetCallback</a></div><div class="ttdeci">static bool SetCallback(Callback type, void *callback)</div><div class="ttdoc">Sets a callback for a specific type of input event.</div></div>
+<div class="ttc" id="aclassglb_1_1_renderer_html_a05d76593500ca2d318ac34e3f9f3ca15"><div class="ttname"><a href="classglb_1_1_renderer.html#a05d76593500ca2d318ac34e3f9f3ca15">glb::Renderer::SetClearColor</a></div><div class="ttdeci">static void SetClearColor(float r, float g, float b, float a)</div><div class="ttdoc">Sets the clear color for the color buffer.</div></div>
+<div class="ttc" id="aclassglb_1_1_renderer_html_a5f2d71965c17dcc085ce08f2102d0888"><div class="ttname"><a href="classglb_1_1_renderer.html#a5f2d71965c17dcc085ce08f2102d0888">glb::Renderer::SetViewport</a></div><div class="ttdeci">static void SetViewport(int x, int y, int width, int height)</div><div class="ttdoc">Sets the viewport dimensions.</div></div>
+<div class="ttc" id="aclassglb_1_1_renderer_html_a656c4f0870ac76041b6bf85151adbb6a"><div class="ttname"><a href="classglb_1_1_renderer.html#a656c4f0870ac76041b6bf85151adbb6a">glb::Renderer::Clear</a></div><div class="ttdeci">static void Clear()</div><div class="ttdoc">Clears the color buffer.</div></div>
+<div class="ttc" id="aclassglb_1_1_renderer_html_a956c5297b268c947a69b45c50f241b06a7ca66fdfaad3eb33fc65d7490178f856"><div class="ttname"><a href="classglb_1_1_renderer.html#a956c5297b268c947a69b45c50f241b06a7ca66fdfaad3eb33fc65d7490178f856">glb::Renderer::Mode::Triangles</a></div><div class="ttdeci">@ Triangles</div><div class="ttdoc">Draw separate triangles.</div></div>
+<div class="ttc" id="aclassglb_1_1_renderer_html_ae3cf98d23d473df6508e726790565399"><div class="ttname"><a href="classglb_1_1_renderer.html#ae3cf98d23d473df6508e726790565399">glb::Renderer::DrawArray</a></div><div class="ttdeci">static void DrawArray(Mode mode, const VertexArray &amp;va, const Shader &amp;shader, unsigned int first, unsigned int count)</div><div class="ttdoc">Draws a range of vertices using a specified mode.</div></div>
+<div class="ttc" id="aclassglb_1_1_shader_html"><div class="ttname"><a href="classglb_1_1_shader.html">glb::Shader</a></div><div class="ttdoc">Manages shader programs and their uniforms.</div><div class="ttdef"><b>Definition</b> Shader.h:68</div></div>
+<div class="ttc" id="aclassglb_1_1_shader_program_source_html_a187ff00a3b11b14c1af400141250664b"><div class="ttname"><a href="classglb_1_1_shader_program_source.html#a187ff00a3b11b14c1af400141250664b">glb::ShaderProgramSource::ReadFromFile</a></div><div class="ttdeci">static ShaderProgramSource ReadFromFile(const std::string &amp;filepath)</div><div class="ttdoc">Reads shader source from a file.</div></div>
+<div class="ttc" id="aclassglb_1_1_user_pointer_html_a91e69ca07e23dbad9696f2bd27ffa40f"><div class="ttname"><a href="classglb_1_1_user_pointer.html#a91e69ca07e23dbad9696f2bd27ffa40f">glb::UserPointer::Set</a></div><div class="ttdeci">static void Set(const std::string &amp;name, void *value)</div><div class="ttdoc">Associates a pointer with a name.</div><div class="ttdef"><b>Definition</b> UserPointer.h:96</div></div>
+<div class="ttc" id="aclassglb_1_1_user_pointer_html_ad24163a6c6edff25450c62a78216c54d"><div class="ttname"><a href="classglb_1_1_user_pointer.html#ad24163a6c6edff25450c62a78216c54d">glb::UserPointer::Get</a></div><div class="ttdeci">static T * Get(const std::string &amp;name)</div><div class="ttdoc">Retrieves a pointer associated with a name.</div><div class="ttdef"><b>Definition</b> UserPointer.h:55</div></div>
+<div class="ttc" id="aclassglb_1_1_vertex_array_html"><div class="ttname"><a href="classglb_1_1_vertex_array.html">glb::VertexArray</a></div><div class="ttdoc">Encapsulates an OpenGL Vertex Array Object (VAO).</div><div class="ttdef"><b>Definition</b> VertexArray.h:28</div></div>
+<div class="ttc" id="aclassglb_1_1_vertex_array_html_a55a490f25a058c7a16d931396af17f18"><div class="ttname"><a href="classglb_1_1_vertex_array.html#a55a490f25a058c7a16d931396af17f18">glb::VertexArray::AddBuffer</a></div><div class="ttdeci">void AddBuffer(const VertexBuffer &amp;vb, const VertexBufferLayout &amp;layout)</div><div class="ttdoc">Associates a VertexBuffer with this VertexArray using the specified VertexBufferLayout.</div></div>
+<div class="ttc" id="aclassglb_1_1_vertex_buffer_html"><div class="ttname"><a href="classglb_1_1_vertex_buffer.html">glb::VertexBuffer</a></div><div class="ttdoc">Encapsulates an OpenGL Vertex Buffer Object (VBO).</div><div class="ttdef"><b>Definition</b> VertexBuffer.h:25</div></div>
+<div class="ttc" id="aclassglb_1_1_vertex_buffer_layout_html"><div class="ttname"><a href="classglb_1_1_vertex_buffer_layout.html">glb::VertexBufferLayout</a></div><div class="ttdoc">Defines the layout of a vertex buffer, specifying the format of the vertex attributes.</div><div class="ttdef"><b>Definition</b> VertexBufferLayout.h:27</div></div>
+<div class="ttc" id="aclassglb_1_1_vertex_buffer_layout_html_a8dcce058e33e29e3a0e297d3f0a572e8"><div class="ttname"><a href="classglb_1_1_vertex_buffer_layout.html#a8dcce058e33e29e3a0e297d3f0a572e8">glb::VertexBufferLayout::Push</a></div><div class="ttdeci">void Push(unsigned int count)</div><div class="ttdoc">Adds a new attribute to the vertex buffer layout.</div><div class="ttdef"><b>Definition</b> VertexBufferLayout.h:74</div></div>
+<div class="ttc" id="aclassglb_1_1_window_html"><div class="ttname"><a href="classglb_1_1_window.html">glb::Window</a></div><div class="ttdoc">Manages a GLFW window and provides an interface for interacting with it.</div><div class="ttdef"><b>Definition</b> Window.h:26</div></div>
+<div class="ttc" id="aclassglb_1_1_window_html_a0a1f080e928b2259a65294219e095354"><div class="ttname"><a href="classglb_1_1_window.html#a0a1f080e928b2259a65294219e095354">glb::Window::IsExist</a></div><div class="ttdeci">int IsExist() const</div><div class="ttdoc">Checks if the window exists.</div><div class="ttdef"><b>Definition</b> Window.h:123</div></div>
+<div class="ttc" id="aclassglb_1_1_window_html_a1e0fe64dd8796115d9f07b83191c6d89"><div class="ttname"><a href="classglb_1_1_window.html#a1e0fe64dd8796115d9f07b83191c6d89">glb::Window::IsOpen</a></div><div class="ttdeci">int IsOpen() const</div><div class="ttdoc">Checks if the window is open.</div><div class="ttdef"><b>Definition</b> Window.h:129</div></div>
+<div class="ttc" id="aclassglb_1_1_window_html_a2a6fa612fe749a984725d7982fde88b6"><div class="ttname"><a href="classglb_1_1_window.html#a2a6fa612fe749a984725d7982fde88b6">glb::Window::Destroy</a></div><div class="ttdeci">void Destroy()</div><div class="ttdoc">Destroys the window and cleans up resources.</div></div>
+<div class="ttc" id="aclassglb_1_1_window_html_a67736c5ba401bb1e0781c3518a3def86"><div class="ttname"><a href="classglb_1_1_window.html#a67736c5ba401bb1e0781c3518a3def86">glb::Window::Create</a></div><div class="ttdeci">static Window &amp; Create(int width, int height, const std::string &amp;name)</div><div class="ttdoc">Creates and initializes a Window instance.</div><div class="ttdef"><b>Definition</b> Window.h:430</div></div>
+<div class="ttc" id="aclassglb_1_1_window_html_a76f3946971cff7473f7119f044c4c9dc"><div class="ttname"><a href="classglb_1_1_window.html#a76f3946971cff7473f7119f044c4c9dc">glb::Window::SetIcon</a></div><div class="ttdeci">void SetIcon(Image &amp;icon) const</div><div class="ttdoc">Sets the icon of the window.</div><div class="ttdef"><b>Definition</b> Window.h:510</div></div>
+<div class="ttc" id="aclassglb_1_1_window_html_a8740734b909d7514dae4c0607ce1654d"><div class="ttname"><a href="classglb_1_1_window.html#a8740734b909d7514dae4c0607ce1654d">glb::Window::PollEvents</a></div><div class="ttdeci">void PollEvents() const</div><div class="ttdoc">Polls events for the window.</div><div class="ttdef"><b>Definition</b> Window.h:383</div></div>
+<div class="ttc" id="aclassglb_1_1_window_html_aaa24d610123c7b3c751d8136bd6e2db1a52f5e0bc3859bc5f5e25130b6c7e8881"><div class="ttname"><a href="classglb_1_1_window.html#aaa24d610123c7b3c751d8136bd6e2db1a52f5e0bc3859bc5f5e25130b6c7e8881">glb::Window::Callback::Position</a></div><div class="ttdeci">@ Position</div><div class="ttdoc">Move window callback (int xpos, int ypos)</div></div>
+<div class="ttc" id="aclassglb_1_1_window_html_aaa24d610123c7b3c751d8136bd6e2db1ad3d2e617335f08df83599665eef8a418"><div class="ttname"><a href="classglb_1_1_window.html#aaa24d610123c7b3c751d8136bd6e2db1ad3d2e617335f08df83599665eef8a418">glb::Window::Callback::Close</a></div><div class="ttdeci">@ Close</div><div class="ttdoc">Close window callback (None)</div></div>
+<div class="ttc" id="aclassglb_1_1_window_html_ab6bf949801c4b65f133fc29eaf019c0d"><div class="ttname"><a href="classglb_1_1_window.html#ab6bf949801c4b65f133fc29eaf019c0d">glb::Window::DisableCallback</a></div><div class="ttdeci">bool DisableCallback(Callback type)</div><div class="ttdoc">Disables a callback function for a specified window event.</div></div>
+<div class="ttc" id="aclassglb_1_1_window_html_ad4707ff9e89c9f7417d6692e3693469d"><div class="ttname"><a href="classglb_1_1_window.html#ad4707ff9e89c9f7417d6692e3693469d">glb::Window::GetSize</a></div><div class="ttdeci">Size_t GetSize() const</div><div class="ttdoc">Gets the size of the window.</div><div class="ttdef"><b>Definition</b> Window.h:442</div></div>
+<div class="ttc" id="aclassglb_1_1_window_html_aeababf18f4f7f08b249495582ba2c805"><div class="ttname"><a href="classglb_1_1_window.html#aeababf18f4f7f08b249495582ba2c805">glb::Window::SetCallback</a></div><div class="ttdeci">bool SetCallback(Callback type, void *callback)</div><div class="ttdoc">Sets a callback function for a specified window event.</div></div>
+<div class="ttc" id="aclassglb_1_1_window_html_af2270442cf85bf8be13cf5b5e32152fc"><div class="ttname"><a href="classglb_1_1_window.html#af2270442cf85bf8be13cf5b5e32152fc">glb::Window::SwapBuffers</a></div><div class="ttdeci">void SwapBuffers() const</div><div class="ttdoc">Swaps the buffers of the window.</div><div class="ttdef"><b>Definition</b> Window.h:388</div></div>
+<div class="ttc" id="aclassglb_1_1_window_html_af4e3d57ed1fce24a298dad9d65b22ae0"><div class="ttname"><a href="classglb_1_1_window.html#af4e3d57ed1fce24a298dad9d65b22ae0">glb::Window::GetInstance</a></div><div class="ttdeci">static Window &amp; GetInstance()</div><div class="ttdoc">Gets the singleton instance of the Window.</div><div class="ttdef"><b>Definition</b> Window.h:436</div></div>
+<div class="ttc" id="anamespaceglb_html_aac72bab751949f90b0e731e69381ae63a84a8921b25f505d0d2077aeb5db4bc16"><div class="ttname"><a href="namespaceglb.html#aac72bab751949f90b0e731e69381ae63a84a8921b25f505d0d2077aeb5db4bc16">glb::BufferUsage::Static</a></div><div class="ttdeci">@ Static</div><div class="ttdoc">Buffer is used for static data that will not be changed frequently.</div></div>
+<div class="ttc" id="astructglb_1_1_window_1_1_size__t_html"><div class="ttname"><a href="structglb_1_1_window_1_1_size__t.html">glb::Window::Size_t</a></div><div class="ttdoc">Represents the size of the window.</div><div class="ttdef"><b>Definition</b> Window.h:34</div></div>
+<div class="ttc" id="astructglb_1_1_window_1_1_size__t_html_a7ad81801af6a463ad44dccc60d2c9cf6"><div class="ttname"><a href="structglb_1_1_window_1_1_size__t.html#a7ad81801af6a463ad44dccc60d2c9cf6">glb::Window::Size_t::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> Window.h:34</div></div>
+<div class="ttc" id="astructglb_1_1_window_1_1_size__t_html_ab8c7ebefe2b72897b18366de3bfdcc14"><div class="ttname"><a href="structglb_1_1_window_1_1_size__t.html#ab8c7ebefe2b72897b18366de3bfdcc14">glb::Window::Size_t::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> Window.h:34</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md12"></a>
+shader.glsl</h2>
+<div class="fragment"><div class="line"><span class="preprocessor">#shader vertex</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#version 330 core</span></div>
+<div class="line"> </div>
+<div class="line">layout(location = 0) in vec2 a_Pos;</div>
+<div class="line">layout(location = 1) in vec3 a_Color;</div>
+<div class="line"> </div>
+<div class="line">out vec3 v_Color;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> main()</div>
+<div class="line">{</div>
+<div class="line">    gl_Position = vec4(a_Pos, 0.0, 1.0);</div>
+<div class="line">    v_Color = a_Color;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#shader fragment</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#version 330 core</span></div>
+<div class="line"> </div>
+<div class="line">layout(location = 0) out vec4 o_Color;</div>
+<div class="line"> </div>
+<div class="line">in vec3 v_Color;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> main()</div>
+<div class="line">{</div>
+<div class="line">    o_Color = vec4(v_Color, 1.0);</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
