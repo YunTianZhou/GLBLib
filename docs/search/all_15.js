@@ -7,7 +7,7 @@ var searchData=
   ['readonly_4',['ReadOnly',['../namespaceglb.html#aa08267b7441534d8a7dd1ea7c33025d7a131fb182a881796e7606ed6da27f1197',1,'glb']]],
   ['readwrite_5',['ReadWrite',['../namespaceglb.html#aa08267b7441534d8a7dd1ea7c33025d7a70a2a84088d405a2e3f1e3accaa16723',1,'glb']]],
   ['refresh_6',['Refresh',['../classglb_1_1_window.html#aaa24d610123c7b3c751d8136bd6e2db1a63a6a88c066880c5ac42394a22803ca6',1,'glb::Window']]],
-  ['renderer_7',['Renderer',['../classglb_1_1_renderer.html',1,'glb::Renderer'],['../md__a_p_i___s_h_e_e_t.html#autotoc_md17',1,'Renderer']]],
+  ['renderer_7',['Renderer',['../classglb_1_1_renderer.html',1,'glb::Renderer'],['../md__a_p_i___s_h_e_e_t.html#autotoc_md24',1,'Renderer']]],
   ['renderer_2eh_8',['Renderer.h',['../_renderer_8h.html',1,'']]],
   ['repository_9',['1. Clone the Repository',['../index.html#autotoc_md4',1,'']]],
   ['requestattention_10',['RequestAttention',['../classglb_1_1_window.html#a0b9380dce13fdfee27561133123274a7',1,'glb::Window']]],

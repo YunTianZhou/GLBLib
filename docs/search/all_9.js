@@ -35,5 +35,5 @@ var searchData=
   ['fragmentsource_32',['FragmentSource',['../classglb_1_1_shader_program_source.html#a37d723f1e2036bb70879cdd13fdcc643',1,'glb::ShaderProgramSource']]],
   ['framebuffersize_33',['FramebufferSize',['../classglb_1_1_window.html#aaa24d610123c7b3c751d8136bd6e2db1a048f247ef00bb80cc022b8b4eb7ba26d',1,'glb::Window']]],
   ['free_34',['Free',['../classglb_1_1_image.html#ad41f892895eeb1d82b5ef6cabef0eac0',1,'glb::Image::Free()'],['../classglb_1_1_image.html#ac3346c6696d74a01f5fefd4415a35356',1,'glb::Image::Free(Image &amp;image)'],['../classglb_1_1_image.html#aa15376e3af00ddd53b19736581139e42',1,'glb::Image::Free(Image images[], int size)']]],
-  ['functions_35',['Drawing Triangles &amp; Basic functions',['../md__e_x_a_m_p_l_e_s.html#autotoc_md10',1,'']]]
+  ['functions_35',['Basic functions',['../md__e_x_a_m_p_l_e_s.html#autotoc_md10',1,'']]]
 ];
