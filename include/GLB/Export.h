@@ -13,4 +13,3 @@
 #ifndef GLB_API
 	#define GLB_API
 #endif
-

@@ -15,7 +15,7 @@ namespace glb {
     }
 
     Window::Window(int width, int height, const std::string& title)
-        : m_isExist(false)
+        : m_isExist(false), m_title(title)
     {
         // Set glfw error callback
         glfwSetErrorCallback(GLFWErrorCallback);
@@ -26,8 +26,8 @@ namespace glb {
             return;
         }
 
-        glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-        glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 4);
+        glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+        glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 
         s_window = glfwCreateWindow(width, height, title.c_str(), nullptr, nullptr);
 
@@ -47,20 +47,26 @@ namespace glb {
             return;
         }
 
-        // Set GLDebug Callback and enable
-        glDebugMessageCallback(GLLogMessageCallback, nullptr);
-        glEnable(GL_DEBUG_OUTPUT);
-        glEnable(GL_DEBUG_OUTPUT_SYNCHRONOUS);
-        glfwSetWindowUserPointer(s_window, &Manager);
+        // Get the OpenGL version
+        int major = 0, minor = 0;
+        glGetIntegerv(GL_MAJOR_VERSION, &major);
+        glGetIntegerv(GL_MINOR_VERSION, &minor);
 
         // Set blend func and enable
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         glEnable(GL_BLEND);
 
+        // Set up the GL debug message callback
+        glEnable(GL_DEBUG_OUTPUT);
+        glEnable(GL_DEBUG_OUTPUT_SYNCHRONOUS);
+        glDebugMessageCallback(GLLogMessageCallback, nullptr);
+
+        glfwSetWindowUserPointer(s_window, &Manager);
+
+        GLBLog("GLB init successfully [OpenGL version " << major << "." << minor << "]");
+
         s_initialized = true;
         m_isExist = true;
-
-        GLBLog("GLB init successfully!");
     }
 
     Window::~Window()
@@ -86,7 +92,7 @@ namespace glb {
     bool Window::SetCallback(Callback type, void* callback)
     {
         // Enum, func, Parameters, CallbackFuncType, Args
-        #define Case(e, f, p, t, a) \
+#define Case(e, f, p, t, a) \
             case Callback::e: \
             { \
                 Manager.Window.e = callback;\
@@ -119,7 +125,7 @@ namespace glb {
         }
         return true;
 
-        #undef Case
+#undef Case
     }
 
     bool Window::DisableCallback(Callback type)
@@ -156,24 +162,3 @@ namespace glb {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

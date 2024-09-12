@@ -39,7 +39,7 @@ namespace glb {
         // Get Functions
         inline int IsExist() const { return m_isExist; }
         inline int IsOpen() const { return glfwWindowShouldClose(s_window) == GL_FALSE; }
-        inline std::string GetTitle() const { return glfwGetWindowTitle(s_window); }
+        inline std::string GetTitle() const { return m_title; }
 
         inline Size_t GetSize() const;
         inline int GetWidth() const;
@@ -110,6 +110,7 @@ namespace glb {
         static bool s_initialized;
         static Window s_instance;
         static GLFWwindow* s_window;
+        std::string m_title;
         bool m_isExist;
     };
 
@@ -192,6 +193,7 @@ namespace glb {
     inline void Window::SetTitle(std::string title)
     {
         glfwSetWindowTitle(s_window, title.c_str());
+        m_title = title;
     }
 
     inline void Window::SetIcon(Image& icon) const

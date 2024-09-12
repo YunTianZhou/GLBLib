@@ -3,6 +3,10 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <unordered_map>
+
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
 
 #include "Export.h"
 
@@ -79,7 +83,9 @@ namespace glb {
 							   Level level,
 							   Type type,
 							   const std::string& message);
+		inline static void PollOpenGLErrors(const std::string& file, const std::string& function, int line);
 	private:
+		static const std::unordered_map <unsigned int, std::string> enumToName;
 		static CallbackFunc func;
 	};
 
@@ -98,6 +104,25 @@ namespace glb {
 		std::cout << "GLB " << prefix << ": [" << function << "] " << message << std::endl;
 		if (func)
 			func(file, function, line, level, type, message);
+	}
+
+	inline void Debug::PollOpenGLErrors(const std::string& file, const std::string& function, int line)
+	{
+		GLenum error;
+		while (error = glGetError())
+		{
+			auto it = enumToName.find(error);
+			if (it != enumToName.end()) 
+			{
+				std::string message = std::string("[OpenGL Error] ") + it->second;
+				Log("Error High", file, function, line, Level::ErrorHigh, Type::OpenGLErr, message);
+			}
+			else 
+			{
+				std::string message = std::string("[OpenGL Error] Error code: ") + std::to_string(error);
+				Log("Error High", file, function, line, Level::ErrorHigh, Type::OpenGLErr, message);
+			}
+		}
 	}
 
 }

@@ -10,10 +10,11 @@ var searchData=
   ['png_7',['pieces.png',['../md__e_x_a_m_p_l_e_s.html#autotoc_md17',1,'']]],
   ['points_8',['Points',['../classglb_1_1_renderer.html#a956c5297b268c947a69b45c50f241b06a75dd5f1160a3f02b6fae89c54361a1b3',1,'glb::Renderer']]],
   ['pollevents_9',['PollEvents',['../classglb_1_1_window.html#a8740734b909d7514dae4c0607ce1654d',1,'glb::Window']]],
-  ['position_10',['Position',['../classglb_1_1_cursor.html#a614c8bb93fa2fe45c2884348f7b1bc29a52f5e0bc3859bc5f5e25130b6c7e8881',1,'glb::Cursor::Position'],['../classglb_1_1_window.html#aaa24d610123c7b3c751d8136bd6e2db1a52f5e0bc3859bc5f5e25130b6c7e8881',1,'glb::Window::Position']]],
-  ['position_5ft_11',['Position_t',['../structglb_1_1_cursor_1_1_position__t.html',1,'glb::Cursor::Position_t'],['../structglb_1_1_window_1_1_position__t.html',1,'glb::Window::Position_t']]],
-  ['printscreen_12',['PrintScreen',['../classglb_1_1_key.html#ad0f577cfd0cb4ed7b586a2dbb917ff74abf54024481cd2ad6bbb9ae44b7312472',1,'glb::Key']]],
-  ['project_13',['4. Build the Project',['../index.html#autotoc_md7',1,'']]],
-  ['project_20with_20cmake_14',['3.  Configure the Project with CMake',['../index.html#autotoc_md6',1,'']]],
-  ['push_15',['Push',['../classglb_1_1_vertex_buffer_layout.html#a8dcce058e33e29e3a0e297d3f0a572e8',1,'glb::VertexBufferLayout']]]
+  ['pollopenglerrors_10',['PollOpenGLErrors',['../classglb_1_1_debug.html#a051a36803400c588f2364af8806bb63d',1,'glb::Debug']]],
+  ['position_11',['Position',['../classglb_1_1_cursor.html#a614c8bb93fa2fe45c2884348f7b1bc29a52f5e0bc3859bc5f5e25130b6c7e8881',1,'glb::Cursor::Position'],['../classglb_1_1_window.html#aaa24d610123c7b3c751d8136bd6e2db1a52f5e0bc3859bc5f5e25130b6c7e8881',1,'glb::Window::Position']]],
+  ['position_5ft_12',['Position_t',['../structglb_1_1_cursor_1_1_position__t.html',1,'glb::Cursor::Position_t'],['../structglb_1_1_window_1_1_position__t.html',1,'glb::Window::Position_t']]],
+  ['printscreen_13',['PrintScreen',['../classglb_1_1_key.html#ad0f577cfd0cb4ed7b586a2dbb917ff74abf54024481cd2ad6bbb9ae44b7312472',1,'glb::Key']]],
+  ['project_14',['4. Build the Project',['../index.html#autotoc_md7',1,'']]],
+  ['project_20with_20cmake_15',['3.  Configure the Project with CMake',['../index.html#autotoc_md6',1,'']]],
+  ['push_16',['Push',['../classglb_1_1_vertex_buffer_layout.html#a8dcce058e33e29e3a0e297d3f0a572e8',1,'glb::VertexBufferLayout']]]
 ];
