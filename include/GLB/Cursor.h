@@ -34,7 +34,6 @@ namespace glb {
         {
             Release = GLFW_RELEASE,
             Press = GLFW_PRESS,
-            Repeat = GLFW_REPEAT,
         };
 
         enum class Mode
@@ -59,12 +58,12 @@ namespace glb {
         static Position_t GetPosition();
         static bool SetCallback(Callback type, void* callback);
         static bool DisableCallback(Callback type);
-        static inline bool ContainMode(Mode mods, Mode mode);
+        static inline bool ContainMode(Mode set, Mode mode);
     };
 
-    inline bool Cursor::ContainMode(Mode mods, Mode mode)
+    inline bool Cursor::ContainMode(Mode set, Mode mode)
     {
-        return (int) mods & (int) mode;
+        return (int) set & (int) mode;
     }
 
 }

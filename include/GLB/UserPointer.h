@@ -20,7 +20,7 @@ namespace glb {
 			auto pointer = pointers.find(name);
 			if (pointer == pointers.end())
 			{
-				GLBWarnH(UnknowUserPointer, "Cannot find user pointer '" << name << "'");
+				GLBWarnH(UnknownUserPointer, "Cannot find user pointer '" << name << "'");
 				return nullptr;
 			}
 			return (T*) pointer->second;
@@ -42,7 +42,7 @@ namespace glb {
 	{
 		if (!Find(name))
 		{
-			GLBWarnL(UnknowUserPointer, "Cannot find user pointer '" << name << "'");
+			GLBWarnL(UnknownUserPointer, "Cannot find user pointer '" << name << "'");
 		}
 		pointers.erase(name);
 	}

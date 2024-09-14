@@ -53,7 +53,7 @@ namespace glb {
 		case Byte:             return 1;
 		case HalfFloat:        return 2;
 		}
-		GLBWarnH(UnknowType, "Unsupported enum type '" << type << "'");
+		GLBWarnH(UnknownType, "Unsupported enum type '" << type << "'");
 		return 0;
 	}
 

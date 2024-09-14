@@ -98,7 +98,7 @@ namespace glb {
 			return true;
 		}
 
-		GLBErrL(LoadImageFaild, "Faild to load image from file '" << filepath << "'");
+		GLBErrL(LoadImageFailed, "Failed to load image from file '" << filepath << "'");
 		return false;
 	}
 
@@ -134,11 +134,11 @@ namespace glb {
 			}
 			else
 			{
-				GLBErrL(UnknowType, "Image file extension " << extension << " not supported!");
+				GLBErrL(UnknownType, "Image file extension " << extension << " not supported!");
 			}
 		}
 
-		GLBErrL(SaveImageFaild, "Failed to save image!");
+		GLBErrL(SaveImageFailed, "Failed to save image!");
 		return false;
 	}
 

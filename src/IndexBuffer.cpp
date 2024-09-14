@@ -41,14 +41,14 @@ namespace glb {
 	{
 		Bind();
 		void* pointer = glMapBuffer(GL_ARRAY_BUFFER, (unsigned int) access);
-		GLBAssertWH(pointer, MapBufferFaild, "Failed to map the index buffer!");
+		GLBAssertWH(pointer, MapBufferFailed, "Failed to map the index buffer!");
 		return pointer;
 	}
 
 	void IndexBuffer::Unmap() const
 	{
 		Bind();
-		GLBAssertWH(glUnmapBuffer(GL_ARRAY_BUFFER), UnmapBufferFaild, "Failed to unmap the index buffer!");
+		GLBAssertWH(glUnmapBuffer(GL_ARRAY_BUFFER), UnmapBufferFailed, "Failed to unmap the index buffer!");
 	}
 
 	void IndexBuffer::Init(void* indices, unsigned int count, BufferUsage usage, Enum_t type)
@@ -56,7 +56,7 @@ namespace glb {
 		GLBAssertEL(type == Enum::Ubyte ||
 					type == Enum::Uint ||
 					type == Enum::Ushort,
-					UnknowType,
+			        UnknownType,
 					"The type of the indices has to be "
 					"Enum::Ubyte, Enum::Uint, or Enum::Ushort!");
 

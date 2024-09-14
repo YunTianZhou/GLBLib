@@ -16,7 +16,7 @@ namespace glb {
 	public:
 		enum class Type
 		{
-			Unknow = GLFW_KEY_UNKNOWN,
+			Unknown = GLFW_KEY_UNKNOWN,
 			Space = GLFW_KEY_SPACE,
 			Apostrophe = GLFW_KEY_APOSTROPHE,
 			Comma = GLFW_KEY_COMMA,
@@ -170,12 +170,12 @@ namespace glb {
 		static std::string ToString(int scancode);
 		static bool SetCallback(Callback type, void* callback);
 		static bool DisableCallback(Callback type);
-		static inline bool ContainMode(Mode mods, Mode mode);
+		static inline bool ContainMode(Mode set, Mode mode);
 	};
 
-	inline bool Key::ContainMode(Mode mods, Mode mode)
+	inline bool Key::ContainMode(Mode set, Mode mode)
 	{
-		return (int) mods & (int) mode;
+		return (int) set & (int) mode;
 	}
 
 }

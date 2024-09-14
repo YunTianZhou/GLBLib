@@ -29,7 +29,7 @@ namespace glb {
 
 	std::string Key::ToString(int scancode)
 	{
-		const char* name = glfwGetKeyName((int)Type::Unknow, scancode);
+		const char* name = glfwGetKeyName((int)Type::Unknown, scancode);
 		return name ? std::string(name) : "Unknown Key";
 	}
 

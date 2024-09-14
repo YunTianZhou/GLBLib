@@ -40,7 +40,7 @@ namespace glb {
             }
             else
             {
-                GLBErrL(UnknowType, "Unsupported vertex buffer element type '" << type << "'");
+                GLBErrL(UnknownType, "Unsupported vertex buffer element type '" << type << "'");
             }
         }
 

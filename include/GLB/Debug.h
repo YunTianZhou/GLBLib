@@ -41,25 +41,25 @@ namespace glb {
 
 		enum class Type
 		{
-			// Invalid / Unknow stuff
+			// Invalid / Unknown stuff
 			InvalidCallbackType,
 			InvalidEnum,
-			UnknowType,
-			UnknowUniform,
-			UnknowUserPointer,
+			UnknownType,
+			UnknownUniform,
+			UnknownUserPointer,
 
 			// Memory
 			ObjectNonExist,
 			DoubleFree,
 			CopyImage,
 
-			// Falid
-			OpenFileFaild,
-			ShaderCompiledFaild,
-			LoadImageFaild,
-			SaveImageFaild,
-			MapBufferFaild,
-			UnmapBufferFaild,
+			// Falied
+			OpenFileFailed,
+			ShaderCompiledFailed,
+			LoadImageFailed,
+			SaveImageFailed,
+			MapBufferFailed,
+			UnmapBufferFailed,
 
 			// GLFW / GL Error
 			GLFWErr,

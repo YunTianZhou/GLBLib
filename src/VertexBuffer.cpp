@@ -47,14 +47,14 @@ namespace glb {
 	{
 		Bind();
 		void* pointer = glMapBuffer(GL_ARRAY_BUFFER, (unsigned int) access);
-		GLBAssertWH(pointer, MapBufferFaild, "Failed to map the vertex buffer!");
+		GLBAssertWH(pointer, MapBufferFailed, "Failed to map the vertex buffer!");
 		return (float*) pointer;
 	}
 
 	void VertexBuffer::Unmap() const
 	{
 		Bind();
-		GLBAssertWH(glUnmapBuffer(GL_ARRAY_BUFFER), UnmapBufferFaild, "Failed to unmap the vertex buffer!");
+		GLBAssertWH(glUnmapBuffer(GL_ARRAY_BUFFER), UnmapBufferFailed, "Failed to unmap the vertex buffer!");
 	}
 
 }

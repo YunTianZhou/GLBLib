@@ -48,7 +48,7 @@ namespace glb {
 		if (buffer)
 			stbi_image_free(buffer);
 		else
-			GLBErrL(LoadImageFaild, "Faild to load texture from file '" << filepath << "'");
+			GLBErrL(LoadImageFailed, "Faild to load texture from file '" << filepath << "'");
 	}
 
 	Texture::Texture(int width, int height, unsigned char* buffer)

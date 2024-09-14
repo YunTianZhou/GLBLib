@@ -13,7 +13,7 @@ namespace glb {
 
         if (!stream.is_open())
         {
-            GLBErrH(OpenFileFaild, "Faild to open the shader source file '" << filepath << "'");
+            GLBErrH(OpenFileFailed, "Failed to open the shader source file '" << filepath << "'");
             return { std::string(), std::string() };
         }
 
@@ -35,14 +35,14 @@ namespace glb {
                 else if (line.find("fragment") != std::string::npos)
                     type = ShaderType::FRAGMENT;
                 else
-                    GLBWarnH(UnknowType, "Unknow shader source type:\n" << line);
+                    GLBWarnH(UnknownType, "Unknown shader source type:\n" << line);
             }
             else
             {
                 if (type != ShaderType::NONE)
                     ss[(int)type] << line << "\n";
                 else
-                    GLBWarnL(UnknowType, "Does not specify a shader type!");
+                    GLBWarnL(UnknownType, "Does not specify a shader type!");
             }
         }
 
@@ -61,7 +61,7 @@ namespace glb {
 
         if (!stream.is_open())
         {
-            GLBErrH(OpenFileFaild, "Faild to open the vertex shader source file '" << vertex << "'");
+            GLBErrH(OpenFileFailed, "Failed to open the vertex shader source file '" << vertex << "'");
             return { std::string(), std::string() };
         }
 
@@ -74,7 +74,7 @@ namespace glb {
 
         if (!stream.is_open())
         {
-            GLBErrH(OpenFileFaild, "Faild to open the fragment shader source file '" << fragment << "'");
+            GLBErrH(OpenFileFailed, "Failed to open the fragment shader source file '" << fragment << "'");
             return { std::string(), std::string() };
         }
 
@@ -126,7 +126,7 @@ namespace glb {
 
             char* buffer = new char[length];
             glGetShaderInfoLog(id, length, &length, buffer);
-            GLBErrH(ShaderCompiledFaild, "Faild to compile " <<
+            GLBErrH(ShaderCompiledFailed, "Failed to compile " <<
                 (type == GL_VERTEX_SHADER ? "vertx" : "fragment") << "shader!");
             GLBSay(buffer);
             delete[] buffer;
@@ -137,14 +137,14 @@ namespace glb {
 
     int Shader::GetUniformLocation(const std::string& name)
     {
-        if (m_UniformLocationCoche.find(name) != m_UniformLocationCoche.end())
-            return m_UniformLocationCoche[name];
+        if (m_UniformLocationCoach.find(name) != m_UniformLocationCoach.end())
+            return m_UniformLocationCoach[name];
 
         int location = glGetUniformLocation(m_rendererID, name.c_str());
         if (location == -1)
-            GLBWarnH(UnknowUniform, "Uniform '" << name << "' doesn't exist!");
+            GLBWarnH(UnknownUniform, "Uniform '" << name << "' doesn't exist!");
 
-        m_UniformLocationCoche[name] = location;
+        m_UniformLocationCoach[name] = location;
         return location;
     }
 

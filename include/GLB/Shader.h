@@ -68,7 +68,7 @@ namespace glb {
         int GetUniformLocation(const std::string& name);
     private:
         unsigned int m_rendererID;
-        std::unordered_map<std::string, int> m_UniformLocationCoche;
+        std::unordered_map<std::string, int> m_UniformLocationCoach;
     };
 
 }
