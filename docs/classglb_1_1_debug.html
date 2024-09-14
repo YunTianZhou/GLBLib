@@ -156,21 +156,21 @@ Public Types</h2></td></tr>
 <tr class="memitem:ab1cd2bc4ce447ff23f3089bfff70c90d" id="r_ab1cd2bc4ce447ff23f3089bfff70c90d"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90d">Type</a> { <br />
 &#160;&#160;<a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90da5ddd84bcf20bc8109df41e04ba94b75d">InvalidCallbackType</a>
 , <a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90dabaf0777e3144a52d6fd69816f4ac22c8">InvalidEnum</a>
-, <a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90da079fb6d73dd5034115cbd62f6e6394d2">UnknowType</a>
-, <a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90da6a47b65c8178957bd501a49ccaa5125f">UnknowUniform</a>
+, <a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90da916c74f40cb3a7d245c9f9eefde044db">UnknownType</a>
+, <a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90da07d28c296ada3d047bdff6dc3b95a0d9">UnknownUniform</a>
 , <br />
-&#160;&#160;<a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90da5a168b3373be4bb47d8c7f07ef007372">UnknowUserPointer</a>
+&#160;&#160;<a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90da48229b1618165f70b12be1c5e266e4d2">UnknownUserPointer</a>
 , <a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90da721c7cbc962a1061d2d16037383070ae">ObjectNonExist</a>
 , <a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90da2f36ec4f5e82976530aa4af543eb7e7e">DoubleFree</a>
 , <a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90daa5f0a7ca56ff1581731aa481e45f96d5">CopyImage</a>
 , <br />
-&#160;&#160;<a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90da4e70428d9a0cc0d3538829f51bae3874">OpenFileFaild</a>
-, <a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90daf6c8e1d76803974ae00533b33f04f3de">ShaderCompiledFaild</a>
-, <a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90da971f692037b263400f4c06d1a5c7efc2">LoadImageFaild</a>
-, <a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90dac72d05a4ac73f3a8d3f2d0b0613ecd6d">SaveImageFaild</a>
+&#160;&#160;<a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90da2d76802b1b517596b775efa68cfa9754">OpenFileFailed</a>
+, <a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90da64a7d4fa07fd5cb2a756d5f155b36b6a">ShaderCompiledFailed</a>
+, <a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90da47786a1f84b948deea567b671a9555c3">LoadImageFailed</a>
+, <a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90da43e91d8e1d744df86adb0bbd8af31666">SaveImageFailed</a>
 , <br />
-&#160;&#160;<a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90da4c84f983b70c0cd6c4d469f27c2f4c29">MapBufferFaild</a>
-, <a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90daf96297dab1f1197820d10c84caac4f53">UnmapBufferFaild</a>
+&#160;&#160;<a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90da2f11f136524cf940adb838de7b1e14bd">MapBufferFailed</a>
+, <a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90daf2ff5e174252490719e15e7e83d5ac47">UnmapBufferFailed</a>
 , <a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90da11b42335c3ce21fcf47a082b284d6b08">GLFWErr</a>
 , <a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90dadfa63e9076a3b4a753f64c3c8a111119">GLEWErr</a>
 , <br />
@@ -185,15 +185,15 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a4187f0f8ddeb23a0eb14a44d1d84ee24" id="r_a4187f0f8ddeb23a0eb14a44d1d84ee24"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4187f0f8ddeb23a0eb14a44d1d84ee24">SetCallback</a> (<a class="el" href="#aa534004cab673d1004adac1b694fe9e6">CallbackFunc</a> callback)</td></tr>
-<tr class="memdesc:a4187f0f8ddeb23a0eb14a44d1d84ee24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the callback function for handling log messages.  <br /></td></tr>
-<tr class="separator:a4187f0f8ddeb23a0eb14a44d1d84ee24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00cf9bb3526e336013b86eb0096c1286" id="r_a00cf9bb3526e336013b86eb0096c1286"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00cf9bb3526e336013b86eb0096c1286">DisableCallback</a> ()</td></tr>
-<tr class="memdesc:a00cf9bb3526e336013b86eb0096c1286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables the current callback function.  <br /></td></tr>
-<tr class="separator:a00cf9bb3526e336013b86eb0096c1286"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a059dae49116685c613c58d3354cdc76a" id="r_a059dae49116685c613c58d3354cdc76a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a059dae49116685c613c58d3354cdc76a">Log</a> (const std::string &amp;prefix, const std::string &amp;file, const std::string &amp;function, int line, <a class="el" href="#a5cb583add3cc0afc4ff3d105ea5d2bf4">Level</a> level, <a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90d">Type</a> type, const std::string &amp;message)</td></tr>
-<tr class="memdesc:a059dae49116685c613c58d3354cdc76a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with the specified details.  <br /></td></tr>
-<tr class="separator:a059dae49116685c613c58d3354cdc76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c6eae8ca7436fa3a341eaedf834b90b" id="r_a4c6eae8ca7436fa3a341eaedf834b90b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c6eae8ca7436fa3a341eaedf834b90b">SetCallback</a> (<a class="el" href="#aa534004cab673d1004adac1b694fe9e6">CallbackFunc</a> callback)</td></tr>
+<tr class="memdesc:a4c6eae8ca7436fa3a341eaedf834b90b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the callback function for handling log messages.  <br /></td></tr>
+<tr class="separator:a4c6eae8ca7436fa3a341eaedf834b90b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2954bfb0ffb22e8c4b26cb1798d34717" id="r_a2954bfb0ffb22e8c4b26cb1798d34717"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2954bfb0ffb22e8c4b26cb1798d34717">DisableCallback</a> ()</td></tr>
+<tr class="memdesc:a2954bfb0ffb22e8c4b26cb1798d34717"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables the current callback function.  <br /></td></tr>
+<tr class="separator:a2954bfb0ffb22e8c4b26cb1798d34717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a154d114140d94703520de249d4561b9e" id="r_a154d114140d94703520de249d4561b9e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a154d114140d94703520de249d4561b9e">Log</a> (const std::string &amp;prefix, const std::string &amp;file, const std::string &amp;function, int line, <a class="el" href="#a5cb583add3cc0afc4ff3d105ea5d2bf4">Level</a> level, <a class="el" href="#ab1cd2bc4ce447ff23f3089bfff70c90d">Type</a> type, const std::string &amp;message)</td></tr>
+<tr class="memdesc:a154d114140d94703520de249d4561b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with the specified details.  <br /></td></tr>
+<tr class="separator:a154d114140d94703520de249d4561b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a051a36803400c588f2364af8806bb63d" id="r_a051a36803400c588f2364af8806bb63d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a051a36803400c588f2364af8806bb63d">PollOpenGLErrors</a> (const std::string &amp;file, const std::string &amp;function, int line)</td></tr>
 <tr class="memdesc:a051a36803400c588f2364af8806bb63d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Poll OpenGL errors, print error message, and call your specified <a class="el" href="classglb_1_1_debug.html" title="Provides logging and debugging functionalities.">Debug</a> Callback (If you specified one).  <br /></td></tr>
 <tr class="separator:a051a36803400c588f2364af8806bb63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -201,7 +201,7 @@ Static Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides logging and debugging functionalities. </p>
 <p>The <a class="el" href="classglb_1_1_debug.html" title="Provides logging and debugging functionalities.">Debug</a> class is used for logging messages with different levels of importance. It allows setting a custom callback function to handle log messages and supports various debug levels and types.</p>
-<dl class="section note"><dt>Note</dt><dd>If your OpenGL version is lower then 4.3, your debug callback function may not receive OpenGL errors. To receive OpenGL errors in your debug callback function, you need to call <code><a class="el" href="#a051a36803400c588f2364af8806bb63d" title="Poll OpenGL errors, print error message, and call your specified Debug Callback (If you specified one...">Debug::PollOpenGLErrors</a></code> after calling each GLB Api. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>If your OpenGL version is lower then 4.3, your debug callback function may not receive OpenGL errors. To receive OpenGL errors in your debug callback function, you need to call <code><a class="el" href="#a051a36803400c588f2364af8806bb63d" title="Poll OpenGL errors, print error message, and call your specified Debug Callback (If you specified one...">Debug::PollOpenGLErrors</a></code> after calling each GLB Api. </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="aa534004cab673d1004adac1b694fe9e6" name="aa534004cab673d1004adac1b694fe9e6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa534004cab673d1004adac1b694fe9e6">&#9670;&#160;</a></span>CallbackFunc</h2>
@@ -302,11 +302,11 @@ Static Public Member Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90dabaf0777e3144a52d6fd69816f4ac22c8" name="ab1cd2bc4ce447ff23f3089bfff70c90dabaf0777e3144a52d6fd69816f4ac22c8"></a>InvalidEnum&#160;</td><td class="fielddoc"><p>Invalid enum value. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90da079fb6d73dd5034115cbd62f6e6394d2" name="ab1cd2bc4ce447ff23f3089bfff70c90da079fb6d73dd5034115cbd62f6e6394d2"></a>UnknowType&#160;</td><td class="fielddoc"><p>Unknown type. </p>
+<tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90da916c74f40cb3a7d245c9f9eefde044db" name="ab1cd2bc4ce447ff23f3089bfff70c90da916c74f40cb3a7d245c9f9eefde044db"></a>UnknownType&#160;</td><td class="fielddoc"><p>Unknown type. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90da6a47b65c8178957bd501a49ccaa5125f" name="ab1cd2bc4ce447ff23f3089bfff70c90da6a47b65c8178957bd501a49ccaa5125f"></a>UnknowUniform&#160;</td><td class="fielddoc"><p>Unknown uniform. </p>
+<tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90da07d28c296ada3d047bdff6dc3b95a0d9" name="ab1cd2bc4ce447ff23f3089bfff70c90da07d28c296ada3d047bdff6dc3b95a0d9"></a>UnknownUniform&#160;</td><td class="fielddoc"><p>Unknown uniform. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90da5a168b3373be4bb47d8c7f07ef007372" name="ab1cd2bc4ce447ff23f3089bfff70c90da5a168b3373be4bb47d8c7f07ef007372"></a>UnknowUserPointer&#160;</td><td class="fielddoc"><p>Unknown user pointer. </p>
+<tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90da48229b1618165f70b12be1c5e266e4d2" name="ab1cd2bc4ce447ff23f3089bfff70c90da48229b1618165f70b12be1c5e266e4d2"></a>UnknownUserPointer&#160;</td><td class="fielddoc"><p>Unknown user pointer. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90da721c7cbc962a1061d2d16037383070ae" name="ab1cd2bc4ce447ff23f3089bfff70c90da721c7cbc962a1061d2d16037383070ae"></a>ObjectNonExist&#160;</td><td class="fielddoc"><p>Object does not exist. </p>
 </td></tr>
@@ -314,17 +314,17 @@ Static Public Member Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90daa5f0a7ca56ff1581731aa481e45f96d5" name="ab1cd2bc4ce447ff23f3089bfff70c90daa5f0a7ca56ff1581731aa481e45f96d5"></a>CopyImage&#160;</td><td class="fielddoc"><p>Error while copying image. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90da4e70428d9a0cc0d3538829f51bae3874" name="ab1cd2bc4ce447ff23f3089bfff70c90da4e70428d9a0cc0d3538829f51bae3874"></a>OpenFileFaild&#160;</td><td class="fielddoc"><p>Failed to open file. </p>
+<tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90da2d76802b1b517596b775efa68cfa9754" name="ab1cd2bc4ce447ff23f3089bfff70c90da2d76802b1b517596b775efa68cfa9754"></a>OpenFileFailed&#160;</td><td class="fielddoc"><p>Failed to open file. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90daf6c8e1d76803974ae00533b33f04f3de" name="ab1cd2bc4ce447ff23f3089bfff70c90daf6c8e1d76803974ae00533b33f04f3de"></a>ShaderCompiledFaild&#160;</td><td class="fielddoc"><p>Failed to compile shader. </p>
+<tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90da64a7d4fa07fd5cb2a756d5f155b36b6a" name="ab1cd2bc4ce447ff23f3089bfff70c90da64a7d4fa07fd5cb2a756d5f155b36b6a"></a>ShaderCompiledFailed&#160;</td><td class="fielddoc"><p>Failed to compile shader. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90da971f692037b263400f4c06d1a5c7efc2" name="ab1cd2bc4ce447ff23f3089bfff70c90da971f692037b263400f4c06d1a5c7efc2"></a>LoadImageFaild&#160;</td><td class="fielddoc"><p>Failed to load image. </p>
+<tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90da47786a1f84b948deea567b671a9555c3" name="ab1cd2bc4ce447ff23f3089bfff70c90da47786a1f84b948deea567b671a9555c3"></a>LoadImageFailed&#160;</td><td class="fielddoc"><p>Failed to load image. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90dac72d05a4ac73f3a8d3f2d0b0613ecd6d" name="ab1cd2bc4ce447ff23f3089bfff70c90dac72d05a4ac73f3a8d3f2d0b0613ecd6d"></a>SaveImageFaild&#160;</td><td class="fielddoc"><p>Failed to save image. </p>
+<tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90da43e91d8e1d744df86adb0bbd8af31666" name="ab1cd2bc4ce447ff23f3089bfff70c90da43e91d8e1d744df86adb0bbd8af31666"></a>SaveImageFailed&#160;</td><td class="fielddoc"><p>Failed to save image. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90da4c84f983b70c0cd6c4d469f27c2f4c29" name="ab1cd2bc4ce447ff23f3089bfff70c90da4c84f983b70c0cd6c4d469f27c2f4c29"></a>MapBufferFaild&#160;</td><td class="fielddoc"><p>Failed to map buffer. </p>
+<tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90da2f11f136524cf940adb838de7b1e14bd" name="ab1cd2bc4ce447ff23f3089bfff70c90da2f11f136524cf940adb838de7b1e14bd"></a>MapBufferFailed&#160;</td><td class="fielddoc"><p>Failed to map buffer. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90daf96297dab1f1197820d10c84caac4f53" name="ab1cd2bc4ce447ff23f3089bfff70c90daf96297dab1f1197820d10c84caac4f53"></a>UnmapBufferFaild&#160;</td><td class="fielddoc"><p>Failed to unmap buffer. </p>
+<tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90daf2ff5e174252490719e15e7e83d5ac47" name="ab1cd2bc4ce447ff23f3089bfff70c90daf2ff5e174252490719e15e7e83d5ac47"></a>UnmapBufferFailed&#160;</td><td class="fielddoc"><p>Failed to unmap buffer. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ab1cd2bc4ce447ff23f3089bfff70c90da11b42335c3ce21fcf47a082b284d6b08" name="ab1cd2bc4ce447ff23f3089bfff70c90da11b42335c3ce21fcf47a082b284d6b08"></a>GLFWErr&#160;</td><td class="fielddoc"><p>GLFW error. </p>
 </td></tr>
@@ -337,8 +337,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a00cf9bb3526e336013b86eb0096c1286" name="a00cf9bb3526e336013b86eb0096c1286"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00cf9bb3526e336013b86eb0096c1286">&#9670;&#160;</a></span>DisableCallback()</h2>
+<a id="a2954bfb0ffb22e8c4b26cb1798d34717" name="a2954bfb0ffb22e8c4b26cb1798d34717"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2954bfb0ffb22e8c4b26cb1798d34717">&#9670;&#160;</a></span>DisableCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -347,7 +347,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void glb::Debug::DisableCallback </td>
+          <td class="memname">static void glb::Debug::DisableCallback </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -364,8 +364,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a059dae49116685c613c58d3354cdc76a" name="a059dae49116685c613c58d3354cdc76a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a059dae49116685c613c58d3354cdc76a">&#9670;&#160;</a></span>Log()</h2>
+<a id="a154d114140d94703520de249d4561b9e" name="a154d114140d94703520de249d4561b9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a154d114140d94703520de249d4561b9e">&#9670;&#160;</a></span>Log()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -374,7 +374,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void glb::Debug::Log </td>
+          <td class="memname">static void glb::Debug::Log </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>prefix</em></span>, </td>
         </tr>
@@ -482,12 +482,12 @@ Static Public Member Functions</h2></td></tr>
 <div class="line">}</div>
 <div class="ttc" id="aclassglb_1_1_vertex_buffer_html"><div class="ttname"><a href="classglb_1_1_vertex_buffer.html">glb::VertexBuffer</a></div><div class="ttdoc">Encapsulates an OpenGL Vertex Buffer Object (VBO).</div><div class="ttdef"><b>Definition</b> VertexBuffer.h:25</div></div>
 <div class="ttc" id="anamespaceglb_html_aac72bab751949f90b0e731e69381ae63a84a8921b25f505d0d2077aeb5db4bc16"><div class="ttname"><a href="namespaceglb.html#aac72bab751949f90b0e731e69381ae63a84a8921b25f505d0d2077aeb5db4bc16">glb::BufferUsage::Static</a></div><div class="ttdeci">@ Static</div><div class="ttdoc">Buffer is used for static data that will not be changed frequently.</div></div>
-</div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>If your OpenGL version is greater equal then 4.3, you don't need to use the function, just using <code><a class="el" href="#a4187f0f8ddeb23a0eb14a44d1d84ee24" title="Sets the callback function for handling log messages.">Debug::SetCallback</a></code> to specified a debug callback. </dd></dl>
+</div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>If your OpenGL version is greater equal then 4.3, you don't need to use the function, just using <code><a class="el" href="#a4c6eae8ca7436fa3a341eaedf834b90b" title="Sets the callback function for handling log messages.">Debug::SetCallback</a></code> to specified a debug callback. </dd></dl>
 
 </div>
 </div>
-<a id="a4187f0f8ddeb23a0eb14a44d1d84ee24" name="a4187f0f8ddeb23a0eb14a44d1d84ee24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4187f0f8ddeb23a0eb14a44d1d84ee24">&#9670;&#160;</a></span>SetCallback()</h2>
+<a id="a4c6eae8ca7436fa3a341eaedf834b90b" name="a4c6eae8ca7436fa3a341eaedf834b90b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c6eae8ca7436fa3a341eaedf834b90b">&#9670;&#160;</a></span>SetCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -496,7 +496,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void glb::Debug::SetCallback </td>
+          <td class="memname">static void glb::Debug::SetCallback </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#aa534004cab673d1004adac1b694fe9e6">CallbackFunc</a></td>          <td class="paramname"><span class="paramname"><em>callback</em></span></td><td>)</td>
           <td></td>

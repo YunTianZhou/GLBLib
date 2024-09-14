@@ -1,9 +1,9 @@
 var searchData=
 [
   ['savetofile_0',['SaveToFile',['../classglb_1_1_image.html#a5111215560998e6cf345b573a0f55b19',1,'glb::Image']]],
-  ['set_1',['Set',['../classglb_1_1_user_pointer.html#a91e69ca07e23dbad9696f2bd27ffa40f',1,'glb::UserPointer']]],
+  ['set_1',['Set',['../classglb_1_1_user_pointer.html#ab05b770c29948d083daa3078f295e74d',1,'glb::UserPointer']]],
   ['setaspectratio_2',['SetAspectRatio',['../classglb_1_1_window.html#ae60bc1657fb289a135acddceb9e4ee1b',1,'glb::Window']]],
-  ['setcallback_3',['SetCallback',['../classglb_1_1_cursor.html#abb1f704d8679beb60dd8ac30ff96ca52',1,'glb::Cursor::SetCallback()'],['../classglb_1_1_debug.html#a4187f0f8ddeb23a0eb14a44d1d84ee24',1,'glb::Debug::SetCallback()'],['../classglb_1_1_key.html#a9386f32311b1314e680ea7d7436211ee',1,'glb::Key::SetCallback()'],['../classglb_1_1_window.html#aeababf18f4f7f08b249495582ba2c805',1,'glb::Window::SetCallback()']]],
+  ['setcallback_3',['SetCallback',['../classglb_1_1_cursor.html#abb1f704d8679beb60dd8ac30ff96ca52',1,'glb::Cursor::SetCallback()'],['../classglb_1_1_debug.html#a4c6eae8ca7436fa3a341eaedf834b90b',1,'glb::Debug::SetCallback()'],['../classglb_1_1_key.html#a9386f32311b1314e680ea7d7436211ee',1,'glb::Key::SetCallback()'],['../classglb_1_1_window.html#aeababf18f4f7f08b249495582ba2c805',1,'glb::Window::SetCallback()']]],
   ['setclearcolor_4',['SetClearColor',['../classglb_1_1_renderer.html#a05d76593500ca2d318ac34e3f9f3ca15',1,'glb::Renderer']]],
   ['setdata_5',['SetData',['../classglb_1_1_index_buffer.html#abfda349a6a8216791b74c8d5e43fda74',1,'glb::IndexBuffer::SetData()'],['../classglb_1_1_vertex_buffer.html#a8ac0790415829e148ea43c194ce2266e',1,'glb::VertexBuffer::SetData()']]],
   ['setdefaulticon_6',['SetDefaultIcon',['../classglb_1_1_window.html#ac73fd94f16b1bfcaad9709e0da3c0978',1,'glb::Window']]],

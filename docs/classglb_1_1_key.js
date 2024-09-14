@@ -1,17 +1,24 @@
 var classglb_1_1_key =
 [
+    [ "Action", "classglb_1_1_key.html#a3b1f18f74e35e9fa0e24400af8161cd2", [
+      [ "Release", "classglb_1_1_key.html#a3b1f18f74e35e9fa0e24400af8161cd2ab8e7b465df7c5979dc731d06e84ce2cf", null ],
+      [ "Press", "classglb_1_1_key.html#a3b1f18f74e35e9fa0e24400af8161cd2a0610123bdd4ffc191a3ea05a847e1307", null ],
+      [ "Repeat", "classglb_1_1_key.html#a3b1f18f74e35e9fa0e24400af8161cd2a7020426cfb0a204051be4b3053d2acc8", null ]
+    ] ],
     [ "Callback", "classglb_1_1_key.html#a9240bda6805b20c02898cb27016ae234", [
       [ "Key", "classglb_1_1_key.html#a9240bda6805b20c02898cb27016ae234a897356954c2cd3d41b221e3f24f99bba", null ],
       [ "Char", "classglb_1_1_key.html#a9240bda6805b20c02898cb27016ae234a8e95e84813830072b7516cfaa7dbc1a9", null ]
     ] ],
     [ "Mode", "classglb_1_1_key.html#a27e89d0ba9ffdc545201b9c804bec902", [
-      [ "StickyKeys", "classglb_1_1_key.html#a27e89d0ba9ffdc545201b9c804bec902af103c3b68c43a2ed3fc02e2e517b13d4", null ],
-      [ "StickyMouseButtons", "classglb_1_1_key.html#a27e89d0ba9ffdc545201b9c804bec902acfa87cabab5f6de117f68750097ed7a3", null ],
-      [ "LockKeyMods", "classglb_1_1_key.html#a27e89d0ba9ffdc545201b9c804bec902ab102cab3f691532798b30057a45297e9", null ],
-      [ "RawMouseMotion", "classglb_1_1_key.html#a27e89d0ba9ffdc545201b9c804bec902a20bb95651bbc5186747759809073c8f1", null ]
+      [ "Shift", "classglb_1_1_key.html#a27e89d0ba9ffdc545201b9c804bec902a825a3d98017bab11815ad2817201324c", null ],
+      [ "Control", "classglb_1_1_key.html#a27e89d0ba9ffdc545201b9c804bec902aa1595abbb4c3a326636dd178757cd6c1", null ],
+      [ "Alt", "classglb_1_1_key.html#a27e89d0ba9ffdc545201b9c804bec902aa2e92861b757ab878312dd57993d60cf", null ],
+      [ "Super", "classglb_1_1_key.html#a27e89d0ba9ffdc545201b9c804bec902a0ce3266d4eb71ad50f7a90aee6d21dcd", null ],
+      [ "CapsLock", "classglb_1_1_key.html#a27e89d0ba9ffdc545201b9c804bec902a8d0f4171170104d094d8b6d4f8bf49e6", null ],
+      [ "NumLock", "classglb_1_1_key.html#a27e89d0ba9ffdc545201b9c804bec902acf6cc0261135c6d163fd4305375773d2", null ]
     ] ],
     [ "Type", "classglb_1_1_key.html#ad0f577cfd0cb4ed7b586a2dbb917ff74", [
-      [ "Unknow", "classglb_1_1_key.html#ad0f577cfd0cb4ed7b586a2dbb917ff74a01ae2e552c349bd5608af0f670f8ebc2", null ],
+      [ "Unknown", "classglb_1_1_key.html#ad0f577cfd0cb4ed7b586a2dbb917ff74a88183b946cc5f0e8c96b2e66e1c74a7e", null ],
       [ "Space", "classglb_1_1_key.html#ad0f577cfd0cb4ed7b586a2dbb917ff74ad511f8439ecde36647437fbba67a4394", null ],
       [ "Apostrophe", "classglb_1_1_key.html#ad0f577cfd0cb4ed7b586a2dbb917ff74ab6ac6f84bcb33f9b5186bda6b4c8b399", null ],
       [ "Comma", "classglb_1_1_key.html#ad0f577cfd0cb4ed7b586a2dbb917ff74a58be47db9455679e6a44df2eff9c9fa6", null ],

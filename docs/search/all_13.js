@@ -13,8 +13,9 @@ var searchData=
   ['pollopenglerrors_10',['PollOpenGLErrors',['../classglb_1_1_debug.html#a051a36803400c588f2364af8806bb63d',1,'glb::Debug']]],
   ['position_11',['Position',['../classglb_1_1_cursor.html#a614c8bb93fa2fe45c2884348f7b1bc29a52f5e0bc3859bc5f5e25130b6c7e8881',1,'glb::Cursor::Position'],['../classglb_1_1_window.html#aaa24d610123c7b3c751d8136bd6e2db1a52f5e0bc3859bc5f5e25130b6c7e8881',1,'glb::Window::Position']]],
   ['position_5ft_12',['Position_t',['../structglb_1_1_cursor_1_1_position__t.html',1,'glb::Cursor::Position_t'],['../structglb_1_1_window_1_1_position__t.html',1,'glb::Window::Position_t']]],
-  ['printscreen_13',['PrintScreen',['../classglb_1_1_key.html#ad0f577cfd0cb4ed7b586a2dbb917ff74abf54024481cd2ad6bbb9ae44b7312472',1,'glb::Key']]],
-  ['project_14',['4. Build the Project',['../index.html#autotoc_md7',1,'']]],
-  ['project_20with_20cmake_15',['3.  Configure the Project with CMake',['../index.html#autotoc_md6',1,'']]],
-  ['push_16',['Push',['../classglb_1_1_vertex_buffer_layout.html#a8dcce058e33e29e3a0e297d3f0a572e8',1,'glb::VertexBufferLayout']]]
+  ['press_13',['Press',['../classglb_1_1_cursor.html#a172c71a6d0e1be113a5bcc98fc5d35ada0610123bdd4ffc191a3ea05a847e1307',1,'glb::Cursor::Press'],['../classglb_1_1_key.html#a3b1f18f74e35e9fa0e24400af8161cd2a0610123bdd4ffc191a3ea05a847e1307',1,'glb::Key::Press']]],
+  ['printscreen_14',['PrintScreen',['../classglb_1_1_key.html#ad0f577cfd0cb4ed7b586a2dbb917ff74abf54024481cd2ad6bbb9ae44b7312472',1,'glb::Key']]],
+  ['project_15',['4. Build the Project',['../index.html#autotoc_md7',1,'']]],
+  ['project_20with_20cmake_16',['3.  Configure the Project with CMake',['../index.html#autotoc_md6',1,'']]],
+  ['push_17',['Push',['../classglb_1_1_vertex_buffer_layout.html#a8dcce058e33e29e3a0e297d3f0a572e8',1,'glb::VertexBufferLayout']]]
 ];

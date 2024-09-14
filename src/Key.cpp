@@ -58,7 +58,7 @@ namespace glb {
 			Case(Key, glfwSetKeyCallback, (GLFWwindow * window, int key, int scancode, int action, int mods), (void (*) (Type, int, Action, Mode)), ((Type) key, scancode, (Action) action, (Mode) mods));
 			Case(Char, glfwSetCharCallback, (GLFWwindow * window, unsigned int codepoint), (void (*) (unsigned int)), (codepoint));
 		default:
-			GLBWarnH(InvalidCallbackType, "Invalid key callback type '" << (int)type << "'");
+			GLBWarnH(InvalidCallbackType, "Invalid key callback type '" << (int) type << "'");
 			return false;
 		}
 		return true;

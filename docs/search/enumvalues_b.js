@@ -13,6 +13,5 @@ var searchData=
   ['linesadjacency_10',['LinesAdjacency',['../classglb_1_1_renderer.html#a956c5297b268c947a69b45c50f241b06a72ba2961719d09dc64d6088bb7b6e13a',1,'glb::Renderer']]],
   ['linestrip_11',['LineStrip',['../classglb_1_1_renderer.html#a956c5297b268c947a69b45c50f241b06ae7f9e73b8edd21f420a63b3ace5768a2',1,'glb::Renderer']]],
   ['linestripadjacency_12',['LineStripAdjacency',['../classglb_1_1_renderer.html#a956c5297b268c947a69b45c50f241b06a826457761e4d352b8f54d7d47b80dbaa',1,'glb::Renderer']]],
-  ['loadimagefaild_13',['LoadImageFaild',['../classglb_1_1_debug.html#ab1cd2bc4ce447ff23f3089bfff70c90da971f692037b263400f4c06d1a5c7efc2',1,'glb::Debug']]],
-  ['lockkeymods_14',['LockKeyMods',['../classglb_1_1_key.html#a27e89d0ba9ffdc545201b9c804bec902ab102cab3f691532798b30057a45297e9',1,'glb::Key']]]
+  ['loadimagefailed_13',['LoadImageFailed',['../classglb_1_1_debug.html#ab1cd2bc4ce447ff23f3089bfff70c90da47786a1f84b948deea567b671a9555c3',1,'glb::Debug']]]
 ];

@@ -183,20 +183,20 @@ $(function(){initNavTree('_debug_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    {</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        InvalidCallbackType, </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        InvalidEnum,         </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        UnknowType,          </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        UnknowUniform,       </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        UnknowUserPointer,   </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        UnknownType,          </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        UnknownUniform,       </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        UnknownUserPointer,   </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        ObjectNonExist,     </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        DoubleFree,         </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        CopyImage,          </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        OpenFileFaild,      </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        ShaderCompiledFaild, </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        LoadImageFaild,     </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        SaveImageFaild,     </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        MapBufferFaild,     </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        UnmapBufferFaild,   </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        OpenFileFailed,      </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        ShaderCompiledFailed, </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        LoadImageFailed,     </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        SaveImageFailed,     </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        MapBufferFailed,     </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        UnmapBufferFailed,   </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        GLFWErr,            </div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        GLEWErr,            </div>
@@ -212,11 +212,11 @@ $(function(){initNavTree('_debug_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                                   <span class="keyword">const</span> std::string&amp; message);</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> SetCallback(<a class="code hl_typedef" href="classglb_1_1_debug.html#aa534004cab673d1004adac1b694fe9e6">CallbackFunc</a> callback);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classglb_1_1_debug.html#a4c6eae8ca7436fa3a341eaedf834b90b">  120</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classglb_1_1_debug.html#a4c6eae8ca7436fa3a341eaedf834b90b">SetCallback</a>(<a class="code hl_typedef" href="classglb_1_1_debug.html#aa534004cab673d1004adac1b694fe9e6">CallbackFunc</a> callback);</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> DisableCallback();</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="classglb_1_1_debug.html#a2954bfb0ffb22e8c4b26cb1798d34717">  125</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classglb_1_1_debug.html#a2954bfb0ffb22e8c4b26cb1798d34717">DisableCallback</a>();</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> Log(<span class="keyword">const</span> std::string&amp; prefix,</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="classglb_1_1_debug.html#a154d114140d94703520de249d4561b9e">  137</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classglb_1_1_debug.html#a154d114140d94703520de249d4561b9e">Log</a>(<span class="keyword">const</span> std::string&amp; prefix,</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                           <span class="keyword">const</span> std::string&amp; file,</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                           <span class="keyword">const</span> std::string&amp; function,</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                           <span class="keywordtype">int</span> line,</div>
@@ -231,37 +231,12 @@ $(function(){initNavTree('_debug_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>};</div>
 </div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="comment">// Inline function implementations</span></div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
-<div class="foldopen" id="foldopen00171" data-start="{" data-end="}">
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="classglb_1_1_debug.html#a4187f0f8ddeb23a0eb14a44d1d84ee24">  171</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classglb_1_1_debug.html#a4187f0f8ddeb23a0eb14a44d1d84ee24">glb::Debug::SetCallback</a>(<a class="code hl_typedef" href="classglb_1_1_debug.html#aa534004cab673d1004adac1b694fe9e6">CallbackFunc</a> callback)</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>{</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    func = callback;</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>}</div>
-</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
-<div class="foldopen" id="foldopen00176" data-start="{" data-end="}">
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="classglb_1_1_debug.html#a00cf9bb3526e336013b86eb0096c1286">  176</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classglb_1_1_debug.html#a00cf9bb3526e336013b86eb0096c1286">Debug::DisableCallback</a>()</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>{</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    func = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>}</div>
-</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
-<div class="foldopen" id="foldopen00181" data-start="{" data-end="}">
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="classglb_1_1_debug.html#a059dae49116685c613c58d3354cdc76a">  181</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classglb_1_1_debug.html#a059dae49116685c613c58d3354cdc76a">Debug::Log</a>(<span class="keyword">const</span> std::string&amp; prefix, <span class="keyword">const</span> std::string&amp; file, <span class="keyword">const</span> std::string&amp; function, <span class="keywordtype">int</span> line, <a class="code hl_enumeration" href="classglb_1_1_debug.html#a5cb583add3cc0afc4ff3d105ea5d2bf4">Level</a> level, <a class="code hl_enumeration" href="classglb_1_1_debug.html#ab1cd2bc4ce447ff23f3089bfff70c90d">Type</a> type, <span class="keyword">const</span> std::string&amp; message)</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>{</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;GLB &quot;</span> &lt;&lt; prefix &lt;&lt; <span class="stringliteral">&quot;: [&quot;</span> &lt;&lt; function &lt;&lt; <span class="stringliteral">&quot;] &quot;</span> &lt;&lt; message &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordflow">if</span> (func)</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        func(file, function, line, level, type, message);</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>}</div>
-</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>} <span class="comment">// namespace glb</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>} <span class="comment">// namespace glb</span></div>
 <div class="ttc" id="aclassglb_1_1_debug_html"><div class="ttname"><a href="classglb_1_1_debug.html">glb::Debug</a></div><div class="ttdoc">Provides logging and debugging functionalities.</div><div class="ttdef"><b>Definition</b> Debug.h:45</div></div>
-<div class="ttc" id="aclassglb_1_1_debug_html_a00cf9bb3526e336013b86eb0096c1286"><div class="ttname"><a href="classglb_1_1_debug.html#a00cf9bb3526e336013b86eb0096c1286">glb::Debug::DisableCallback</a></div><div class="ttdeci">static void DisableCallback()</div><div class="ttdoc">Disables the current callback function.</div><div class="ttdef"><b>Definition</b> Debug.h:176</div></div>
 <div class="ttc" id="aclassglb_1_1_debug_html_a051a36803400c588f2364af8806bb63d"><div class="ttname"><a href="classglb_1_1_debug.html#a051a36803400c588f2364af8806bb63d">glb::Debug::PollOpenGLErrors</a></div><div class="ttdeci">static void PollOpenGLErrors(const std::string &amp;file, const std::string &amp;function, int line)</div><div class="ttdoc">Poll OpenGL errors, print error message, and call your specified Debug Callback (If you specified one...</div></div>
-<div class="ttc" id="aclassglb_1_1_debug_html_a059dae49116685c613c58d3354cdc76a"><div class="ttname"><a href="classglb_1_1_debug.html#a059dae49116685c613c58d3354cdc76a">glb::Debug::Log</a></div><div class="ttdeci">static void Log(const std::string &amp;prefix, const std::string &amp;file, const std::string &amp;function, int line, Level level, Type type, const std::string &amp;message)</div><div class="ttdoc">Logs a message with the specified details.</div><div class="ttdef"><b>Definition</b> Debug.h:181</div></div>
-<div class="ttc" id="aclassglb_1_1_debug_html_a4187f0f8ddeb23a0eb14a44d1d84ee24"><div class="ttname"><a href="classglb_1_1_debug.html#a4187f0f8ddeb23a0eb14a44d1d84ee24">glb::Debug::SetCallback</a></div><div class="ttdeci">static void SetCallback(CallbackFunc callback)</div><div class="ttdoc">Sets the callback function for handling log messages.</div><div class="ttdef"><b>Definition</b> Debug.h:171</div></div>
+<div class="ttc" id="aclassglb_1_1_debug_html_a154d114140d94703520de249d4561b9e"><div class="ttname"><a href="classglb_1_1_debug.html#a154d114140d94703520de249d4561b9e">glb::Debug::Log</a></div><div class="ttdeci">static void Log(const std::string &amp;prefix, const std::string &amp;file, const std::string &amp;function, int line, Level level, Type type, const std::string &amp;message)</div><div class="ttdoc">Logs a message with the specified details.</div></div>
+<div class="ttc" id="aclassglb_1_1_debug_html_a2954bfb0ffb22e8c4b26cb1798d34717"><div class="ttname"><a href="classglb_1_1_debug.html#a2954bfb0ffb22e8c4b26cb1798d34717">glb::Debug::DisableCallback</a></div><div class="ttdeci">static void DisableCallback()</div><div class="ttdoc">Disables the current callback function.</div></div>
+<div class="ttc" id="aclassglb_1_1_debug_html_a4c6eae8ca7436fa3a341eaedf834b90b"><div class="ttname"><a href="classglb_1_1_debug.html#a4c6eae8ca7436fa3a341eaedf834b90b">glb::Debug::SetCallback</a></div><div class="ttdeci">static void SetCallback(CallbackFunc callback)</div><div class="ttdoc">Sets the callback function for handling log messages.</div></div>
 <div class="ttc" id="aclassglb_1_1_debug_html_a5cb583add3cc0afc4ff3d105ea5d2bf4"><div class="ttname"><a href="classglb_1_1_debug.html#a5cb583add3cc0afc4ff3d105ea5d2bf4">glb::Debug::Level</a></div><div class="ttdeci">Level</div><div class="ttdoc">Enumeration for different levels of logging.</div><div class="ttdef"><b>Definition</b> Debug.h:58</div></div>
 <div class="ttc" id="aclassglb_1_1_debug_html_aa534004cab673d1004adac1b694fe9e6"><div class="ttname"><a href="classglb_1_1_debug.html#aa534004cab673d1004adac1b694fe9e6">glb::Debug::CallbackFunc</a></div><div class="ttdeci">void(*)(const std::string &amp;file, const std::string &amp;function, int line, Level level, Type type, const std::string &amp;message) CallbackFunc</div><div class="ttdoc">Type definition for the callback function used for logging.</div><div class="ttdef"><b>Definition</b> Debug.h:108</div></div>
 <div class="ttc" id="aclassglb_1_1_debug_html_ab1cd2bc4ce447ff23f3089bfff70c90d"><div class="ttname"><a href="classglb_1_1_debug.html#ab1cd2bc4ce447ff23f3089bfff70c90d">glb::Debug::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Enumeration for different types of debug messages.</div><div class="ttdef"><b>Definition</b> Debug.h:72</div></div>

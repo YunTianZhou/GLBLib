@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['callback_0',['Callback',['../classglb_1_1_cursor.html#a614c8bb93fa2fe45c2884348f7b1bc29',1,'glb::Cursor::Callback'],['../classglb_1_1_key.html#a9240bda6805b20c02898cb27016ae234',1,'glb::Key::Callback'],['../classglb_1_1_window.html#aaa24d610123c7b3c751d8136bd6e2db1',1,'glb::Window::Callback']]]
+  ['bufferaccess_0',['BufferAccess',['../namespaceglb.html#aa08267b7441534d8a7dd1ea7c33025d7',1,'glb']]],
+  ['bufferusage_1',['BufferUsage',['../namespaceglb.html#aac72bab751949f90b0e731e69381ae63',1,'glb']]],
+  ['button_2',['Button',['../classglb_1_1_cursor.html#a0baefcffd3c3fe8fc908c1aae2091af9',1,'glb::Cursor']]]
 ];

@@ -27,13 +27,13 @@ var searchData=
   ['f8_24',['F8',['../classglb_1_1_key.html#ad0f577cfd0cb4ed7b586a2dbb917ff74a4787509ad9f9d747a81a30e9dde3d4a7',1,'glb::Key']]],
   ['f9_25',['F9',['../classglb_1_1_key.html#ad0f577cfd0cb4ed7b586a2dbb917ff74a892a245e287c163080b23db737d3c4c9',1,'glb::Key']]],
   ['features_26',['Features',['../index.html#autotoc_md1',1,'']]],
-  ['find_27',['Find',['../classglb_1_1_user_pointer.html#a8f15f218f7bf00595e48539daf09cda0',1,'glb::UserPointer']]],
+  ['find_27',['Find',['../classglb_1_1_user_pointer.html#a55699c12eb67e14dbcc483265d120985',1,'glb::UserPointer']]],
   ['fliphorizontally_28',['FlipHorizontally',['../classglb_1_1_image.html#a812086f92532e0edcc5a26102203485c',1,'glb::Image']]],
   ['flipvertically_29',['FlipVertically',['../classglb_1_1_image.html#a9ef5cf56bce73fb9b3bf61b8e2bb27bd',1,'glb::Image']]],
   ['float_30',['Float',['../classglb_1_1_enum.html#a80c95f14b705f3535a633a59d07d2fc4',1,'glb::Enum']]],
   ['focus_31',['Focus',['../classglb_1_1_window.html#a38d1257f52dc8e4241e1f5820ddb5959',1,'glb::Window::Focus() const'],['../classglb_1_1_window.html#aaa24d610123c7b3c751d8136bd6e2db1ae24ee2487879116dcab772c0ac4fe341',1,'glb::Window::Focus']]],
   ['fragmentsource_32',['FragmentSource',['../classglb_1_1_shader_program_source.html#a37d723f1e2036bb70879cdd13fdcc643',1,'glb::ShaderProgramSource']]],
   ['framebuffersize_33',['FramebufferSize',['../classglb_1_1_window.html#aaa24d610123c7b3c751d8136bd6e2db1a048f247ef00bb80cc022b8b4eb7ba26d',1,'glb::Window']]],
-  ['free_34',['Free',['../classglb_1_1_image.html#ad41f892895eeb1d82b5ef6cabef0eac0',1,'glb::Image::Free()'],['../classglb_1_1_image.html#ac3346c6696d74a01f5fefd4415a35356',1,'glb::Image::Free(Image &amp;image)'],['../classglb_1_1_image.html#aa15376e3af00ddd53b19736581139e42',1,'glb::Image::Free(Image images[], int size)']]],
+  ['free_34',['Free',['../classglb_1_1_image.html#ad41f892895eeb1d82b5ef6cabef0eac0',1,'glb::Image::Free()'],['../classglb_1_1_image.html#a598b8115e9e3eacdf48a2bccf473fe76',1,'glb::Image::Free(Image &amp;image)'],['../classglb_1_1_image.html#a2794d92a39871a3785fa36864fd7b324',1,'glb::Image::Free(Image images[], int size)']]],
   ['functions_35',['Basic functions',['../md__e_x_a_m_p_l_e_s.html#autotoc_md10',1,'']]]
 ];
