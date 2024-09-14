@@ -5,6 +5,8 @@
 #include <string>
 #include "Export.h"
 
+#include <stdio.h>
+
 namespace glb {
 
 	class GLB_API Key
@@ -138,17 +140,26 @@ namespace glb {
 			Last = GLFW_KEY_LAST,
 		};
 
+		enum class Action
+		{
+			Release = GLFW_RELEASE,
+			Press = GLFW_PRESS,
+			Repeat = GLFW_REPEAT,
+		};
+
 		enum class Mode
 		{
-			StickyKeys = GLFW_STICKY_KEYS,
-			StickyMouseButtons = GLFW_STICKY_MOUSE_BUTTONS,
-			LockKeyMods = GLFW_LOCK_KEY_MODS,
-			RawMouseMotion = GLFW_RAW_MOUSE_MOTION,
+			Shift = GLFW_MOD_SHIFT,
+			Control = GLFW_MOD_CONTROL,
+			Alt = GLFW_MOD_ALT,
+			Super = GLFW_MOD_SUPER,
+			CapsLock = GLFW_MOD_CAPS_LOCK,
+			NumLock = GLFW_MOD_NUM_LOCK,
 		};
 
 		enum class Callback
 		{
-			Key,    		// Key input (int key, int scancode, int action, int mods)
+			Key,    		// Key input (Type key, int scancode, Action action, Mode mods)
 			Char,   		// Text input callback (unsigned int codepoint)
 		};
 
@@ -159,6 +170,12 @@ namespace glb {
 		static std::string ToString(int scancode);
 		static bool SetCallback(Callback type, void* callback);
 		static bool DisableCallback(Callback type);
+		static inline bool ContainMode(Mode mods, Mode mode);
 	};
+
+	inline bool Key::ContainMode(Mode mods, Mode mode)
+	{
+		return (int) mods & (int) mode;
+	}
 
 }

@@ -45,9 +45,9 @@ namespace glb {
 
         switch (type)
         {
-            Case(Position, glfwSetCursorPosCallback, (GLFWwindow * window, double xpos, double ypos), (void (*) (double, double)), (xpos, ypos));
+            Case(Position, glfwSetCursorPosCallback, (GLFWwindow * window, double xpos, double ypos), (void (*) (Position_t)), ({ xpos, ypos }));
             Case(Enter, glfwSetCursorEnterCallback, (GLFWwindow * window, int enter), (void (*) (int)), (enter));
-            Case(MouseButton, glfwSetMouseButtonCallback, (GLFWwindow * window, int button, int action, int mods), (void (*) (int, int, int)), (button, action, mods));
+            Case(MouseButton, glfwSetMouseButtonCallback, (GLFWwindow * window, int button, int action, int mods), (void (*) (Button, Action, Mode)), ((Button) button, (Action) action, (Mode) mods));
             Case(Scroll, glfwSetScrollCallback, (GLFWwindow * window, double xoffset, double yoffset), (void (*) (double, double)), (xoffset, yoffset));
         default:
             GLBWarnH(InvalidCallbackType, "Invalid cursor callback type '" << (int)type << "'");

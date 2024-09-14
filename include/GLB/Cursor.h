@@ -16,6 +16,7 @@ namespace glb {
             double x = 0.0;
             double y = 0.0;
         };
+
         enum class Button
         {
             Left = GLFW_MOUSE_BUTTON_LEFT,
@@ -29,11 +30,28 @@ namespace glb {
             Button7 = GLFW_MOUSE_BUTTON_7,
         };
 
+        enum class Action
+        {
+            Release = GLFW_RELEASE,
+            Press = GLFW_PRESS,
+            Repeat = GLFW_REPEAT,
+        };
+
+        enum class Mode
+        {
+            Shift = GLFW_MOD_SHIFT,
+            Control = GLFW_MOD_CONTROL,
+            Alt = GLFW_MOD_ALT,
+            Super = GLFW_MOD_SUPER,
+            CapsLock = GLFW_MOD_CAPS_LOCK,
+            NumLock = GLFW_MOD_NUM_LOCK,
+        };
+
         enum class Callback
         {
-            Position,          // Cursor position callback (double xpos, double ypos)
+            Position,          // Cursor position callback (Position_t position)
             Enter,             // Cursor enter/leave callback (int enter)
-            MouseButton,       // Mouse button callback (int button, int action, int mods)
+            MouseButton,       // Mouse button callback (Button button, Action action, int mods)
             Scroll,            // Scroll callback (double xoffset, double yoffset)
         };
     public:
@@ -41,6 +59,12 @@ namespace glb {
         static Position_t GetPosition();
         static bool SetCallback(Callback type, void* callback);
         static bool DisableCallback(Callback type);
+        static inline bool ContainMode(Mode mods, Mode mode);
     };
+
+    inline bool Cursor::ContainMode(Mode mods, Mode mode)
+    {
+        return (int) mods & (int) mode;
+    }
 
 }
